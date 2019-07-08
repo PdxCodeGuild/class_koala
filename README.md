@@ -1,14 +1,13 @@
 # 20190408-Python-FullStack-Day
 Repo for the PDX Code Guild Python Full Stack day course starting 04/08/2019
 
-Class is held from **April 8, 2019 - July 1st, 2019**
+Class is held from **July 8th, 2019 - October 14th, 2019**
 M-F 9:30 am – 4:30 pm
 
 
 ### Holidays
 
-Memorial Day - May 27th, 2019  
-Independence Day - July 4th, 2019  
+Labor Day -- September 2nd, 2019
 
 ## Class Members
 
@@ -16,62 +15,10 @@ Independence Day - July 4th, 2019
 
 - Merritt Lawrenson
     - merritt@pdxcodeguild.com
-    
-## JavaScript Labs Assigned:
-
-Lab 01 - lab 09  
-Lab 10 (presentation 5/24, Vue optional)  
-Lab 11  
-
-#### Optional:
-
-JS Form Validation  
-Vue Tutorial  
-Group-Calculator  
-    
-## HTML/CSS Labs Assigned:
-
-Lab 01  
-Lab 02 (use floats)  
-Lab 03 (use flexbox/grid)  
-Lab 04 (use whatever you want)  
-Lab 05 (no frameworks)  
-
-#### Optional:
-
-CSS Animations  
-CSS Diner
-Flexbox Froggy
-Grid Garden
 
 ## Python Labs Assigned:
 
-Lab 09  
-Lab 10  
-Lab 11  
-Lab 15  
-Lab 19  
-Lab 20  
-Lab 17  
-Lab 13  
-Lab 14  
-Lab 18  
-Lab 22  
-Lab 21  
-Lab 23  
-Lab 16  
-Lab 25  
-Mini-capstone  
-Mob-Jackalope  
-Pair-Hangman  
 
-#### Optional:
-
-Practice 1-5  
-Lab 24  
-Lab 26  
-Lab 27  
-Optional Labs -- LCR, APR, Crime Data, Road Trip, Sock Sorter, Tree
 
 ## Student Presentations
 
