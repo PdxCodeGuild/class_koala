@@ -151,8 +151,8 @@ min(5, 6)
 ```
 You can also 'pack' a tuple into an other variable, and 'unpack' it into an other set of variables.
 ```python
-x = ("Mr. Python", 30, "Java(script)")    # tuple packing
-(name, age, fav_drink) = x    # tuple unpacking
+x = "Mr. Python", 30, "Java(script)"    # tuple packing
+name, age, fav_drink = x    # tuple unpacking
 print(name)
 print(age)
 print(fav_drink)

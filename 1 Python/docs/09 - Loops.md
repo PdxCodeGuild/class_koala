@@ -12,6 +12,7 @@ while i < 10:
     print(i)
     i += 1
 print('done')
+print(i)
 
 >>> 0
 >>> 1
@@ -24,6 +25,7 @@ print('done')
 >>> 8
 >>> 9
 >>> done
+>>> 10
 ```
 You can add an `else` statement to a while loop. whatever is in the else statement will execute when the while loop is finished, but won't execute when you `break` out of one or if an exception is raised.
 ```python
