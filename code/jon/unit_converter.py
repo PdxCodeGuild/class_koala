@@ -1,33 +1,50 @@
-distance = int(input('what is the distance to convert into meters? '))
-unit = input('what are the units? ').lower()
+distance = int(input('what is the distance to convert? '))
+from_unit = input('what are the input units? ').lower()
+to_unit = input('what are the output units? ').lower()
 
+if from_unit == 'ft' or from_unit == 'feet':
+    feet_to_meters = float(distance /3.281)
+    if to_unit == 'mi' or to_unit == 'miles':
+        result = float(feet_to_meters / 1609.344)
+    elif to_unit == 'm' or to_unit == 'meters':
+        result = feet_to_meters
+    elif to_unit == 'ft' or to_unit == 'feet':
+        result = distance
+    elif to_unit == 'km' or to_unit == 'kilometers':
+        result = float(feet_to_meters / 3280.84)
+    print (f'{distance} {from_unit} is {result} {to_unit}')
 
-if unit == 'ft' or unit == 'feet':
-    distance_in_meters = round((distance * 0.3048),4)
-    print(f'{distance} ft is {distance_in_meters} m')
+elif from_unit == 'm' or from_unit == 'meter':
+    if to_unit == 'mi' or to_unit == 'miles':
+        result = float(distance / 1609.344)
+    elif to_unit == 'm' or to_unit == 'meters':
+        result = distance
+    elif to_unit == 'ft' or to_unit == 'feet':
+        result = float(distance * 3.281)
+    elif to_unit == 'km' or to_unit == 'kilometers':
+        result = float(distance / 1000)
+    print (f'{distance} {from_unit} is {result} {to_unit}')
 
-elif unit == 'mi' or unit == 'miles':
-    distance_in_meters = round((distance * 1609.344),4)
-    print(f'{distance} mi is {distance_in_meters} m')
+elif from_unit == 'km' or from_unit == 'kilometers':
+    kilometers_to_meters = float(distance * 1000)
+    if to_unit == 'mi' or to_unit == 'miles':
+        result = float(kilometers_to_meters / 1609.344)
+    elif to_unit == 'm' or to_unit == 'meters':
+        result = kilometers_to_meters
+    elif to_unit == 'ft' or to_unit == 'feet':
+        result = float(kilometers_to_meters * 3.281)
+    elif to_unit == 'km' or to_unit == 'kilometers':
+        result = distance
+    print (f'{distance} {from_unit} is {result} {to_unit}')
 
-elif unit == 'm' or unit == 'meters':
-    print(f'{distance} m is {distance} m')
-
-elif unit == 'km' or unit == 'kilometers':
-    distance_in_meters = round((distance * 1000),4)
-    print(f'{distance} km is {distance_in_meters} m')
-
-elif unit == 'yrd' or unit == 'yards':
-    distance_in_meters = round((distance / 1.094 ),4)
-    print(f'{distance} yards is {distance_in_meters} m')
-
-elif unit == 'in' or unit == 'inches':
-    distance_in_meters = round((distance / 39.37),4)
-    print(f'{distance} inches is {distance_in_meters} m')
-
-
-
-
-
-
-
+elif from_unit == 'mi' or from_unit == 'miles':
+    miles_to_meters = float(distance * 1609.34)
+    if to_unit == 'mi' or to_unit == 'miles':
+        result = distance
+    elif to_unit == 'm' or to_unit == 'meters':
+        result = miles_to_meters
+    elif to_unit == 'ft' or to_unit == 'feet':
+        result = float(miles_to_meters * 3.281)
+    elif to_unit == 'km' or to_unit == 'kilometers':
+        result = float(miles_to_meters / 1000)
+    print (f'{distance} {from_unit} is {result} {to_unit}')
