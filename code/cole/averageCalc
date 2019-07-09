@@ -1,0 +1,19 @@
+#averageCalc
+
+x = True
+num = []
+
+while x == True:
+    i = input("enter a number or 'done'\n")
+    if i == "done":
+        break
+    else:
+        num.append(i)
+
+for i in range(len(num)):
+    num[i] = float(num[i])
+
+total = sum(num)
+avg = total/len(num)
+
+print(f"\nthe average is {avg}")
