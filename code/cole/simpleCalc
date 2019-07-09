@@ -1,0 +1,27 @@
+#simpleCalc
+
+x = True
+
+while x == True:
+    op = input("what operation would you like to perform? (+,-,x,/,done)\n")
+    if op == "done":
+        print("goodbye!")
+        break
+    else:
+        a = float(input("enter the first number\n"))
+        b = float(input("enter the second number\n"))
+
+        if op == "+":
+            c = a+b
+            print(f"the solution is {c}")
+        elif op == "-":
+            c = a-b
+            print(f"the solution is {c}")
+        elif op == "x":
+            c = a*b
+            print(f"the solution is {c}")
+        elif op == "/":
+            c = a/b
+            print(f"the solution is {c}")
+        else:
+            print("please enter a valid operator")
