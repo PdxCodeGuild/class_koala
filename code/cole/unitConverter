@@ -106,5 +106,5 @@ elif inUnit == "in" or inUnit == "inches":
         i = i/36
         print(f"{i} yd")
     elif outUnit == "m" or outUnit -- "meters":
-        i = i*0.0254
+        i = i*0.0254        
         print(f"{i} m")
