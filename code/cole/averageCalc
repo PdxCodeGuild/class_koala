@@ -1,14 +1,11 @@
 #averageCalc
-
-x = True
 num = []
 
-while x == True:
+i = input("enter a number or 'done'\n")
+while i != "done":
+    num.append(i)
     i = input("enter a number or 'done'\n")
-    if i == "done":
-        break
-    else:
-        num.append(i)
+
 
 for i in range(len(num)):
     num[i] = float(num[i])
