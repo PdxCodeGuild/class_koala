@@ -17,3 +17,4 @@ while op != "done":
         continue
     print(f"the solution is {c}")
     op = input("what operation would you like to perform? (+,-,x,/,done)\n")
+print("goodbye!")
