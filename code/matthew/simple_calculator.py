@@ -1,4 +1,5 @@
 # filename: simple_calculator.py
+import ast # for use in literal evaluation
 
 # used to alternate between various messages in the while loop
 count = 0
@@ -54,8 +55,20 @@ while True:
     # reverts back to a float for use in later operations
     result = float(result)
 
-    # allows user to exit or enter a new operation
-    next_op = input("If finished, type \"done\".\nIf you'd like to perform another operation, enter it now: ").lower()
+    # enters / re-enters into while loop
+    repeat = "yes"
+
+    while repeat == "yes":
+        # allows user to exit, create a standalone custom operation or enter a new operation based on the earlier total
+        next_op = input("If finished, type \"done\".\nIf you'd like to fully customize an arithmetic expression, type \"yes\".\nIf you'd like to simply perform another operation, enter it now: ").lower()
+
+        # allows user to perform separate computation, safely evaluates the expression and prints the result
+        if next_op == "yes":
+            print("")
+            custom_result = eval(ast.literal_eval(input("(Note: This will not affect the previous computations)\nInside quotations, enter a full arithmetic expression: ")))
+            print(f"\nThe result is {custom_result}.\n")
+        else:
+            repeat = "no" # exits current while loop
 
     # exits program
     if next_op == "done":
