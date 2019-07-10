@@ -1,0 +1,21 @@
+#numberGuess
+import random
+
+again = "yes"
+
+while again == "yes":
+    playerNumber = 0
+    cpuNumber = random.randint(1,10)
+    i = 1
+    while playerNumber != cpuNumber:
+        playerNumber = int(input("Guess a number between 1 and 10.\n"))
+        if playerNumber > cpuNumber:
+            print("Too high, guess again!\n")
+            i = i+1
+            continue
+        elif playerNumber < cpuNumber:
+            print("Too low, guess again!\n")
+            i = i+1
+            continue
+    print(f"You got it in {i} attempt(s)!")
+    again = input("Would you like to play again? yes/no\n")
