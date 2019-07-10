@@ -18,7 +18,11 @@ Labor Day -- September 2nd, 2019
 
 ## Python Labs Assigned:
 
-
+Lab 09  
+Lab 10  
+Lab 11  
+Lab 15  
+Lab 19  
 
 ## Student Presentations
 
