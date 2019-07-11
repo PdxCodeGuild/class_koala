@@ -63,5 +63,5 @@
 def power_of_2(num):
     for i in range(0, num + 1):
         print (2 ** i)
-        
+           
 print(power_of_2(20))
