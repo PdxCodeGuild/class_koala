@@ -1,0 +1,73 @@
+#practice01
+
+#problem 1
+def is_even(a):
+    b = a%2
+    if b == 0:
+        return True
+    else:
+        return False
+
+i = float(input("enter a number\n"))
+
+x = is_even(i)
+
+if x == True:
+    print("The number is even")
+else:
+    print("The number is odd")
+
+#problem 2
+def opposite(a, b):
+    if a > -1 and b <0:
+        return True
+    elif a < 0 and b > -1:
+        return True
+    else:
+        return False
+
+i = float(input("enter a number\n"))
+j = float(input("enter another number\n"))
+
+x = opposite(i,j)
+
+print(f"{x}")
+
+#problem 3
+def near_100(a):
+    if a >89 and a < 111:
+        return True
+    else:
+        return False
+
+i = float(input("enter a number\n"))
+
+x = near_100(i)
+
+if x == True:
+    print(f"{i} is near 100")
+else:
+    print(f"{i} is not near 100")
+
+#problem 4
+def highest_of_three(a, b, c):
+    if a>b and a>c:
+        return a
+    elif b>c and b>a:
+        return b
+    else:
+        return c
+
+i = float(input("enter a number\n"))
+j = float(input("enter a second number\n"))
+k = float(input("enter a third number\n"))
+
+x = highest_of_three(i, j, k)
+
+print(f"{x} is the highest number\n")
+
+#problem 5
+i=0
+while i < 20:
+    print(f"{2**i}")
+    i = i+1
