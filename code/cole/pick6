@@ -1,0 +1,69 @@
+#pick6
+import random
+
+def pick6(list):
+    numbers = []
+    list.clear()
+    i = 1
+    while i < 100:
+        numbers.append(i)
+        i = i+1
+    i = 1
+    while i < 7:
+        x = random.choice(numbers)
+        list.append(x)
+        i = i+1
+
+def detectMatch(list1, list2):
+    i = 0
+    x = 0
+    for num in list1:
+        if list1[x] == list2[x]:
+            i = i+1
+            x = x+1
+        else:
+            x = x+1
+    return i
+
+winKey = {0:0, 1:4, 2:7, 3:100, 4:50000, 5:1000000, 6:25000000}
+oneMatches = 0
+twoMatches = 0
+threeMatches = 0
+fourMatches = 0
+fiveMatches = 0
+sixMatches = 0
+winningNums = []
+ticket = []
+balance = 0
+i = 0
+pick6(winningNums)
+while i < 100000:
+    matches = 0
+    pick6(ticket)
+    balance = balance - 2
+    matches = detectMatch(winningNums, ticket)
+    winnings = winKey[matches]
+    balance = balance + winnings
+    i = i+1
+    if matches == 1:
+        oneMatches = oneMatches + 1
+    elif matches == 2:
+        twoMatches = twoMatches + 1
+    elif matches == 3:
+        twoMatches = threeMatches + 1
+    elif matches == 4:
+        twoMatches = fourMatches + 1
+    elif matches == 5:
+        twoMatches = fiveMatches + 1
+    elif matches == 6:
+        twoMatches = sixMatches + 1
+    else:
+        continue
+
+print(f"Times Matched Once: {oneMatches}")
+print(f"Times Matched Twice: {twoMatches}")
+print(f"Times Matched Three Times: {threeMatches}")
+print(f"Times Matched Four Times: {fourMatches}")
+print(f"Times Matched Five Times: {fiveMatches}")
+print(f"Times Matched Six Times: {sixMatches}")
+print(f"Balance: {balance}")
