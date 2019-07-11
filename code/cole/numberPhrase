@@ -1,0 +1,36 @@
+#numberPhrase
+
+ones = {1:"one", 2:"two", 3:"three", 4:"four", 5:"five", 6:"six", 7:"seven", 8:"eight", 9:"nine", 0:""}
+
+tens = {1:"teen", 2:"twenty", 3:"thirty", 4:"forty", 5:"fifty", 6:"sixty", 7:"seventy", 8:"eighty", 9:"ninety", 0:""}
+
+teens = {10:"ten", 11:"eleven", 12:"twelve", 13:"thirteen", 14:"fourteen", 15:"fifteen", 16:"sixteen", 17:"seventeen", 18:"eighteen", 19:"nineteen"}
+
+
+def phrasify(i):
+    i = int(i)
+    hundredsDigit = i//100
+    tensDigit = i%100
+    tensDigit = tensDigit//10
+    onesDigit = i%10
+    if hundredsDigit == 0:
+        if tensDigit == 1:
+            return f"{teens[i]}"
+        elif tensDigit == 0:
+            if onesDigit == 0:
+                return "zero"
+            else:
+                return f"{ones[onesDigit]}"
+        else:
+            return f"{tens[tensDigit]}-{ones[onesDigit]}"
+    else:
+        if tensDigit == 1:
+            return f"{ones[hundredsDigit]} hundred {teens[i%100]}"
+        elif tensDigit == 0:
+            return f"{ones[hundredsDigit]} hundred and {ones[onesDigit]}"
+        else:
+            return f"{ones[hundredsDigit]} hundred {tens[tensDigit]}-{ones[onesDigit]}"
+
+num = input("enter a number up to three digits\n")
+phrase = phrasify(num)
+print(f"{phrase}")
