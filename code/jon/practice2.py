@@ -105,10 +105,10 @@
 
 #Problem 7
 
-def lower_case(word):
+# def lower_case(word):
 
-    lowercase_word = word.lower().strip()
-    return lowercase_word
+#     lowercase_word = word.lower().strip()
+#     return lowercase_word
 
-print(lower_case('SUPER!'))
-print(lower_case("        NANNANANANA BATMAN        "))
+# print(lower_case('SUPER!'))
+# print(lower_case("        NANNANANANA BATMAN        "))
