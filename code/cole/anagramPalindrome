@@ -1,0 +1,42 @@
+#anagramPalindrome
+
+def palindromeCheck(string):
+    x = True
+    for char in string:
+        oppositeChar = (len(string)-1)-(string.index(char))
+        if char == string[oppositeChar]:
+            x = True
+        else:
+            x = False
+            break
+    return x
+
+userString = input("Type anything.\n")
+x = palindromeCheck(userString)
+if x == True:
+    print(f"{userString} is a palindrome")
+else:
+    print(f"{userString} is not a palindrome")
+
+def anagramCheck(string1, string2):
+    string1 = string1.lower()
+    string2 = string2.lower()
+    charValue = {"a":1, "b":2, "c":3, "d":4, "e":5, "f":6, "g":7, "h":8, "i":9, "j":10, "k":11, "l":12, "m":13, "n":14, "o":15, "p":16, "q":17, "r":18, "s":19, "t":20, "u":21, "v":22, "w":23, "x":24, "y":25, "z":26, " ":0}
+    x = 0
+    y = 0
+    for char in string1:
+        x += charValue[char]
+    for char in string2:
+        y += charValue[char]
+    if x == y:
+        return True
+    else:
+        return False
+
+userString1 = input("Type any word.\n")
+userString2 = input("Type another word.\n")
+i = anagramCheck(userString1, userString2)
+if i == True:
+    print(f"{userString2} is an anagram of {userString1}")
+else:
+    print(f"{userString2} is not an anagram of {userString1}")
