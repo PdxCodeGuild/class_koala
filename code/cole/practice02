@@ -1,0 +1,96 @@
+#practice02
+
+#problem 1
+
+def doubleLetters(string):
+    returnString = ""
+    for char in string:
+        returnString += char*2
+    return returnString
+
+userString = input("Type anything.\n")
+newString = doubleLetters(userString)
+print(f"{newString}")
+
+#problem 2
+
+def missingChar(string):
+    list = []
+    i = 0
+    while i < len(string):
+        newString = string[0:i]
+        newString += string[i+1:]
+        list.append(newString)
+        i += 1
+    return list
+
+userString = input("Type anything.\n")
+list = missingChar(userString)
+print(f"{list}")
+
+#problem 3
+
+def lastLetter(string):
+    charValue = {"a":1, "b":2, "c":3, "d":4, "e":5, "f":6, "g":7, "h":8, "i":9, "j":10, "k":11, "l":12, "m":13, "n":14, "o":15, "p":16, "q":17, "r":18, "s":19, "t":20, "u":21, "v":22, "w":23, "x":24, "y":25, "z":26, "":0}
+    highest = ""
+    string = string.lower()
+    for char in string:
+        if charValue[char] > charValue[highest]:
+            highest = char 
+        else:
+            continue
+    return highest
+
+userString = input("Type anything.\n")
+latest = lastLetter(userString)
+print(f"{latest} is the latest letter in the alphabet")
+
+#problem 4
+
+def hiCounter(string):
+    string.lower()
+    i = string.count("hi")
+    return i
+string = input("Type anything.\n")
+i = hiCounter(string)
+print(f"you said hi {i} times")
+
+#problem 5
+
+def catDog(string):
+    string = string.lower()
+    x = string.count("cat")
+    y = string.count("dog")
+    if x == y:
+        return True
+    else:
+        return False
+
+string = input("Type anything.\n")
+equal = catDog(string)
+if equal == True:
+    print("you typed cat and dog the same amount of times")
+else:
+    print("you did not type cat and dog the same amount of times")
+
+#problem 6
+
+def countLetter(letter, string):
+    x = string.count(letter)
+    return x
+
+string = input("Type any word.\n")
+letter = input("Type any letter.\n")
+x = countLetter(letter, string)
+print(f"{letter} appears in {string} {x} time(s).")
+
+#problem 7
+
+def lowerCase(string):
+    string = string.lower()
+    string = string.strip()
+    return string
+
+string = input("Type anything.\n")
+string = lowerCase(string)
+print(f"{string}")
