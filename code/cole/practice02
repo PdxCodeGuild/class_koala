@@ -36,7 +36,7 @@ def lastLetter(string):
     string = string.lower()
     for char in string:
         if charValue[char] > charValue[highest]:
-            highest = char 
+            highest = char
         else:
             continue
     return highest
@@ -88,7 +88,7 @@ print(f"{letter} appears in {string} {x} time(s).")
 
 def lowerCase(string):
     string = string.lower()
-    string = string.strip()
+    string = string.replace(" ","")
     return string
 
 string = input("Type anything.\n")
