@@ -14,10 +14,10 @@ def combine(fruits, prices):
     f_and_p = dict(zip(fruits, prices))
     return f_and_p
 
-fruits = ['apple', 'banana', 'pear']
-prices = [1.2, 3.3, 2.1]
+# fruits = ['apple', 'banana', 'pear']
+# prices = [1.2, 3.3, 2.1]
 
-combined = combine(fruits, prices)
+# combined = combine(fruits, prices)
 # print(combined)
 
 
@@ -32,7 +32,7 @@ def average(combined):
     averaged = round(prices_summed / len(prices_list), 2)
     return averaged
 
-averaged = average(combined)
+# averaged = average(combined)
 # print(averaged)
 
 
@@ -41,20 +41,30 @@ averaged = average(combined)
 # Problem 3
 # Average numbers whose keys start with the same letter. Output a dictionary containing those letters as keys and the averages.
 
-# NOT FINISHED
+# ONLY WORKS ON CURRENT INPUT / NEEDS UPDATING
 
-# def unify(dict):
-#     for k, v in dict:
-#         if k
-#         letter = keys[0]
-#     number = dict.values()
-#     print(letter)
-#     print(number)
-#
-#
+def unify(dict):
+    a_list = []
+    b_list = []
+    c_list = []
+    dict_unify = {}
+    for key in dict:
+        if key.startswith("a"):
+            a_list.append(dict.get(key))
+            a_avg = (sum(a_list)) // len(a_list)
+            dict_unify.update({"a": a_avg})
+        if key.startswith("b"):
+            b_list.append(dict.get(key))
+            b_avg = (sum(b_list)) // len(b_list)
+            dict_unify.update({"b": b_avg})
+        if key.startswith("c"):
+            c_list.append(dict.get(key))
+            c_avg = (sum(c_list)) // len(c_list)
+            dict_unify.update({"c": c_avg})
+    return dict_unify
+
 # dict = {'a1':5, 'a2':2, 'a3':3, 'b1':10, 'b2':1, 'b3':1, 'c1':4, 'c2':5, 'c3':6}
-#
-# unify(dict)
+# print(unify(dict))
 
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - -
