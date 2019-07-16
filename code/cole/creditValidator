@@ -1,0 +1,28 @@
+#creditValidator
+
+def validate(cardNumber):
+    cardNumber = list(cardNumber)
+    checkNum = int(cardNumber.pop(len(cardNumber)-1))
+    total = 0
+    cardNumber.reverse()
+
+    for num in cardNumber:
+        isOdd = cardNumber.index(num)%2
+        num = int(num)
+        if isOdd != 0:
+            num = num*2
+        if num > 9:
+            num = num-9
+        total += num
+    print(f"{checkNum} {total}")
+    if total%10 == checkNum:
+        return True
+    else:
+        return False
+
+userNum = input("Please enter your credit card number.\n")
+valid = validate(userNum)
+if valid == True:
+    print("Your card is valid")
+else:
+    print("Your card is not valid")

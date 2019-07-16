@@ -10,41 +10,56 @@ def name_generator():
 
 def jackalope_dict(list, name):
     sex = ["m", "f"]
-    jack = {"name": name, "age": 4, "sex": random.choice(sex), "pregnant": False, "viability": False}
+    jack = {"name": name, "age": 0, "sex": random.choice(sex), "pregnant": False}
     list.append(jack)
     return list
 
-def viability(list):
-    for jack in list:
-        if jack["age"] >= 4 and jack["age"] <= 8:
-            if list.index(jack) < len(list)-1:
-                if jack["sex"] != list[list.index(jack)+1]["sex"]:
-                    if list[list.index(jack)+1]["pregnant"] == False:
-                        jack["viability"] = True
-            if list.index(jack) > 0:
-                if jack["sex"] != list[list.index(jack)-1]["sex"]:
-                    if list[list.index(jack)-1]["pregnant"] == False:
-                        jack["viability"] = True
+def viability(list, jack):
+    if jack["age"] >= 4 and jack["age"] <= 8:
+        if list.index(jack) < len(list)-1:
+            if jack["sex"] != list[list.index(jack)+1]["sex"]:
+                if list[list.index(jack)+1]["pregnant"] == False:
+                    return True
+                else:
+                    return False
+        if list.index(jack) > 0:
+            if jack["sex"] != list[list.index(jack)-1]["sex"]:
+                if list[list.index(jack)-1]["pregnant"] == False:
+                    return True
+                else:
+                    return False
+            else:
+                return False
+        else:
+            return False
+    else:
+        return False
+
+
 
 
 jackalopes = []
 jackalope_dict(jackalopes, name_generator())
 jackalope_dict(jackalopes, name_generator())
-jackalope_dict(jackalopes, name_generator())
-jackalope_dict(jackalopes, name_generator())
-jackalope_dict(jackalopes, name_generator())
-jackalope_dict(jackalopes, name_generator())
-jackalope_dict(jackalopes, name_generator())
-jackalope_dict(jackalopes, name_generator())
-jackalope_dict(jackalopes, name_generator())
-viability(jackalopes)
+years = 0
+while years < 100:
+    for jack in jackalopes:
+        if jack["pregnant"] == True:
+            jackalope_dict(jackalopes, name_generator())
+            jackalope_dict(jackalopes, name_generator())
+            jack["pregnant"] = False
+        jack["age"] += 1
+    for jack in jackalopes:
+        if jack["age"]>10:
+            jackalopes.remove(jack)
+    random.shuffle(jackalopes)
+    for jack in jackalopes:
+        viable = viability(jackalopes, jack)
+        if viable == True:
+            if jack["sex"] == "f":
+                jack["pregnant"] = True
+    years += 1
+
+    print(years, len(jackalopes))
 print(jackalopes)
-
-
-
-
-
-
-
-
-#
+print(len(jackalopes))
