@@ -1,0 +1,58 @@
+#ari
+
+def isolateSentence(string):    #separates the text in to a list of sentences
+    sentences = []
+    sentences = string.split(".")
+    return sentences
+
+def isolateWord(string):        #separates the text in to a list of words
+    words = []
+    words = string.split(" ")
+    return words
+
+def charPerWord(list):          #calculates the average number of characters per word
+    totalChar = 0
+    for word in list:
+        totalChar += len(word)
+    avg = totalChar/len(list)
+    return avg
+
+def wordPerSentence(list):      #calculates the average number of words per sentence
+    totalWords = 0
+    for sentence in list:
+        words = isolateWord(sentence)
+        totalWords += len(words)
+    avg = totalWords/len(list)
+    return avg
+
+ariScale = {
+1: {"ages": "5-6", "gradeLevel": "Kindergarten"},
+2: {"ages": "6-7", "gradeLevel": "1st Grade"},
+3: {"ages": "7-8", "gradeLevel": "2nd Grade"},
+4: {"ages": "8-9", "gradeLevel": "3rd Grade"},
+5: {"ages": "9-10", "gradeLevel": "4th Grade"},
+6: {"ages": "10-11", "gradeLevel": "5th Grade"},
+7: {"ages": "11-12", "gradeLevel": "6th Grade"},
+8: {"ages": "12-13", "gradeLevel": "7th Grade"},
+9: {"ages": "13-14", "gradeLevel": "8th Grade"},
+10: {"ages": "14-15", "gradeLevel": "9th Grade"},
+11: {"ages": "15-16", "gradeLevel": "10th Grade"},
+12: {"ages": "16-17", "gradeLevel": "11th Grade"},
+13: {"ages": "17-18", "gradeLevel": "12th Grade"},
+14: {"ages": "18-22", "gradeLevel": "College"}
+}
+
+f = open("ariText.txt", "r")
+text = f.read()
+sentences = isolateSentence(text)
+words = isolateWord(text)
+avgChar = charPerWord(words)
+avgWords = wordPerSentence(sentences)
+ari = (avgChar*4.71) + (avgWords*0.5) - 21.43      #calculates ARI
+ari = ari - ari%1 + 1           #rounds ARI up
+ari = int(ari)
+dictKey = ariScale[ari]
+age = dictKey["ages"]
+grade = dictKey["gradeLevel"]
+print(f"This text has an ARI of {ari} and is reccommended for people between the ages of {age} or in {grade}")
+f.close()
