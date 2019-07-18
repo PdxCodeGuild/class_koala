@@ -40,7 +40,6 @@ peaks = peaks(data)
 valleys = valleys(data)
 p_and_v = peaks_and_valleys(peaks, valleys)
 
-print(f'data = {data}')
 print(f'The peaks are at {peaks}')
 print(f'The valleys are at {valleys}')
 print(f'The peaks and valleys are: {p_and_v} ')
