@@ -31,7 +31,7 @@ Lab 22
 Lab 18  
 Mob - Jackalope  
 Lab 16  
-lab 23  
+Lab 23  
 
 ## Student Presentations
 
