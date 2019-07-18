@@ -22,20 +22,24 @@ def num_matches(winning, ticket):
         print(winning)
         print(ticket)
         print('You won:$ ', payout[matches])
+    print('You won a total of: ', )
     return payout[matches]
-
+    
 def play_lottery():
 
     winning_ticket = pick6()
+    spent = 0
     balance = 0
 
     for i in range(100000):
         ticket = pick6()
+        spent -= 2
         balance -= 2
         payout = num_matches(winning_ticket, ticket)
         balance += payout
-        
+    roi = float((payout - spent)/spent)
     print('Balance: ', balance)
+    print('ROI: ', roi)
     
 
 play_lottery()
