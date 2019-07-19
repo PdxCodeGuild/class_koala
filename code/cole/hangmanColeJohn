@@ -1,4 +1,7 @@
 #hangmanColeJohn
+
+import os
+
 def createHangman(int):
     if int == 0:
         print("  _______\n  |     |\n        |\n        |\n        |\n        |\n       ___")
@@ -21,7 +24,7 @@ def createHangman(int):
     elif int == 9:
         print("  _______\n  |     |\n  O     |\n--|--   |\n_/ \    |\n        |\n       ___")
     elif int == 10:
-        print("  _______\n  |     |\n  O     |\n--|--   |\n_/ \_   |\n        |\n       ___\n You Lose!")
+        print("  _______\n  |     |\n  O     |\n--|--   |\n_/ \_   |\n        |\n       ___\n Player 1 Wins!")
 
 def answerCheck(input, word):
     i = word.count(input)
@@ -39,11 +42,9 @@ def displayUpdate(input, word, display):
             indexes.append(x)
             i = x + 1
     list1 = display.split(" ")
-    #list1.pop(len(list1)-1)
     for num in indexes:
         list1.insert(num, input)
         list1.pop(num+1)
-    print(indexes)
     j = len(list1)-1
     list1.reverse()
     display = ""
@@ -53,22 +54,49 @@ def displayUpdate(input, word, display):
         j -= 1
     return display
 
+def checkVictory(word, display):
+    display = display.replace(" ", "")
+    if display == word:
+        return True
 
-incorrect = 0
-word = input("Player 2 look way from the screen.\n Player 1 enter a word.\n")
-display = "_ "*len(word)
-while incorrect < 10:
-    prevDisplay = display
-    guess = input("Player 2 guess a letter.\n")
-    inWord = answerCheck(guess, word)
-    if inWord == True:
-        display = displayUpdate(guess, word, display)
+def checkUsed(input, pastInput):
+    i = pastInput.count(input)
+    if i == 0:
+        return False
     else:
-        incorrect += 1
-    print(createHangman(incorrect))
-    print(display)
+        return True
 
 
 
-
-#createHangman(10)
+victory = False
+used = False
+again = "yes"
+while again == "yes":
+    incorrect = 0
+    pastInput = []
+    word = input("Player 2 look way from the screen.\n Player 1 enter a word.\n")
+    os.system("cls||clear")
+    display = "_ "*len(word)
+    while incorrect < 10:
+        print(display)
+        print(f"You've guessed {pastInput}")
+        prevDisplay = display
+        guess = input("Player 2 guess a letter.\n")
+        used = checkUsed(guess, pastInput)
+        if used == False:
+            inWord = answerCheck(guess, word)
+            if inWord == True:
+                display = displayUpdate(guess, word, display)
+            else:
+                incorrect += 1
+        else:
+            print("You already guessed that!")
+            continue
+        victory = checkVictory(word, display)
+        pastInput.append(guess)
+        print(createHangman(incorrect))
+        if victory == True:
+            print("Player 2 Wins!")
+            break
+    print(f"The word was {word}.")
+    again = input("Do you want to play again? (yes/no)\n")
