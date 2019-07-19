@@ -1,0 +1,74 @@
+#hangmanColeJohn
+def createHangman(int):
+    if int == 0:
+        print("  _______\n  |     |\n        |\n        |\n        |\n        |\n       ___")
+    elif int == 1:
+        print("  _______\n  |     |\n  O     |\n        |\n        |\n        |\n       ___")
+    elif int == 2:
+        print("  _______\n  |     |\n  O     |\n  |     |\n        |\n        |\n       ___")
+    elif int == 3:
+        print("  _______\n  |     |\n  O     |\n -|     |\n        |\n        |\n       ___")
+    elif int == 4:
+        print("  _______\n  |     |\n  O     |\n--|     |\n        |\n        |\n       ___")
+    elif int == 5:
+        print("  _______\n  |     |\n  O     |\n--|-    |\n        |\n        |\n       ___")
+    elif int == 6:
+        print("  _______\n  |     |\n  O     |\n--|--   |\n        |\n        |\n       ___")
+    elif int == 7:
+        print("  _______\n  |     |\n  O     |\n--|--   |\n /      |\n        |\n       ___")
+    elif int == 8:
+        print("  _______\n  |     |\n  O     |\n--|--   |\n_/      |\n        |\n       ___")
+    elif int == 9:
+        print("  _______\n  |     |\n  O     |\n--|--   |\n_/ \    |\n        |\n       ___")
+    elif int == 10:
+        print("  _______\n  |     |\n  O     |\n--|--   |\n_/ \_   |\n        |\n       ___\n You Lose!")
+
+def answerCheck(input, word):
+    i = word.count(input)
+    if i == 0:
+        return False
+    else:
+        return True
+
+def displayUpdate(input, word, display):
+    indexes = []
+    i = 0
+    for letter in word:
+        if letter == input:
+            x = word.find(input, i)
+            indexes.append(x)
+            i = x + 1
+    list1 = display.split(" ")
+    #list1.pop(len(list1)-1)
+    for num in indexes:
+        list1.insert(num, input)
+        list1.pop(num+1)
+    print(indexes)
+    j = len(list1)-1
+    list1.reverse()
+    display = ""
+    while j > 0:
+        display += list1[j]
+        display += " "
+        j -= 1
+    return display
+
+
+incorrect = 0
+word = input("Player 2 look way from the screen.\n Player 1 enter a word.\n")
+display = "_ "*len(word)
+while incorrect < 10:
+    prevDisplay = display
+    guess = input("Player 2 guess a letter.\n")
+    inWord = answerCheck(guess, word)
+    if inWord == True:
+        display = displayUpdate(guess, word, display)
+    else:
+        incorrect += 1
+    print(createHangman(incorrect))
+    print(display)
+
+
+
+
+#createHangman(10)
