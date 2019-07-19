@@ -24,8 +24,8 @@ print(f'Original word: {word} \nEncrypted word: {encrypted_word}')
 
 
 
-"""
-    While loop version of the For loop above
+
+    # While loop version of the For loop above
 
     # def rot_cipher(string):
     # letters = 'abcdefghijklmnopqrstuvwxyz'
@@ -37,4 +37,3 @@ print(f'Original word: {word} \nEncrypted word: {encrypted_word}')
     #     encrypted = encrypted + cipher[index_of_origin]
     #     i += 1
     # return encrypted
-"""
