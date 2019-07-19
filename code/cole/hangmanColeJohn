@@ -1,0 +1,117 @@
+#hangmanColeJohn
+
+import os
+import random
+
+f = open("english.txt")
+contents = f.read()
+def createHangman(int):
+    if int == 0:
+        print("  _______\n  |     |\n        |\n        |\n        |\n        |\n       ___")
+    elif int == 1:
+        print("  _______\n  |     |\n  O     |\n        |\n        |\n        |\n       ___")
+    elif int == 2:
+        print("  _______\n  |     |\n  O     |\n  |     |\n        |\n        |\n       ___")
+    elif int == 3:
+        print("  _______\n  |     |\n  O     |\n -|     |\n        |\n        |\n       ___")
+    elif int == 4:
+        print("  _______\n  |     |\n  O     |\n--|     |\n        |\n        |\n       ___")
+    elif int == 5:
+        print("  _______\n  |     |\n  O     |\n--|-    |\n        |\n        |\n       ___")
+    elif int == 6:
+        print("  _______\n  |     |\n  O     |\n--|--   |\n        |\n        |\n       ___")
+    elif int == 7:
+        print("  _______\n  |     |\n  O     |\n--|--   |\n /      |\n        |\n       ___")
+    elif int == 8:
+        print("  _______\n  |     |\n  O     |\n--|--   |\n_/      |\n        |\n       ___")
+    elif int == 9:
+        print("  _______\n  |     |\n  O     |\n--|--   |\n_/ \    |\n        |\n       ___")
+    elif int == 10:
+        print("  _______\n  |     |\n  O     |\n--|--   |\n_/ \_   |\n        |\n       ___\n Player 1 Wins!")
+
+def answerCheck(input, word):
+    i = word.count(input)
+    if i == 0:
+        return False
+    else:
+        return True
+
+def displayUpdate(input, word, display):
+    indexes = []
+    i = 0
+    for letter in word:
+        if letter == input:
+            x = word.find(input, i)
+            indexes.append(x)
+            i = x + 1
+    list1 = display.split(" ")
+    for num in indexes:
+        list1.insert(num, input)
+        list1.pop(num+1)
+    j = len(list1)-1
+    list1.reverse()
+    display = ""
+    while j > 0:
+        display += list1[j]
+        display += " "
+        j -= 1
+    return display
+
+def checkVictory(word, display):
+    display = display.replace(" ", "")
+    if display == word:
+        return True
+
+def checkUsed(input, pastInput):
+    i = pastInput.count(input)
+    if i == 0:
+        return False
+    else:
+        return True
+
+def generateWord(contents):
+    i = 0
+    wordList = contents.split("\n")
+    while i == 0:
+        word = random.choice(wordList)
+        if len(word) >= 5:
+            return word
+            break
+        else:
+            continue
+victory = False
+used = False
+again = "yes"
+while again == "yes":
+    incorrect = 0
+    pastInput = []
+    players = input("How many players?(1/2)\n")
+    if players == 2:
+        word = input("Player 2 look way from the screen.\n Player 1 enter a word.\n")
+        os.system("cls||clear")
+    else:
+        word = generateWord(contents)
+    display = "_ "*len(word)
+    while incorrect < 10:
+        print(display)
+        print(f"You've guessed {pastInput}")
+        prevDisplay = display
+        guess = input("Player 2 guess a letter.\n")
+        used = checkUsed(guess, pastInput)
+        if used == False:
+            inWord = answerCheck(guess, word)
+            if inWord == True:
+                display = displayUpdate(guess, word, display)
+            else:
+                incorrect += 1
+        else:
+            print("You already guessed that!")
+            continue
+        victory = checkVictory(word, display)
+        pastInput.append(guess)
+        print(createHangman(incorrect))
+        if victory == True:
+            print("Player 2 Wins!")
+            break
+    print(f"The word was {word}.")
+    again = input("Do you want to play again? (yes/no)\n")
