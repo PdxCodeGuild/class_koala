@@ -1,7 +1,10 @@
 #hangmanColeJohn
 
 import os
+import random
 
+f = open("english.txt")
+contents = f.read()
 def createHangman(int):
     if int == 0:
         print("  _______\n  |     |\n        |\n        |\n        |\n        |\n       ___")
@@ -66,16 +69,28 @@ def checkUsed(input, pastInput):
     else:
         return True
 
-
-
+def generateWord(contents):
+    i = 0
+    wordList = contents.split("\n")
+    while i == 0:
+        word = random.choice(wordList)
+        if len(word) >= 5:
+            return word
+            break
+        else:
+            continue
 victory = False
 used = False
 again = "yes"
 while again == "yes":
     incorrect = 0
     pastInput = []
-    word = input("Player 2 look way from the screen.\n Player 1 enter a word.\n")
-    os.system("cls||clear")
+    players = input("How many players?(1/2)\n")
+    if players == 2:
+        word = input("Player 2 look way from the screen.\n Player 1 enter a word.\n")
+        os.system("cls||clear")
+    else:
+        word = generateWord(contents)
     display = "_ "*len(word)
     while incorrect < 10:
         print(display)
