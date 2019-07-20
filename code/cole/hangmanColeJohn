@@ -89,11 +89,12 @@ while again == "yes":
     print("_______________________\n\n| Welcome to Hangman! |\n_______________________")
     players = input("How many players?(1/2)\n")
     if players == "2":
-        word = input("Player 2 look way from the screen.\n Player 1 enter a word.\n")
+        word = input("Player 2 look way from the screen.\nPlayer 1 enter a word.\n")
     elif players == "1":
         word = generateWord(contents)
     else:
         continue
+    word = word.lower()
     display = "_ "*len(word)
     while incorrect < 10:
         os.system("cls||clear")
@@ -109,6 +110,7 @@ while again == "yes":
             print("One letter at a time please.")
             input("Press Enter to conitnue")
             continue
+        guess = guess.lower()
         used = checkUsed(guess, pastInput)
         if used == False:
             inWord = answerCheck(guess, word)
