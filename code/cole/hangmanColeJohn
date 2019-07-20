@@ -97,7 +97,7 @@ while again == "yes":
     display = "_ "*len(word)
     while incorrect < 10:
         os.system("cls||clear")
-        print(createHangman(incorrect))
+        createHangman(incorrect)
         print(display)
         print(f"You've guessed {pastInput}")
         prevDisplay = display
@@ -126,7 +126,7 @@ while again == "yes":
         if victory == True:
             break
     os.system("cls||clear")
-    print(createHangman(incorrect))
+    createHangman(incorrect)
     if players == "2":
         if victory == True:
             print("Player 2 Wins!")
