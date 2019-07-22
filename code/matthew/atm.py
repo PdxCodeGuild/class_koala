@@ -51,6 +51,6 @@ while True:
         continue
 
     again = input("\nWould you like to perform another transaction? (y or n) ").lower()
-    if again == "n" or again == "no":
+    if again.startswith("n"):
         print("\nTransaction(s) complete. Please visit again soon.\n")
         quit()
