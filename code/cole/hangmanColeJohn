@@ -27,7 +27,7 @@ def createHangman(int):
     elif int == 9:
         print("  _______\n  |     |\n  O     |\n--|--   |\n_/ \    |\n        |\n       ___")
     elif int == 10:
-        print("  _______\n  |     |\n  O     |\n--|--   |\n_/ \_   |\n        |\n       ___\n Player 1 Wins!")
+        print("  _______\n  |     |\n  O     |\n--|--   |\n_/ \_   |\n        |\n       ___")
 
 def answerCheck(input, word):
     i = word.count(input)
@@ -85,18 +85,30 @@ again = "yes"
 while again == "yes":
     incorrect = 0
     pastInput = []
+    os.system("cls||clear")
+    print("_______________________\n\n| Welcome to Hangman! |\n_______________________")
     players = input("How many players?(1/2)\n")
-    if players == 2:
+    if players == "2":
         word = input("Player 2 look way from the screen.\n Player 1 enter a word.\n")
-        os.system("cls||clear")
-    else:
+    elif players == "1":
         word = generateWord(contents)
+    else:
+        continue
     display = "_ "*len(word)
     while incorrect < 10:
+        os.system("cls||clear")
+        createHangman(incorrect)
         print(display)
         print(f"You've guessed {pastInput}")
         prevDisplay = display
-        guess = input("Player 2 guess a letter.\n")
+        if players == "2":
+            guess = input("Player 2 guess a letter.\n")
+        else:
+            guess = input("Guess a letter.\n")
+        if len(guess) > 1:
+            print("One letter at a time please.")
+            input("Press Enter to conitnue")
+            continue
         used = checkUsed(guess, pastInput)
         if used == False:
             inWord = answerCheck(guess, word)
@@ -106,12 +118,26 @@ while again == "yes":
                 incorrect += 1
         else:
             print("You already guessed that!")
+            input("Press Enter to conitnue")
             continue
         victory = checkVictory(word, display)
         pastInput.append(guess)
-        print(createHangman(incorrect))
+
+        if victory == True:
+            break
+    os.system("cls||clear")
+    createHangman(incorrect)
+    if players == "2":
         if victory == True:
             print("Player 2 Wins!")
-            break
+        else:
+            print("Player 1 Wins!")
+    else:
+        if victory == True:
+            print("You Win!")
+        else:
+            print("You Lose!")
     print(f"The word was {word}.")
     again = input("Do you want to play again? (yes/no)\n")
+f.close()
+os.system("cls||clear")
