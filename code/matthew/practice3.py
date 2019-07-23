@@ -178,19 +178,20 @@ def combine(e1, e2):
 # Given a list of numbers, and a target number, find a pair of numbers from the list that sum to a target number
 # Optional: return a list of all pairs of numbers that sum to a target value.
 
-# NOT FINISHED
+def find_pair(nums, target):
+    pairs = []
+    nums.sort()
+    for n in nums:
+        test = nums.pop(0)
+        for n in nums:
+            if n + test == target:
+                pairs.append((n, test))
+        nums.append(test)
+    return pairs
 
-# def find_pair(nums, target):
-#
-#
-#
-#
-# nums = [5, 6, 2, 3]
-# target = 7
-# find_pair(nums, target)
-
-
-
+nums = [5, 6, 2, 3, 4]
+target = 7
+# print(find_pair(nums, target))
 
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - -
