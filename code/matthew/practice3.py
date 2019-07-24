@@ -24,13 +24,13 @@ def random_element(fruits):
 
 # Problem 2
 # Write a REPL which asks users for a list of numbers, which they enter, until they say 'done'. Then print out the list.
-
-number_list = []
-while True:
-    number = input("Enter a number (or 'done'): ").lower()
-    if number == "done":
-        break
-    number_list.append(int(number))
+#
+# number_list = []
+# while True:
+#     number = input("Enter a number (or 'done'): ").lower()
+#     if number == "done":
+#         break
+#     number_list.append(int(number))
 
 # print(number_list)
 
@@ -178,19 +178,20 @@ def combine(e1, e2):
 # Given a list of numbers, and a target number, find a pair of numbers from the list that sum to a target number
 # Optional: return a list of all pairs of numbers that sum to a target value.
 
-# NOT FINISHED
+def find_pair(nums, target):
+    pairs = []
+    nums.sort()
+    for n in nums:
+        test = nums.pop(0)
+        for n in nums:
+            if n + test == target:
+                pairs.append((n, test))
+        nums.append(test)
+    return pairs
 
-# def find_pair(nums, target):
-#
-#
-#
-#
-# nums = [5, 6, 2, 3]
-# target = 7
-# find_pair(nums, target)
-
-
-
+nums = [5, 6, 2, 3, 4]
+target = 7
+# print(find_pair(nums, target))
 
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -198,11 +199,13 @@ def combine(e1, e2):
 # Problem 10
 # Write a function that merges two lists into a single list, where each element of the output list is a list containing two elements, one from each of the input lists.
 
+def merge(list1, list2):
+    list3 = []
+    for i in range(0, len(list1)):
+        list3.append([list1[i], list2[i]])
+    return list3
 
-
-
-
-
+# print(merge([5,2,1], [6,8,2])) # → [[5,6],[2,8],[1,2]]
 
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - -

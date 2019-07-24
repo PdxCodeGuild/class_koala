@@ -32,6 +32,16 @@ Lab 18
 Mob - Jackalope  
 Lab 16  
 Lab 23  
+Lab 21  
+Lab 25  
+Lab 26  
+
+#### Optional Python Labs
+
+Practice 1-5  
+Lab 24  
+Lab 27  
+Optional Labs -- LCR, APR, Crime Data, Road Trip, Sock Sorter, Tree  
 
 ## Student Presentations
 
