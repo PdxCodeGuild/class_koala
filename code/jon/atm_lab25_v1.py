@@ -3,7 +3,7 @@ class Atm:
         self.balance = balance
 
     def check_balance(self):
-
+        
     def deposit(self, amount):
 
     def check_withdrawal(self, amount):
