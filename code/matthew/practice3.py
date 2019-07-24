@@ -1,5 +1,6 @@
 # filename: practice3.py
 import random
+import statistics
 
 # LISTS
 
@@ -213,7 +214,14 @@ def merge(list1, list2):
 # Problem 11
 # Write a function combine_all that takes a list of lists, and returns a list containing each element from each of the lists.
 
+def combine_all(nums):
+    combined = []
+    for i in nums:
+        combined += i
+    return combined
 
+nums = [[5,2,3],[4,5,1],[7,6,3]]
+# print(combine_all(nums))
 
 
 
@@ -224,10 +232,25 @@ def merge(list1, list2):
 # Problem 12
 # Write a function that takes n as a parameter, and returns a list containing the first n Fibonacci Numbers.
 
-
-
-
-
+# def fibonacci(n):
+#     fib = []
+#     data = [0, 1]
+#     for i in range(n):
+#         x = data[0] + data[1]
+#         fib.append(x)
+#         y = data.pop()
+#         data.insert(0, y)
+#
+#         # fib.append(y)
+#         # z = x + y
+#         # fib.append(z)
+#         # x = y + z
+#         # fib.append(x)
+#         # y = z + x
+#     return fib
+#
+#
+# print(fibonacci(8)) # → [1, 1, 2, 3, 5, 8, 13, 21]
 
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -235,9 +258,27 @@ def merge(list1, list2):
 # Problem 13
 # Write functions to find the minimum, maximum, mean, and (optionally) mode of a list of numbers.
 
-
-
-
+# def minimum(nums):
+#     return min(nums)
+# 
+# def maximum(nums):
+#     return max(nums)
+#
+# def mean(nums):
+#     sum_total = sum(nums)
+#     mean = sum_total / len(nums)
+#     return mean
+#
+# def mode(nums):
+#     return statistics.mode(nums)
+#
+#
+#
+# nums = [69, 77, 84, 97, 59, 75, 92, 88, 80, 64, 96, 91, 75, 86, 90, 93, 83, 78, 95, 99, 82, 65, 87, 84]
+# print(minimum(nums))
+# print(maximum(nums))
+# print(mean(nums))
+# print(mode(nums))
 
 
 
@@ -246,10 +287,16 @@ def merge(list1, list2):
 # Problem 14
 # Write a function which takes a list as a parameter and returns a new list with any duplicates removed.
 
+def find_unique(nums):
+    unique_nums = []
+    for n in nums:
+        if n not in unique_nums:
+            unique_nums.append(n)
+    return unique_nums
 
-
-
-
+nums = [12, 24, 35, 24, 88, 120, 155, 88, 120, 155]
+unique_nums = find_unique(nums)
+# print(unique_nums)
 
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - -
