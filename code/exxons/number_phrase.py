@@ -9,17 +9,7 @@ num_to_conv = int(num_to_conv)
 
 ones_digit = num_to_conv % 10
 tens_digit = num_to_conv // 10
-
-
-
-# def double_digit_num(one_digit,teen_digit):
-#     # determines what double digit number was typed in and converts to string from dictionary information
-#     ones_dictionary = {1:'one',2:'two',3:'three',4:'four',5:'five',6:'six',7:'seven',8:'eight',9:'nine'}
-#     teens_dictionary =  {10:'ten', 11:'eleven', 12:'twelve', 13:'thirteen', 14:'fourteen', 15:'fifteen', 16:'sixteeen', 17:'seventeen', 18:'eighteen', 19:'nineteen', 20:'twenty'}
-
-#     teen_number == double_digit_num(ones_dictionary[ones_digit], teens_dictionary[tens_digit])
-#     return(teen_number)
-
+hundredsDigit = num_to_conv //100
 
 
 if tens_digit ==  0:
@@ -35,9 +25,6 @@ if tens_digit == 1 and ones_digit <= 10:
     
     print(f'{num_to_conv} is', (teens_dictionary[num_to_conv]))
 
-# could not get the loop to stop after the above if statement 
-
-
 
 if ones_digit == 0 and tens_digit > 1 < 9:
     print(f'{num_to_conv} is', (tens_dictionary[tens_digit]))
@@ -50,9 +37,8 @@ if ones_digit > 0 and ones_digit <= 9 and tens_digit <= 9 and tens_digit > 1:
 
 
 
-# if the above if statement was true it for the double digit numbers it followed the above if statement and ended 
-# but if it also met the requirements for the 3rd if statment with teens dict then it stop at that one???
-# can i end/skip the 3rd if statement if the conditions are true for the 5th if statement???
+
+
 
 
 
