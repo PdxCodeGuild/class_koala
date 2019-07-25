@@ -48,13 +48,25 @@ def averageCalc(list):
     return(average)
 
 def highestCalc(list):
-    totals = []
+    i = 0
+    highestDay = {}
     for item in list:
-        totals.append(item["Total"])
-    totals.sort()
-    totals.reverse()
-    return(totals[0])
+        if item["Total"] > i:
+            i = item["Total"]
+            highestDay = item
+    return highestDay
 
+
+def yearlyAverage(list, year):
+    yearlyData = []
+    total = 0
+    for item in list:
+        if item["Year"] == year:
+            yearlyData.append(item)
+    for item in yearlyData:
+        total += item["Total"]
+    yearAvg = total/len(yearlyData)
+    return yearAvg
 
 
 dataList = loadData()
@@ -62,5 +74,18 @@ dataList = organizeData(dataList)
 averageRain = averageCalc(dataList)
 highest = highestCalc(dataList)
 
-print(averageRain)
-print(highest)
+highestYearAvg = 0
+highestYear = 0
+i = 2000
+while i < 2020:
+    yearAvg = yearlyAverage(dataList, i)
+    if yearAvg > highestYearAvg:
+        highestYearAvg = yearAvg
+        highestYear = i
+
+    i += 1
+
+
+print(f"The average daily rainfall is {averageRain} inches")
+print(f"The highest daily rainfall was {highest['Total']} inches, on {highest['Month']}/{highest['Day']}/{highest['Year']}")
+print(f"The year with the most rainfall was {highestYear} with a daily average of {highestYearAvg} inches")
