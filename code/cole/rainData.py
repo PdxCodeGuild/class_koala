@@ -44,12 +44,23 @@ def averageCalc(list):
     total = 0
     for x in list:
         total += x["Total"]
-        print(total)
-    print(len(list))
     average = total/len(list)
     return(average)
+
+def highestCalc(list):
+    totals = []
+    for item in list:
+        totals.append(item["Total"])
+    totals.sort()
+    totals.reverse()
+    return(totals[0])
+
+
 
 dataList = loadData()
 dataList = organizeData(dataList)
 averageRain = averageCalc(dataList)
+highest = highestCalc(dataList)
+
 print(averageRain)
+print(highest)
