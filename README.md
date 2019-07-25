@@ -36,6 +36,8 @@ Lab 21
 Lab 25  
 Lab 26  
 
+Python Project: Mini presentations first thing 7/30  
+
 #### Optional Python Labs
 
 Practice 1-5  
