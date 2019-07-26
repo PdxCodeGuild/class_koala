@@ -8,10 +8,7 @@ from wordcloud import WordCloud, STOPWORDS
 
 # ***** AUTHENTICATING *****
 
-consumer_key = "MVA4s4MTPq6c6YyOLIkZS4DIF"
-consumer_secret = "EGfLt4zM0e0nYp05vPYdXGCRZNE6OrNZe4P8OUiCPlZEV8C6mz"
-access_token = "1090606562505240576-AtbNpF1nq1NUod8aBVag1z0jR29HBQ"
-access_token_secret = "QwNSIYhukEnuyjx9yJaCdY4c1QfJjWfLdi5cg3mcYox40"
+# Twitter APIs removed for security
 
 try:
     # Creating the authentication object
@@ -25,7 +22,7 @@ except:
 
 
 # The Twitter user who we want to get tweets from
-name = "_ginmo"
+name = "mjhwrites"
 # Number of tweets to pull
 tweetCount = 20
 
@@ -52,9 +49,7 @@ words = tweet_word.words
 word_string = " ".join(words)
 
 stopwords = set(STOPWORDS)
-stopwords.add("amp")
-stopwords.add("will")
-stopwords.add("need")
+stopwords.update(["amp", "will", "need"])
 
 # Create the wordcloud object
 wordcloud = WordCloud(width=480, height=480, background_color="white", stopwords=stopwords, margin=0).generate(word_string)
@@ -72,11 +67,7 @@ plt.show()
 #     """Class for sentiment analysis."""
 #     def __init__(self):
 #         """Initializes the authorization"""
-#         # keys and tokens from the Twitter Dev Console
-#         consumer_key = "MVA4s4MTPq6c6YyOLIkZS4DIF"
-#         consumer_secret = "EGfLt4zM0e0nYp05vPYdXGCRZNE6OrNZe4P8OUiCPlZEV8C6mz"
-#         access_token = "1090606562505240576-AtbNpF1nq1NUod8aBVag1z0jR29HBQ"
-#         access_token_secret = "QwNSIYhukEnuyjx9yJaCdY4c1QfJjWfLdi5cg3mcYox40"
+
 #
 #         # attempt authentication
 #         try:
