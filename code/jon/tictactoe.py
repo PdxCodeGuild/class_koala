@@ -1,24 +1,40 @@
-class Player():
-    def __init__(self, player1, player2):
-        self.player1 = player1
-        self.player2 = player2
+import os
+os.system('clear')
 
-    def name(self, name):
+class Player:
+    def __init__(self, name, token):
+       self.name = name
+       self.token = token
 
+    def player_name(self, name, token):
+        return name, token
 
-
-class Game():
-    def __init__(self):
-        self = self
-
+class Game:
+    
     def board(self):
-        self.cells = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
-        print('  %s  |  %s  |  %s  ' %(self.cells[1], self.cells[2], self.cells[3]))
-        print('------------------')
-        print('  %s  |  %s  |  %s  ' %(self.cells[4], self.cells[5], self.cells[6]))
-        print('------------------')
-        print('  %s  |  %s  |  %s  ' %(self.cells[7], self.cells[8], self.cells[9]))
+        # os.system('clear')
+        print('\n##### LET\'S PLAY TIC-TAC-TOE #####\n')
+        self.box = [' ', ' 1 ', ' 2 ', '3 ', ' 4 ', ' 5 ','6 ', ' 7 ', ' 8 ','9 ']
+        print(f'  %s  |  %s  |  %s  ' %(self.box[1], self.box[2], self.box[3]))
+        print('---------------------')
+        print(f'  %s  |  %s  |  %s  ' %(self.box[4], self.box[5], self.box[6]))
+        print('---------------------')
+        print(f'  %s  |  %s  |  %s  ' %(self.box[7], self.box[8], self.box[9]))
+        print('\n')
+
+    def move(self, box_num, token):
+       token = self.box[box_num]
+
 
 start = Game()
-start.board()
 
+def refresh_screen():
+    os.system('clear')
+    start.board()
+
+
+while True:
+    refresh_screen()
+
+    p1_choice = int(input('What box do you want (1 - 9)? '))
+    start.move(p1_choice, 'X')
