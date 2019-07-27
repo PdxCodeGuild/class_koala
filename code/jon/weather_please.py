@@ -11,25 +11,27 @@ import os
         - take that file and email it to me
 """
 
-# def get_zipcode(zipcode):
-#     map_api = 'VhicHGxyitNwdtTPZFczl8z9TeeM0voN'
-#     map_url = 'http://www.mapquestapi.com/geocoding/v1/address?key=' + map_api + '&location=' + str(zipcode)
+def get_lanlon(zipcode):
+    map_api = 'VhicHGxyitNwdtTPZFczl8z9TeeM0voN'
+    map_url = 'http://www.mapquestapi.com/geocoding/v1/address?key=' + map_api + '&location=' + zipcode
 
-#     map_res = requests.get(map_url)
-#     map_data = map_res.json()
-#     map_data_wanted = [map_data['results']]
-#     print(map_data_wanted[0])
+    map_res = requests.get(map_url)
+    map_data = map_res.json()
+    # map_data_wanted = map_data['results'][0]['locations'][0]['latLng']
+    map_latitude = map_data['results'][0]['locations'][0]['latLng']['lat']
+    map_longitude = map_data['results'][0]['locations'][0]['latLng']['lng']
+    # print(map_data_wanted)
+    return map_latitude, map_longitude
 
 def weather(lat, lng):
     api_key = "5f96bbce0e67b37965b9ef3af8b32ceb"
     print(f'Latitude: {lat}')
     print(f'Longitude: {lng}')
-
     forecast = forecastio.load_forecast(api_key, lat, lng, units='us')
     
     data = forecast.json
     
-    wanted_data = [data['currently']['time'], data['currently']['summary'], data['currently']['temperature'], data['currently']['apparentTemperature'], data['daily']['summary']]
+    wanted_data = [data['currently']['summary'], data['currently']['temperature'], data['currently']['apparentTemperature'], data['daily']['summary']]
     
     # print(f'from dictionary: {wanted_data}')
     return wanted_data
@@ -71,13 +73,8 @@ refresh_screen()
 print (f'\nWelcome, {name}, to........\n')
 header()
 
-# lat = input('Please enter your latitude (+ = North, - = South): ')
-# print(f'Latitude: {lat}')
-# lon = input('Please enter your longitude (+ = East, - = West): ')
-# print(f'Longitude: {lon}')
+# display(weather(lat, lon))
 
-# Just for testing
-lat = 45.33675
-lon = -122.590784
+req_zipcode = input(f'What zipcode do you want to get the weather for? ')
 
-display(weather(lat, lon))
+print(get_lanlon[req_zipcode])
