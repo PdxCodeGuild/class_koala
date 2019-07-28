@@ -84,16 +84,17 @@ def display(info):
     print(f'The current temperature is {current_temp} degrees F but feels more like {feels_temp} degrees F.')
 
 # Main
+req_zipcode = ''
 
 parser = argparse.ArgumentParser()
 parser.add_argument('-z', '--zipcode', help = 'Enter zipcode for the place you would like a weather report for.')
 parser.parse_args()
 args = parser.parse_args()
-# print(args.zipcode)
+req_zipcode = args.zipcode
 
 if args.zipcode:
-    req_zipcode == args.zipcode
-    display(weather(args.zipcode))
+    
+    display(weather(req_zipcode))
     
 else:
     name = input('What is your first name? ')
