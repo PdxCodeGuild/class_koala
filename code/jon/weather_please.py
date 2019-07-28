@@ -1,7 +1,8 @@
 import forecastio
 import requests
-from datetime import datetime
 import os
+import argparse
+from datetime import datetime
 
 """
     - Still need to work on argparse to include zipcode as an argument when     starting program.
@@ -9,6 +10,8 @@ import os
         - needs to take results of display() and save it into a file
         - take that file and email it to me
 """
+
+
 
 def refresh_screen():
     os.system('clear')
@@ -82,10 +85,25 @@ def display(info):
 
 # Main
 
-name = input('What is your first name? ')
-refresh_screen()
-print (f'\nWelcome, {name}, to........\n')
-header()
-req_zipcode = input(f'What zipcode do you want to get the weather for? ')
+parser = argparse.ArgumentParser()
+parser.add_argument('-z', '--zipcode', help = 'Enter zipcode for the place you would like a weather report for.')
+parser.parse_args()
+args = parser.parse_args()
+# print(args.zipcode)
 
-display(weather(req_zipcode))
+if args.zipcode:
+    req_zipcode == args.zipcode
+    display(weather(args.zipcode))
+    
+else:
+    name = input('What is your first name? ')
+    refresh_screen()
+    print (f'\nWelcome, {name}, to........\n')
+    header()
+
+    req_zipcode = input(f'What zipcode do you want to get the weather for? ')
+
+    display(weather(req_zipcode))
+    
+
+       
