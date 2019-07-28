@@ -5,10 +5,10 @@ import argparse
 from datetime import datetime
 
 """
-    - Still need to work on argparse to include zipcode as an argument when     starting program.
-    - Still need to implement an email function:
-        - needs to take results of display() and save it into a file
-        - take that file and email it to me
+    To-Do:
+        - Still need to implement an email function:
+            - needs to take results of display() and save it into a file
+            - take that file and email it to me
 """
 
 
