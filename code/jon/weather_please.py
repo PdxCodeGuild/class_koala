@@ -79,9 +79,9 @@ def display(info):
     weather_summary = info[3]
     city = get_latlon(req_zipcode)[2]
 
-    print(f'Currently at {current_time} in {city}, the weather is {weather}.')  
-    print(f'Your weather summary for the week is: {weather_summary}.')
-    print(f'The current temperature is {current_temp} degrees F but feels more like {feels_temp} degrees F.')
+    print(f'\nCurrently at {current_time} in {city}, the weather is {weather}.\n')  
+    print(f'Summary for the week: {weather_summary}.\n')
+    print(f'Current temperature: {current_temp} degrees F.\n')
 
 # Main
 req_zipcode = ''
