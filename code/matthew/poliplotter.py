@@ -1,8 +1,6 @@
 # filename: poliplotter.py
 
-import os # used to select the images to tweet
 import re # used to clean tweets
-import time # establishes intervals between tweets
 import tweepy # used in API authorization
 import numpy as np # used for reading the mask images
 from PIL import Image # also used for reading the mask images
@@ -11,7 +9,7 @@ import matplotlib.pyplot as plt # used to help plot word cloud
 from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator # used to generate word cloud and remove stopwords
 
 # ***** AUTHENTICATION *****
-# ***** HIDDEN FOR SECURITY *****
+# ***** HIDDEN FOR SECURITY*****
 
 def authenicator():
     """creates the authenication object, sets access token and secret, then creates the tweepy API object to fetch tweets"""
@@ -27,7 +25,8 @@ def authenicator():
 def target_user():
     name = input("\nWithout including the @ symbol,\nPlease type the username of the requested account: ") # specifies target user
     tweetCount = int(input("How many tweets would you like to analyze? ")) # number of tweets to pull
-    return name, tweetCount
+    status = f"Hello World! Here's how @{name} spent the past week on Twitter!"
+    return name, tweetCount, status
 
 def results(api, name, tweetCount):
     """gathers x number of tweets from the user and returns the results"""
@@ -81,17 +80,17 @@ def wordcloud(word_string, stopwords):
         print(f"We're sorry. '{name}' is not a valid Twitter user.\n")
         quit()
 
-def show(mask, wc):
-    """displays the generated image"""
+def save(mask, wc):
+    """saves the generated image"""
     image_colors = ImageColorGenerator(mask) # create color from image
     plt.figure(figsize=[16,9])
     plt.imshow(wc.recolor(color_func=image_colors), interpolation="bilinear")
     plt.axis("off")
-    plt.show()
+    plt.savefig("poliplotpics/poliplotpic.png")
 
 if __name__ == '__main__':
     api = authenicator()
-    name, tweetCount = target_user()
+    name, tweetCount, status = target_user()
     results = results(api, name, tweetCount)
     tweet_string = compiler(results)
     clean_tweets = clean_tweet(tweet_string)
@@ -99,4 +98,5 @@ if __name__ == '__main__':
     stopwords = stopwords()
     mask = assign_mask(name)
     wc = wordcloud(word_string, stopwords)
-    show(mask, wc)
+    save(mask, wc)
+    api.update_with_media("poliplotpics/poliplotpic.png", status)
