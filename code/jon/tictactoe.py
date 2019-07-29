@@ -15,15 +15,16 @@ class Game:
         # os.system('clear')
         print('\n##### LET\'S PLAY TIC-TAC-TOE #####\n')
         self.box = [' ', ' 1 ', ' 2 ', '3 ', ' 4 ', ' 5 ','6 ', ' 7 ', ' 8 ','9 ']
-        print(f'  %s  |  %s  |  %s  ' %(self.box[1], self.box[2], self.box[3]))
+        print(f'  {self.box[1]}  |  {self.box[2]}  |  {self.box[3]}')
         print('---------------------')
-        print(f'  %s  |  %s  |  %s  ' %(self.box[4], self.box[5], self.box[6]))
+        print(f'  {self.box[4]}  |  {self.box[5]}  |  {self.box[6]}')
         print('---------------------')
-        print(f'  %s  |  %s  |  %s  ' %(self.box[7], self.box[8], self.box[9]))
+        print(f'  {self.box[7]}  |  {self.box[8]}  |  {self.box[9]}')
         print('\n')
 
     def move(self, box_num, token):
-       token = self.box[box_num]
+    #    token = self.box[box_num]
+        self.box[box_num] = token
 
 
 start = Game()

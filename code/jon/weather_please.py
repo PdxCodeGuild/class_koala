@@ -64,7 +64,7 @@ def weather(zipcode):
     data = forecast.json
 
     # Extracts and stores the current summary of the weather (sunny, cloudy, rainy, partly cloudy, etc.), current temperature, what temperature it actually feels like and the weather summary for the day
-    wanted_data = [data['currently']['summary'], data['currently']['temperature'], data['currently']['apparentTemperature'], data['daily']['summary']]
+    wanted_data = [data['currently']['summary'], data['currently']['temperature'], data['daily']['summary']]
     
     return wanted_data
 
@@ -75,13 +75,12 @@ def display(info):
     current_time = now.strftime('%H:%M')
     weather = info[0]
     current_temp = info[1]
-    feels_temp = info[2]
-    weather_summary = info[3]
+    weather_summary = info[2]
     city = get_latlon(req_zipcode)[2]
 
-    print(f'Currently at {current_time} in {city}, the weather is {weather}.')  
-    print(f'Your weather summary for the week is: {weather_summary}.')
-    print(f'The current temperature is {current_temp} degrees F but feels more like {feels_temp} degrees F.')
+    print(f'\nCurrently at {current_time} in {city}, the weather is {weather}.\n')  
+    print(f'Summary for the week: {weather_summary}.\n')
+    print(f'Current temperature: {current_temp} degrees F.\n')
 
 # Main
 req_zipcode = ''
@@ -95,6 +94,8 @@ req_zipcode = args.zipcode
 if args.zipcode:
     
     display(weather(req_zipcode))
+    print('-----------------------------------')
+    email_results(req_zipcode)
     
 else:
     name = input('What is your first name? ')
@@ -105,6 +106,7 @@ else:
     req_zipcode = input(f'What zipcode do you want to get the weather for? ')
 
     display(weather(req_zipcode))
+
     
 
        
