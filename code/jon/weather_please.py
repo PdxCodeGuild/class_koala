@@ -94,6 +94,8 @@ req_zipcode = args.zipcode
 if args.zipcode:
     
     display(weather(req_zipcode))
+    print('-----------------------------------')
+    email_results(req_zipcode)
     
 else:
     name = input('What is your first name? ')
@@ -104,6 +106,7 @@ else:
     req_zipcode = input(f'What zipcode do you want to get the weather for? ')
 
     display(weather(req_zipcode))
+
     
 
        
