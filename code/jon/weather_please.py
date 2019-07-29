@@ -74,13 +74,27 @@ def display(info):
     now = datetime.now()
     current_time = now.strftime('%H:%M')
     weather = info[0]
-    current_temp = info[1]
+    current_temp = round(info[1])
     weather_summary = info[2]
     city = get_latlon(req_zipcode)[2]
 
-    print(f'\nCurrently at {current_time} in {city}, the weather is {weather}.\n')  
-    print(f'Summary for the week: {weather_summary}.\n')
-    print(f'Current temperature: {current_temp} degrees F.\n')
+    show_me_the_weather = (f'\nCurrently at {current_time} in {city}, the weather is {weather}.\nSummary for the week: {weather_summary}\nCurrent temperature: {current_temp} degrees F.\n')
+
+    # print(f'\nCurrently at {current_time} in {city}, the weather is {weather}.\n')
+    # print(f'Summary for the week: {weather_summary}.\n')
+    # print(f'Current temperature: {current_temp} degrees F.\n')
+    print(show_me_the_weather)
+    return show_me_the_weather
+
+# Place show_me_the_weather into a new text file
+def result_text():
+    result = display(weather(req_zipcode))
+    with open('weather.txt', 'w') as file:
+       file.write(result)
+
+# # Take weather.txt file and email it to my email address
+# def email_results():
+
 
 # Main
 req_zipcode = ''
@@ -94,8 +108,8 @@ req_zipcode = args.zipcode
 if args.zipcode:
     
     display(weather(req_zipcode))
-    print('-----------------------------------')
-    email_results(req_zipcode)
+    print('------------------------')
+    result_text()
     
 else:
     name = input('What is your first name? ')
