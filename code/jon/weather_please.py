@@ -64,7 +64,7 @@ def weather(zipcode):
     data = forecast.json
 
     # Extracts and stores the current summary of the weather (sunny, cloudy, rainy, partly cloudy, etc.), current temperature, what temperature it actually feels like and the weather summary for the day
-    wanted_data = [data['currently']['summary'], data['currently']['temperature'], data['currently']['apparentTemperature'], data['daily']['summary']]
+    wanted_data = [data['currently']['summary'], data['currently']['temperature'], data['daily']['summary']]
     
     return wanted_data
 
@@ -75,8 +75,7 @@ def display(info):
     current_time = now.strftime('%H:%M')
     weather = info[0]
     current_temp = info[1]
-    feels_temp = info[2]
-    weather_summary = info[3]
+    weather_summary = info[2]
     city = get_latlon(req_zipcode)[2]
 
     print(f'\nCurrently at {current_time} in {city}, the weather is {weather}.\n')  
