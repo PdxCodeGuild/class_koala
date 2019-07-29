@@ -1,6 +1,8 @@
 # filename: poliplotter.py
 
+import os # used to select the images to tweet
 import re # used to clean tweets
+import time # establishes intervals between tweets
 import tweepy # used in API authorization
 import numpy as np # used for reading the mask images
 from PIL import Image # also used for reading the mask images
@@ -25,8 +27,7 @@ def authenicator():
 def target_user():
     name = input("\nWithout including the @ symbol,\nPlease type the username of the requested account: ") # specifies target user
     tweetCount = int(input("How many tweets would you like to analyze? ")) # number of tweets to pull
-    mask = np.array(Image.open("img/trump_portrait.jpg")) # opens the image file, converts to a NumPy array and stores as the "mask" variable
-    return name, tweetCount, mask
+    return name, tweetCount
 
 def results(api, name, tweetCount):
     """gathers x number of tweets from the user and returns the results"""
@@ -59,6 +60,18 @@ def stopwords():
     stopwords.update(["amp", "will", "need", "much", "us", "Im", "cant", "going", "thats"])
     return stopwords
 
+def assign_mask(name):
+    """assigns corresponding mask based on Twitter user"""
+    user_image_dict = {"realdonaldtrump": "img/trump_portrait.jpg", "joebiden": "img/biden_flag.webp", "berniesanders": "img/bernie_flag.jpg", "senwarren": "img/warren_flag.jpeg", "kamalaharris": "img/kamala_flag.jpg", "petebuttigieg": "img/pete_flag.jpg"}
+    for user, user_image in user_image_dict.items():
+        if user == name:
+            image_loc = user_image
+    if name not in user_image_dict:
+        print(f"\nWe're sorry. There is either no available image for '{name}' or '{name}' is not a valid Twitter user. Please try again.\n")
+        quit()
+    mask = np.array(Image.open(image_loc)) # opens the image file, converts to a NumPy array and stores as the "mask" variable
+    return mask
+
 def wordcloud(word_string, stopwords):
     """creates the wordcloud object"""
     try:
@@ -78,11 +91,12 @@ def show(mask, wc):
 
 if __name__ == '__main__':
     api = authenicator()
-    name, tweetCount, mask = target_user()
+    name, tweetCount = target_user()
     results = results(api, name, tweetCount)
     tweet_string = compiler(results)
     clean_tweets = clean_tweet(tweet_string)
     word_string = string_prep(clean_tweets)
     stopwords = stopwords()
+    mask = assign_mask(name)
     wc = wordcloud(word_string, stopwords)
     show(mask, wc)
