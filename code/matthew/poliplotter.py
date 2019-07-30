@@ -1,18 +1,19 @@
 # filename: poliplotter.py
 
 import re # used to clean tweets
-import tweepy # used in API authorization
-import numpy as np # used for reading the mask images
-from PIL import Image # also used for reading the mask images
+import tweepy # used in API authorization and uploading to bot
+import datetime # used for inserting day of the week into status
+import numpy as np # used for interpreting the mask images
+from PIL import Image # used to open the mask images
 from textblob import TextBlob # used to parse individual words
-import matplotlib.pyplot as plt # used to help plot word cloud
+import matplotlib.pyplot as plt # used to help plot word cloud and save image to file
 from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator # used to generate word cloud and remove stopwords
 
 # ***** AUTHENTICATION *****
-# ***** HIDDEN FOR SECURITY*****
+# ***** HIDDEN FOR SECURITY *****
 
 def authenicator():
-    """creates the authenication object, sets access token and secret, then creates the tweepy API object to fetch tweets"""
+    """creates the authenication object, sets access token and secret, then creates the tweepy API object to fetch and upload tweets"""
     try:
         auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
         auth.set_access_token(access_token, access_token_secret)
@@ -23,9 +24,11 @@ def authenicator():
     return api
 
 def target_user():
-    name = input("\nWithout including the @ symbol,\nPlease type the username of the requested account: ") # specifies target user
-    tweetCount = int(input("How many tweets would you like to analyze? ")) # number of tweets to pull
-    status = f"Hello World! Here's how @{name} spent the past week on Twitter!"
+    """accepts two inputs from user and sets tweet status"""
+    name = input("\nWithout including the @ symbol,\nPlease type the username of the requested account: ")
+    tweetCount = int(input("How many tweets would you like to analyze? "))
+    day_of_week = datetime.date.today().strftime("%A")
+    status = f"Happy {day_of_week}! Here's how @{name} spent the past week on Twitter!"
     return name, tweetCount, status
 
 def results(api, name, tweetCount):
@@ -81,8 +84,8 @@ def wordcloud(word_string, stopwords):
         quit()
 
 def save(mask, wc):
-    """saves the generated image"""
-    image_colors = ImageColorGenerator(mask) # create color from image
+    """creates color from the image, sets size and other image features, then saves the generated image"""
+    image_colors = ImageColorGenerator(mask)
     plt.figure(figsize=[16,9])
     plt.imshow(wc.recolor(color_func=image_colors), interpolation="bilinear")
     plt.axis("off")
@@ -99,4 +102,4 @@ if __name__ == '__main__':
     mask = assign_mask(name)
     wc = wordcloud(word_string, stopwords)
     save(mask, wc)
-    api.update_with_media("poliplotpics/poliplotpic.png", status)
+    api.update_with_media("poliplotpics/poliplotpic.png", status) # sends status and word cloud image to Twitter bot
