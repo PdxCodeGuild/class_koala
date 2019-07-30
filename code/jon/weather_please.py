@@ -53,12 +53,12 @@ def get_latlon(zipcode):
 
 # Gets the weather from the Dark Sky API using the Lat/Lon from get_latlon()
 def weather(zipcode):
-    api_key = "5f96bbce0e67b37965b9ef3af8b32ceb"
+    weather_api = "5f96bbce0e67b37965b9ef3af8b32ceb"
     weather_latitude = get_latlon(req_zipcode)[0]
     weather_longitude = get_latlon(req_zipcode)[1]
     print(f'Latitude: {weather_latitude}')
     print(f'Longitude: {weather_longitude}')
-    forecast = forecastio.load_forecast(api_key, weather_latitude, weather_longitude, units='us')
+    forecast = forecastio.load_forecast(weather_api, weather_latitude, weather_longitude, units='us')
     
     # Stores the weather information from the darksky API as a JSON file
     data = forecast.json
