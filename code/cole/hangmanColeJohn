@@ -1,0 +1,145 @@
+#hangmanColeJohn
+
+import os
+import random
+
+f = open("english.txt")
+contents = f.read()
+def createHangman(int):
+    if int == 0:
+        print("  _______\n  |     |\n        |\n        |\n        |\n        |\n       ___")
+    elif int == 1:
+        print("  _______\n  |     |\n  O     |\n        |\n        |\n        |\n       ___")
+    elif int == 2:
+        print("  _______\n  |     |\n  O     |\n  |     |\n        |\n        |\n       ___")
+    elif int == 3:
+        print("  _______\n  |     |\n  O     |\n -|     |\n        |\n        |\n       ___")
+    elif int == 4:
+        print("  _______\n  |     |\n  O     |\n--|     |\n        |\n        |\n       ___")
+    elif int == 5:
+        print("  _______\n  |     |\n  O     |\n--|-    |\n        |\n        |\n       ___")
+    elif int == 6:
+        print("  _______\n  |     |\n  O     |\n--|--   |\n        |\n        |\n       ___")
+    elif int == 7:
+        print("  _______\n  |     |\n  O     |\n--|--   |\n /      |\n        |\n       ___")
+    elif int == 8:
+        print("  _______\n  |     |\n  O     |\n--|--   |\n_/      |\n        |\n       ___")
+    elif int == 9:
+        print("  _______\n  |     |\n  O     |\n--|--   |\n_/ \    |\n        |\n       ___")
+    elif int == 10:
+        print("  _______\n  |     |\n  O     |\n--|--   |\n_/ \_   |\n        |\n       ___")
+
+def answerCheck(input, word):
+    i = word.count(input)
+    if i == 0:
+        return False
+    else:
+        return True
+
+def displayUpdate(input, word, display):
+    indexes = []
+    i = 0
+    for letter in word:
+        if letter == input:
+            x = word.find(input, i)
+            indexes.append(x)
+            i = x + 1
+    list1 = display.split(" ")
+    for num in indexes:
+        list1.insert(num, input)
+        list1.pop(num+1)
+    j = len(list1)-1
+    list1.reverse()
+    display = ""
+    while j > 0:
+        display += list1[j]
+        display += " "
+        j -= 1
+    return display
+
+def checkVictory(word, display):
+    display = display.replace(" ", "")
+    if display == word:
+        return True
+
+def checkUsed(input, pastInput):
+    i = pastInput.count(input)
+    if i == 0:
+        return False
+    else:
+        return True
+
+def generateWord(contents):
+    i = 0
+    wordList = contents.split("\n")
+    while i == 0:
+        word = random.choice(wordList)
+        if len(word) >= 5:
+            return word
+            break
+        else:
+            continue
+victory = False
+used = False
+again = "yes"
+while again == "yes":
+    incorrect = 0
+    pastInput = []
+    os.system("cls||clear")
+    print("_______________________\n\n| Welcome to Hangman! |\n_______________________")
+    players = input("How many players?(1/2)\n")
+    if players == "2":
+        word = input("Player 2 look way from the screen.\nPlayer 1 enter a word.\n")
+    elif players == "1":
+        word = generateWord(contents)
+    else:
+        continue
+    word = word.lower()
+    display = "_ "*len(word)
+    while incorrect < 10:
+        os.system("cls||clear")
+        createHangman(incorrect)
+        print(display)
+        print(f"You've guessed {pastInput}")
+        prevDisplay = display
+        if players == "2":
+            guess = input("Player 2 guess a letter.\n")
+        else:
+            guess = input("Guess a letter.\n")
+        if len(guess) > 1:
+            print("One letter at a time please.")
+            input("Press Enter to conitnue")
+            continue
+        guess = guess.lower()
+        used = checkUsed(guess, pastInput)
+        if used == False:
+            inWord = answerCheck(guess, word)
+            if inWord == True:
+                display = displayUpdate(guess, word, display)
+            else:
+                incorrect += 1
+        else:
+            print("You already guessed that!")
+            input("Press Enter to conitnue")
+            continue
+        victory = checkVictory(word, display)
+        pastInput.append(guess)
+
+        if victory == True:
+            break
+    os.system("cls||clear")
+    createHangman(incorrect)
+    if players == "2":
+        if victory == True:
+            print("Player 2 Wins!")
+        else:
+            print("Player 1 Wins!")
+    else:
+        if victory == True:
+            print("You Win!")
+        else:
+            print("You Lose!")
+    print(f"The word was {word}.")
+    again = input("Do you want to play again? (yes/no)\n")
+f.close()
+os.system("cls||clear")

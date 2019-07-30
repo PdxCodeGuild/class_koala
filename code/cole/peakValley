@@ -1,0 +1,40 @@
+#peakValley
+
+def listify(string):                #turns a string of numbers in to a list of ints
+    intList = list(string.split(" "))
+    intList = [int(x) for x in intList]
+    return intList
+
+def peak(list):
+    peaks = []
+    i = 1
+    while i < len(list)-1:
+        if list[i] > list[i+1] and list[i] > list[i-1]:
+            peaks.append(i)
+        i+=1
+    return peaks
+
+def valley(list):
+    valleys = []
+    i = 1
+    while i < len(list)-1:
+        if list[i] < list[i+1] and list[i] < list[i-1]:
+            valleys.append(i)
+        i+=1
+    return valleys
+
+def listCombiner(list1, list2):
+    combinedList = []
+    for item in list1:
+        combinedList.append(item)
+    for item in list2:
+        combinedList.append(item)
+    combinedList.sort()
+    return combinedList
+
+
+data = listify(input("enter a list of numbers\n"))
+peaks = peak(data)
+valleys = valley(data)
+peaksAndValleys = listCombiner(peaks, valleys)
+print(f"data: {data}\npeaks: {peaks}\nvalleys: {valleys}\nboth: {peaksAndValleys}")

@@ -18,15 +18,32 @@ Labor Day -- September 2nd, 2019
 
 ## Python Labs Assigned:
 
-Lab 09  
-Lab 10  
-Lab 11  
-Lab 15  
-Lab 19  
-Lab 17  
-Lab 20  
-Lab 13  
-Lab 14  
+Lab 09 Unit Converter  
+Lab 10 Average Numbers  
+Lab 11 Simple Calc  
+Lab 15 Num to Phrase  
+Lab 19 Blackjack  
+Lab 17 Palindrome/Anagram  
+Lab 20 CC Validation  
+Lab 13 ROT13  
+Lab 14 Pick 6  
+Lab 22 ARI  
+Lab 18 Peaks and Valleys  
+Mob - Jackalope  
+Lab 16 Image Manipulation  
+Lab 23 Contact List  
+Lab 21 Count Words  
+Lab 25 ATM  
+Lab 26 Tic Tac Toe  
+
+Python Project: Mini presentations first thing 7/30  
+
+#### Optional Python Labs
+
+Practice 1-5  
+Lab 24 Rain Data  
+Lab 27 Connect Four  
+Optional Labs -- LCR, APR, Crime Data, Road Trip, Sock Sorter, Tree  
 
 ## Student Presentations
 
