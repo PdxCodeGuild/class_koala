@@ -14,6 +14,8 @@ from email.mime.text import MIMEText
         - Still need to implement an email function:
             - needs to take results of display() and save it into a file
             - take that file and email it to me
+            - NOTE: I'm able to create the output into a file, but the file is coming back
+              as empty when emailed.
 """
 
 
