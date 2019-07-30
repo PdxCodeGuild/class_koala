@@ -1,6 +1,6 @@
 def load_list():
     with open('contactlist.csv', 'r') as file:
-        lines = file.read().split() #turns all lines in the csv and it's contects into a list   
+        lines = file.read().split() #turns all lines in the csv and it's contents into a list   
         dict_list = [] #blank list
         header = lines[0].split(',') #puts the first line of the csv into a header
     for i in range(1, len(lines)):

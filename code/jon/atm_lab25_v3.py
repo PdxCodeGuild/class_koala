@@ -18,9 +18,12 @@ class Atm:
         return False
 
     def withdraw(self, amount):
-        self.balance -= float(amount)
-        self.transactions.append(f'User withdrew ${amount}.')
-        print(f'User withdrew ${amount}')
+        if self.check_withdrawal(True):
+            self.balance -= float(amount)
+            self.transactions.append(f'User withdrew ${amount}.')
+            print(f'User withdrew ${amount}')
+        else:
+            print(f'Sorry!  You don\'t have enough to cover that withdrawal.')
 
     def print_transactions(self):
         result = self.transactions
@@ -35,10 +38,11 @@ print(f'Withdraw')
 print(f'History')
 print(f'Exit')
 
+atm = Atm()
 while True:
     choice = input(f'\nWhat would you like to do? ').lower()
 
-    atm = Atm()
+    # atm = Atm()
     if choice == 'exit':
         print('Thanks for using the ATM!')
         break
