@@ -2,12 +2,8 @@ import forecastio
 import requests
 import os
 import argparse
-import email,smtplib, ssl
+import secrets
 from datetime import datetime
-from email import encoders
-from email.mime.base import MIMEBase
-from email.mime.multipart import MIMEMultipart
-from email.mime.text import MIMEText
 
 """
     To-Do:
@@ -39,7 +35,7 @@ def header():
 
 # Gets latitude and longitude of the zipcode
 def get_latlon(zipcode):
-    map_api = 'VhicHGxyitNwdtTPZFczl8z9TeeM0voN'
+    map_api = secrets.map_api
     map_url = 'http://www.mapquestapi.com/geocoding/v1/address?key=' + map_api + '&location=' + str(zipcode)
 
     # Retrieves the info from the mapquest API
@@ -58,12 +54,12 @@ def get_latlon(zipcode):
 
 # Gets the weather from the Dark Sky API using the Lat/Lon from get_latlon()
 def weather(zipcode):
-    api_key = "5f96bbce0e67b37965b9ef3af8b32ceb"
+    weather_api = secrets.weather_api
     weather_latitude = get_latlon(req_zipcode)[0]
     weather_longitude = get_latlon(req_zipcode)[1]
     print(f'Latitude: {weather_latitude}')
     print(f'Longitude: {weather_longitude}')
-    forecast = forecastio.load_forecast(api_key, weather_latitude, weather_longitude, units='us')
+    forecast = forecastio.load_forecast(weather_api, weather_latitude, weather_longitude, units='us')
     
     # Stores the weather information from the darksky API as a JSON file
     data = forecast.json
@@ -83,66 +79,10 @@ def display(info):
     weather_summary = info[2]
     city = get_latlon(req_zipcode)[2]
 
-    show_me_the_weather = (f'\nCurrently at {current_time} in {city}, the weather is {weather}.\nSummary for the week: {weather_summary}\nCurrent temperature: {current_temp} degrees F.\nSending you an email as well!')
+    show_me_the_weather = (f'\nCurrently at {current_time} in {city}, the weather is {weather}.\nSummary for the week: {weather_summary}\nCurrent temperature: {current_temp} degrees F.\n')
 
-    # print(f'\nCurrently at {current_time} in {city}, the weather is {weather}.\n')
-    # print(f'Summary for the week: {weather_summary}.\n')
-    # print(f'Current temperature: {current_temp} degrees F.\n')
     print(show_me_the_weather)
     return show_me_the_weather
-
-# Place show_me_the_weather into a new text file
-def result_text():
-    result = display(weather(req_zipcode))
-    with open('weather.txt', 'w') as file:
-       file.write(result)
-
-# # Take weather.txt file and email it to my email address
-def email_results():
-    subject = 'Here is your weather report'
-    body = 'This is an email with attachement sent from Python'
-    sender_email = 'codeguildprogrammer@gmail.com'
-    receiver_email = 'jon@jonbascos.com'
-    
-    # Creating a multipart message and headers
-    message = MIMEMultipart()
-    message['From'] = sender_email
-    message['To'] = receiver_email
-    message['Subject'] = subject
-    
-    # Add body to email
-
-    message.attach(MIMEText(body, 'plain'))
-
-    filename = 'weather.txt'
-
-    with open(filename, 'rb') as attachment:
-        part = MIMEBase('application', 'octet-stream')
-        part.set_payload(attachment.read())
-
-    # Encode file in ASCII characters to send by email
-    encoders.encode_base64(part)
-
-    #Add header as key/value pair to attachment part
-    part.add_header(
-        'Content-Disposition',
-        f'attachment; filename = {filename}',
-    )
-
-    # Add attachment to message and convert message to string
-    message.attach(part)
-    text = message.as_string()
-
-    # Log-in, attach and send email
-    port = 465 # For SSL
-    context = ssl.create_default_context()
-    
-    with smtplib.SMTP_SSL('smtp.gmail.com', port, context = context) as server:
-        server.login(sender_email, 'p@ssword1234')
-        server.sendmail(sender_email, receiver_email, text)
-
-    print('Email Sent')
-
 
 # Main
 req_zipcode = ''
@@ -156,7 +96,6 @@ req_zipcode = args.zipcode
 if args.zipcode:
     
     display(weather(req_zipcode))
-    email_results()
     
 else:
     name = input('What is your first name? ')
@@ -167,8 +106,3 @@ else:
     req_zipcode = input(f'What zipcode do you want to get the weather for? ')
 
     display(weather(req_zipcode))
-    email_results()
-
-    
-
-       
