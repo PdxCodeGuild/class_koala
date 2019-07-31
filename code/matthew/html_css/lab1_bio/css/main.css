@@ -1,0 +1,27 @@
+/** FULL PAGE **/
+
+body {
+  background-color: lightblue;
+}
+
+
+/** HEADER **/
+
+h1 {
+  font-family: fantasy;
+}
+
+
+/** MAIN **/
+
+.places {
+  margin: 30px 0;
+}
+
+
+/** FOOTER **/
+
+footer {
+  font-family: monospace;
+  font-size: 11px;
+}

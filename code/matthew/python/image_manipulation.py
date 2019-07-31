@@ -5,7 +5,7 @@ img = Image.open("lena.png") # opens image and stores as "img"
 width, height = img.size # stores width and height accordingly
 pixels = img.load() # stores pixel data in "pixels"
 
-# cycles through each pixel, unpacking into rgb, converting into greyscale accordingly and then repacking
+# cycles through each pixel, unpacks into rgb, converts into greyscale accordingly and then repacks
 for i in range(width):
     for j in range(height):
         r, g, b = pixels[i, j]

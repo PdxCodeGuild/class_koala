@@ -2,6 +2,7 @@
 
 import re # used to clean tweets
 import tweepy # used in API authorization and uploading to bot
+import secrets # used for Twitter APIs
 import datetime # used for inserting day of the week into status
 import numpy as np # used for interpreting the mask images
 from PIL import Image # used to open the mask images
@@ -9,14 +10,11 @@ from textblob import TextBlob # used to parse individual words
 import matplotlib.pyplot as plt # used to help plot word cloud and save image to file
 from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator # used to generate word cloud and remove stopwords
 
-# ***** AUTHENTICATION *****
-# ***** HIDDEN FOR SECURITY *****
-
 def authenicator():
     """creates the authenication object, sets access token and secret, then creates the tweepy API object to fetch and upload tweets"""
     try:
-        auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
-        auth.set_access_token(access_token, access_token_secret)
+        auth = tweepy.OAuthHandler(secrets.consumer_key, secrets.consumer_secret)
+        auth.set_access_token(secrets.access_token, secrets.access_token_secret)
         api = tweepy.API(auth)
     except:
         print("\nError: Authentication Failed\n")
