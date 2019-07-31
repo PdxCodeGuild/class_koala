@@ -1,8 +1,18 @@
 body {
     text-align: center;
-    background-color: teal;
+    background-color: #145c5c;
     font-size: 1.5em;
     color: #c5c1c1;
+}
+
+footer {
+    padding: 20px;
+    background-color: black;
+}
+
+aside {
+    float: right;
+    border-left
 }
 
 p {
@@ -12,13 +22,20 @@ p {
 }
 
 a {
-    color: rgb(115, 146, 4);
+    color: #739204;
 }
 
 img {
     width: 500px;
     height: 500px;
     border-radius: 50%;
+    padding: 10px 0;
+}
+
+hr{
+    width: 700px;
+    height: 5px;
+    background-color: #1724da;
 }
 
 h2 {
@@ -28,7 +45,7 @@ h2 {
 .bio_picture {
     float: left;
     width: 150px;
-    height: 150px;
+    height: 200px;
     border-radius: 25%;
     display: block;
     padding: 10px;
@@ -38,6 +55,35 @@ quote {
     font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
-ul {
+.lived {
     list-style-type: circle;
+    text-align: justify;
+}
+
+main {
+    width: 75%;
+    height: 100%;
+}
+
+section {
+    margin-top: 50px;
+    margin-right: 10px;
+    padding: 5px;
+    background-color: #696767;
+    text-align: left;
+    width: 25%;
+    height: 100%;
+    float: right;
+}
+
+section ul {
+    font-size: 1em;
+    list-style-type: none;
+    padding: 5px;
+    line-height: 30px;
+}
+
+#patrick_bio {
+    text-align: center;
+    color: #1724da;
 }
