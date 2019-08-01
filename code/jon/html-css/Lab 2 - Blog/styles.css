@@ -1,0 +1,96 @@
+/*
+    colors:
+        #ececec
+        #9fd3c7
+        #385170
+        #142d4c
+    Fonts:
+        font-family: 'Spectral SC', serif;
+        font-family: 'Poppins', sans-serif;
+*/
+
+* {
+    box-sizing:border-box;
+}
+
+.clear:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+body {
+    color:#9fd3c7;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header {
+    background-color: #142d4c;
+    margin: auto;
+}
+
+h1, h2, h3 {
+    font-family: 'Spectral SC', serif;
+}
+
+ul a {
+    text-decoration: none;
+    color: red;
+}
+
+.profile-picture {
+    padding: 10px;
+    margin: auto;
+    border-radius: 20%;
+    display: block;
+    width: 200px;
+    height: 200px;
+}
+
+#name_title {
+    text-align: center;
+}
+
+
+nav ul {
+    list-style: none;
+    margin-right: 30px;
+    padding-bottom: 10px;
+}
+
+nav ul li {
+    border-bottom: 1px dashed black;
+    /* width: 45%; */
+    text-align: center;
+    margin: auto;
+    padding: 15px 0;
+    float: left;
+}
+
+footer {
+    text-align: center;
+}
+
+/********** Blogs ********/
+
+.blog-container {
+    background-color:#ececec;
+    margin: 10px;
+}
+
+.blog-heading {
+    text-decoration: underline;
+    margin-left: 10px;
+    padding-top: 20px;
+}
+
+.blog-post {
+    padding: 20px;
+
+}
+
+hr {
+    width: 75%;
+    height: 2px;
+    background-color: #142d4c;
+}
