@@ -1,5 +1,12 @@
 /* color: rgb(24, 149, 153); */
 
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   background-image: url("https://media.giphy.com/media/1AeAt980lm4GUndEG6/giphy.gif");
@@ -11,6 +18,19 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   font-family: cursive;
+  margin: 12px;
+}
+
+table {
+  margin: auto;
+}
+
+hr {
+  width: 320px;
+}
+
+q {
+  margin: 48px;
 }
 
 .red-text {
@@ -24,9 +44,10 @@ p {
 .header {
   margin: 24px auto 36px;
   border: 5px dashed coral;
-  width: 50%;
+  width: 320px;
   padding: 12px;
   text-align: center;
+  color: white;
 }
 
 #silly-paragraph {
@@ -54,6 +75,50 @@ body > h3 {
   border: 1px solid red;
 }
 
-p.red-text * {
+.box {
+  margin: 36px;
+  padding: 12px;
+  background-color: blanchedalmond;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.two-column {
+  background-color: rgba(255,255,255,.5);
+}
+
+@media (min-width: 768px) {
+
+  .header {
+    width: 680px;
+  }
+  
+  .two-column {
+    width: calc(50% - 24px);
+    margin: 12px;
+    float: left;
+  }
+
+}
+
+@media (min-width: 1024px) {
+  
+  .header {
+    width: 960px;
+  }
+
+  .two-column {
+    width: calc(33% - 24px);
+  }
 
 }
