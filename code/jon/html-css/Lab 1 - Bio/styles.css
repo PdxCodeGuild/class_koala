@@ -58,6 +58,7 @@ quote {
 .lived {
     list-style-type: circle;
     text-align: justify;
+    padding-bottom: 10px;
 }
 
 main {
