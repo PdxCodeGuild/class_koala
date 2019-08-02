@@ -37,14 +37,14 @@ h2 {
 }
 
 h3 {
-  font-size: 22px;
-  margin: 0;
+  font-size: 20px;
+  margin: 0 5.5%;
   padding: 35px 0 2.5px;
   text-align: center;
 }
 
 h4 {
-  font-size: 18px;
+  font-size: 15px;
 }
 
 p {
@@ -123,8 +123,8 @@ nav ul {
 
 #header-text h1 {
   color: #3264A6;
-  font-size: 36px;
-  margin: 0;
+  font-size: 30px;
+  margin: 0 5.5%;
 }
 
 #header-text h4 {
@@ -161,14 +161,50 @@ nav ul {
 
 /* ABOUT */
 
-#about-image img {
-  border-radius: 100%;
-  display: block;
-  padding: 25px;
-  margin: auto;
-  width: 75%;
+#about h2 {
+  padding-top: 40px;
 }
 
+#about h2,
+#follow h2,
+#recent h2 {
+  margin: 0 5.5%;
+  text-align: left;
+}
+
+#about .hr-sections,
+#follow .hr-sections,
+#recent .hr-sections {
+  margin: 8px 5.5% 8px
+}
+
+#about-image img {
+  display: block;
+  padding: 15px 0;
+  width: 100%;
+}
+
+/* FOLLOW */
+
+#icons {
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.fab {
+  padding: 20px;
+  font-size: 20px;
+}
+
+#icons a,
+#icons a:visited {
+  color: black;
+}
+
+#icons a:hover {
+  color: #BF6C3B;
+}
 
 
 /* FOOTER */
