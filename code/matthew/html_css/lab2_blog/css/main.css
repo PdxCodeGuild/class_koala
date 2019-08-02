@@ -1,5 +1,14 @@
 /* FULL PAGE */
 
+/* Color Scheme: */
+/* h1 {
+  color: #3264A6;
+  color: #7394BF;
+  color: #BFCDD9;
+  color: #F2D0A7;
+  color: #BF6C3B;
+} */
+
 html {
     box-sizing: border-box;
   }
@@ -9,16 +18,171 @@ html {
 
 /* BODY */
 
+/* body {
+  margin-top: 75px;
+} */
+
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Lora', serif;
+  font-family: 'Crimson Text', serif;
+  font-weight: normal;
+  letter-spacing: 1.5px;
+}
+
+h2 {
+  font-size: 16px;
+  letter-spacing: 4px;
+  margin: 0;
+  padding: 50px 0 1px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 22px;
+  margin: 0;
+  padding: 20px 0 2.5px;
+  text-align: center;
+}
+
+h4 {
+  font-size: 18px;
+  font-style: italic;
 }
 
 p {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Raleway', sans-serif;
+  font-size: 13px;
+  letter-spacing: 2.5px;
+  line-height: 25px;
+}
+
+img {
+  vertical-align: middle;
+  width: 100%;
+}
+
+.hr-sections {
+  border-top: 1px solid #3264A6;
+  width: 40px;
+}
+
+.wrap {
+  margin: 0 8%;
+  text-align: center;
+}
+
+/* HEADER */
+
+header {
+  margin: auto;
+  text-align: center;
+}
+
+nav {
+  background: linear-gradient(rgba(191, 205, 217, 0.15), rgba(191, 205, 217, 0.15)), linear-gradient(white, white);
+  border-bottom: 1px solid #3264A6;
+  text-align: center;
+  /* position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; */
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 5px 0;
+}
+
+.nav-links {
+  display: inline-block;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.nav-links a {
+  color: black;
+  padding: 20px 20px;
+  text-decoration: none;
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  letter-spacing: 2.5px;
+  line-height: 24px;
+}
+
+.nav-links a:hover {
+  color: #BF6C3B;
+}
+
+.nav-links a:visited {
+  color: none;
+}
+
+#header-text {
+  padding: 45px 0;
+}
+
+#header-text h1 {
+  color: #3264A6;
+  font-size: 36px;
+  margin: 0;
+}
+
+#header-text h4 {
+  margin: 10px 0 0;
+}
+
+/* BANNER */
+
+
+/* BLOGS */
+
+.publish-date {
+  color: grey;
+  font-size: 12.5px;
+  font-style: italic;
+  margin: 0;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.blog-image {
+  padding-bottom: 10px;
+}
+
+.hr-blogs {
+  border: 1px solid rgba(191, 107, 59, 0.2);
+  margin: 50px auto 25px;
+  width: 50%;
+}
+
+
+/* ABOUT */
+
+#about-image img {
+  border-radius: 100%;
+  display: block;
+  padding: 25px;
+  margin: auto;
+  width: 75%;
 }
 
 
 
+/* FOOTER */
+
+footer {
+  background-color: rgba(191, 205, 217, 0.15);
+  border-top: 1px solid #3264A6;
+  margin: 100px auto 0;
+  padding: 50px 0;
+  text-align: center;
+}
+
+footer p {
+  font-size: 10px;
+  letter-spacing: 3px;
+  margin: 0 auto;
+}
 
 
 /* MEDIA QUERIES */
