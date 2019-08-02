@@ -1,9 +1,13 @@
-
 /* FULL PAGE */
 
-a {
-  color: aqua;
+html {
+  box-sizing: border-box;
 }
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* BODY */
 
 body {
   background-image: url("../img/evenfall.jpg");
@@ -15,8 +19,18 @@ body {
   text-shadow: 2px 2px black;
 }
 
+.hr-small {
+  width: 60%;
+  margin: 30px auto;
+}
+
 hr {
   margin: 30px;
+}
+
+a {
+  color: rgba(0, 255, 255, 0.685);
+  text-decoration-color: white;
 }
 
 /* HEADER */
@@ -84,8 +98,7 @@ footer {
 
 footer img {
   display: block;
-  margin: 0 auto;
-  padding: 20px;
+  margin: 20px auto;
   transition: width 2s;
   width: 25px;
 }
