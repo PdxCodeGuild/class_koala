@@ -1,4 +1,4 @@
-lastname,firstname,gender,house,year
+last_name,first_name,gender,house,year
 vane,romilda,female,gryffindor,1
 creevey,colin,male,gryffindor,2
 lovegood,luna,female,ravenclaw,2
@@ -59,3 +59,4 @@ clearwater,penelope,female,ravenclaw,7
 flint,marcus,male,slytherin,7
 weasley,percy,male,gryffindor,7
 wood,oliver,male,gryffindor,7
+hughes,matthew,male,gryffindor,5

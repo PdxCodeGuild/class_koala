@@ -1,0 +1,108 @@
+/*
+    colors:
+        #ececec
+        #9fd3c7
+        #385170
+        #142d4c
+    Fonts:
+        font-family: 'Spectral SC', serif;
+        font-family: 'Poppins', sans-serif;
+*/
+
+* {
+    box-sizing:border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.clear:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+body {
+    color:#9fd3c7;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header {
+    background-color: #142d4c;
+    margin: auto;
+   
+}
+
+h1, h2, h3 {
+    font-family: 'Spectral SC', serif;
+}
+
+a {
+    text-decoration: none;
+    color: red;
+}
+
+.profile-picture {
+    padding: 10px;
+    margin: auto;
+    border-radius: 20%;
+    display: block;
+    width: 200px;
+    height: 200px;
+}
+
+#name_title {
+    text-align: center;
+}
+
+
+nav ul {
+    list-style: none;
+    margin-right: 30px;
+    padding-bottom: 10px;
+}
+
+nav ul li {
+    border-bottom: 1px dashed black;
+    width: 45%;
+    text-align: center;
+    margin: auto;
+    padding: 15px 0;
+}
+
+footer {
+    text-align: center;
+    background-color: black;
+    padding: 20px;
+}
+
+/********** Blogs ********/
+
+.blog-container {
+    background-color:#ececec;
+    height: 100%;
+}
+
+.blog-heading, .blog-date {
+    color: #385170;
+    margin-left: 10px;
+    padding-top: 20px;
+}
+
+.blog-post {
+    padding: 20px;
+    line-height: 1.5em;
+}
+
+.read-more {
+    border: 2px solid teal;
+    width: 120px;
+    padding: 5px 5px 5px 15px;
+    margin-top: 20px;
+}
+
+hr {
+    margin: 10px auto;
+    width: 75%;
+    height: 2px;
+    background-color: #142d4c;
+}
