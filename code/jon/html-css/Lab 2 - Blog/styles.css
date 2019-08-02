@@ -15,10 +15,20 @@
     margin: 0;
 }
 
+*:before,
+*:after {
+ box-sizing: border-box;
+}
+
 .clear:after {
     content: "";
     display: table;
     clear: both;
+  }
+
+  .container {
+      margin: auto;
+      max-width: 1224px;
   }
 
 body {
@@ -30,7 +40,7 @@ body {
 .header {
     background-color: #142d4c;
     margin: auto;
-   
+    width: 100%;
 }
 
 h1, h2, h3 {
@@ -44,7 +54,6 @@ a {
 
 li > a:hover {
     color: yellow;
-    font-size: 1.5em;
 }
 
 .profile-picture {
@@ -52,12 +61,13 @@ li > a:hover {
     margin: auto;
     border-radius: 50%;
     display: block;
-    width: 200px;
-    height: 200px;
+    width: 175px;
+    height: 175px;
 }
 
 #name_title {
     text-align: center;
+    line-height: 1.5;
 }
 
 nav ul {
@@ -76,11 +86,35 @@ nav ul li {
     padding: 15px 0;
 }
 
+.learning {
+    background-color: #142d4c;
+    margin-top: 20px;
+    padding-left: 10px;
+    text-align: center;
+}
+
+.learning ul {
+    margin-top: 5px;
+    line-height: 2;
+    text-align: center;
+    list-style: none;
+}
+
+.learning ul li a:hover{
+    text-decoration: underline;
+}
+
 footer {
     text-align: center;
     background-color: #142d4c;
-    padding: 20px;
+    padding-top: 20px;
+    width: 100%;
 }
+
+.copyright {
+    margin-top: 20px;
+}
+
 
 /********** Social Media ********/
 .social-media {
@@ -115,9 +149,13 @@ footer {
 }
 /********** Blogs ********/
 
+section {
+    margin-left: 10px;
+}
 .blog-container {
     background-color:#ececec;
     height: 100%;
+    width: 100%;
 }
 
 .blog-heading, .blog-date {
@@ -127,7 +165,7 @@ footer {
 }
 
 .blog-post {
-    padding: 20px;
+    padding: 30px;
     line-height: 1.5em;
 }
 
@@ -143,4 +181,54 @@ hr {
     width: 75%;
     height: 2px;
     background-color: #142d4c;
+}
+
+/****** Media Queries ******/
+
+@media screen and (min-width: 640px) {
+
+    .header, .blog-container {
+        float: left;
+    }
+
+    .header {
+        width: 20%;
+        max-width: 200px;
+        height: 100%;
+        padding: 0 5px 0 0;
+        /* margin-right: 5px; */
+        /* position: fixed; */
+    }
+
+    .blog-container {
+        width: 60%;
+        /* margin: auto; */
+        margin-bottom: 50px;
+    }
+
+}
+
+@media screen and (min-width: 960px) {
+    .container {
+        width: 80%;
+    }
+    .header {
+        width: 20%;
+        max-width: 200px;
+        height: 100%;
+        padding: 0 5px 0 0;
+        /* margin-right: 5px; */
+        /* position: fixed; */
+    }
+
+    .blog-container {
+        width: 60%;
+        /* margin: auto; */
+        margin-bottom: 50px;
+    }
+
+    .learning {
+        width: 20%;
+        float: right;
+    }
 }
