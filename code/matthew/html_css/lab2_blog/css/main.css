@@ -110,7 +110,7 @@ nav ul {
 }
 
 #header-text {
-  padding: 70px 0;
+  padding: 75px 0;
 }
 
 /* main header title */
@@ -157,7 +157,7 @@ h3 {
   border-bottom: 1px solid #3264A6;
   font-family: 'Montserrat', sans-serif;
   letter-spacing: 1.5px;
-  margin: 40px auto 0;
+  margin: 45px auto 0;
   padding: 5px 10px;
   text-align: center;
   width: 150px;
@@ -297,9 +297,40 @@ footer p {
 
 
 @media (min-width: 768px) {
+  .center-wrap,
+  #about h2,
+  #follow h2,
+  #recent h2 {
+    margin: 0 12.5%;
+  }
 
-}
+  #about .hr-sections,
+  #follow .hr-sections,
+  #recent .hr-sections {
+    margin: 8px 12.5% 8px;
+  }
+
+  .thumbs { 
+    height: 100px;
+    margin-right: 25px;
+    padding: 0;
+    width: 100px;
+  }
+  
+  .recent-articles h3 {
+    font-size: 22px;
+    margin-top: 32px;
+  }
+  
+  .recent-articles p {
+    font-size: 16px;
+  }
+
+} 
 
 @media (min-width: 1024px) {
-  
+  main {
+    margin: 0 125px;
+  }
+
 }
