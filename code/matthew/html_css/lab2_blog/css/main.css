@@ -1,13 +1,13 @@
-/* FULL PAGE */
-
 /* Color Scheme: */
-/* h1 {
-  color: #3264A6;
-  color: #7394BF;
-  color: #BFCDD9;
-  color: #F2D0A7;
-  color: #BF6C3B;
-} */
+/* color: #3264A6;
+   color: #7394BF;
+   color: #BFCDD9;
+   color: #F2D0A7;
+   color: #BF6C3B; */
+
+
+/***** FULL PAGE *****/
+
 
 html {
     box-sizing: border-box;
@@ -22,11 +22,13 @@ html {
   clear: both;
 }
 
-/* BODY */
 
-/* body {
-  margin-top: 75px;
-} */
+/***** BODY *****/
+
+
+.center-wrap {
+  margin: 0 5.5%;
+}
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
@@ -34,6 +36,7 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 1.5px;
 }
 
+/* section headings */
 h2 {
   font-size: 16px;
   letter-spacing: 4px;
@@ -42,23 +45,18 @@ h2 {
   text-align: center;
 }
 
-h3 {
-  font-size: 20px;
-  margin: 0 5.5%;
-  padding: 35px 0 2.5px;
-  text-align: center;
-}
-
-h4 {
-  font-size: 15px;
+/* section heading underlines */
+.hr-sections {
+  border-top: 1px solid #3264A6;
+  width: 40px;
 }
 
 p {
   color: #2e2e2e;
   font-family: 'Lora', serif;
   font-size: 14px;
-  letter-spacing: 2.75px;
-  line-height: 25px;
+  letter-spacing: .5px;
+  line-height: 2;
 }
 
 img {
@@ -66,17 +64,9 @@ img {
   width: 100%;
 }
 
-.hr-sections {
-  border-top: 1px solid #3264A6;
-  width: 40px;
-}
 
-.wrap {
-  margin: 0 5.5%;
-  text-align: left;
-}
+/***** HEADER *****/
 
-/* HEADER */
 
 header {
   margin: auto;
@@ -123,27 +113,34 @@ nav ul {
   padding: 70px 0;
 }
 
+/* main header title */
 #header-text h1 {
   color: #3264A6;
   font-size: 30px;
   margin: 0 5.5%;
 }
 
+/* header subtitle */
 #header-text h4 {
+  font-size: 15px;
   margin: 10px 0 0;
 }
 
-/* BANNER */
 
-#banner-image {
+/***** BLOGS *****/
+
+
+/* blog titles */
+h3 {
+  font-size: 20px;
+  margin: 0 5.5%;
+  padding: 35px 0 2.5px;
+  text-align: center;
 }
 
-
-/* BLOGS */
-
+/* blog dates */
 .publish-date {
-  color: rgba(0, 0, 0, 0.7);
-  font-size: 14px;
+  color: rgba(0, 0, 0, 0.65);
   font-style: italic;
   margin: 0;
   padding-bottom: 20px;
@@ -154,6 +151,7 @@ nav ul {
   padding: 10px 0 25px;
 }
 
+/* blog dividing line */
 .hr-blogs {
   border: 1px solid rgba(191, 107, 59, 0.2);
   margin: 70px auto 35px;
@@ -161,7 +159,8 @@ nav ul {
 }
 
 
-/* ABOUT */
+/***** ABOUT *****/
+
 
 #about h2 {
   padding-top: 40px;
@@ -186,7 +185,9 @@ nav ul {
   width: 100%;
 }
 
-/* FOLLOW */
+
+/***** FOLLOW *****/
+
 
 #icons {
   margin: 0 auto;
@@ -209,12 +210,15 @@ nav ul {
   color: #BF6C3B;
 }
 
-/* RECENT */
+
+/***** RECENT ARTICLES *****/
+
 
 #recent-first {
   margin-top: 15px;
 }
 
+/* creates thumbnails of images */
 .thumbs { 
   float: left;
   height: 50px;
@@ -223,16 +227,15 @@ nav ul {
   width: 50px;
 }
 
+/* sets image backgrounds */
 #thumb1 {
   background: url("../img/trump-1000.png") no-repeat 50% 50%;
   background-size: cover;
 }
-
 #thumb2 {
   background: url("../img/flashcards.png") no-repeat 50% 50%;
   background-size: cover;
 }
-
 #thumb3 {
   background: url("../img/binary-woman.png") no-repeat 50% 50%;
   background-size: cover;
@@ -251,11 +254,12 @@ nav ul {
 }
 
 .recent-articles p {
-  font-size: 10px;
+  font-size: 11px;
 }
 
 
-/* FOOTER */
+/***** FOOTER *****/
+
 
 footer {
   background-color: rgba(191, 205, 217, 0.15);
@@ -272,7 +276,8 @@ footer p {
 }
 
 
-/* MEDIA QUERIES */
+/***** MEDIA QUERIES *****/
+
 
 @media (min-width: 768px) {
 
