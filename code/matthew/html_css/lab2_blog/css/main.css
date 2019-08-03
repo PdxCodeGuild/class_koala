@@ -87,10 +87,6 @@ nav {
   background: linear-gradient(rgba(191, 205, 217, 0.15), rgba(191, 205, 217, 0.15)), linear-gradient(white, white);
   border-bottom: 1px solid #3264A6;
   text-align: center;
-  /* position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%; */
 }
 
 nav ul {
@@ -101,7 +97,7 @@ nav ul {
 
 .nav-links {
   display: inline-block;
-  padding: 20px 0;
+  padding: 25px 0;
   text-align: center;
 }
 
@@ -110,7 +106,7 @@ nav ul {
   padding: 20px 22px;
   text-decoration: none;
   font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
+  font-size: 13px;
   letter-spacing: 2.5px;
   line-height: 24px;
 }
@@ -124,7 +120,7 @@ nav ul {
 }
 
 #header-text {
-  padding: 75px 0;
+  padding: 70px 0;
 }
 
 #header-text h1 {
@@ -216,14 +212,30 @@ nav ul {
 /* RECENT */
 
 #recent-first {
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
-.recent-articles img {
-  width: 100px;
+.thumbs { 
   float: left;
-  margin: 20px 25px 0 0;
+  height: 50px;
+  margin: 20px 15px 0 0;
   padding: 0;
+  width: 50px;
+}
+
+#thumb1 {
+  background: url("../img/trump-1000.png") no-repeat 50% 50%;
+  background-size: cover;
+}
+
+#thumb2 {
+  background: url("../img/flashcards.png") no-repeat 50% 50%;
+  background-size: cover;
+}
+
+#thumb3 {
+  background: url("../img/binary-woman.png") no-repeat 50% 50%;
+  background-size: cover;
 }
 
 .recent-articles h3,
@@ -234,8 +246,8 @@ nav ul {
 }
 
 .recent-articles h3 {
-  font-size: 16px;
-  margin-top: 28px;
+  font-size: 15px;
+  margin-top: 26px;
 }
 
 .recent-articles p {
@@ -248,8 +260,8 @@ nav ul {
 footer {
   background-color: rgba(191, 205, 217, 0.15);
   border-top: 1px solid #3264A6;
-  margin: 100px auto 0;
-  padding: 50px 0;
+  margin: 75px auto 0;
+  padding: 60px 0;
   text-align: center;
 }
 
