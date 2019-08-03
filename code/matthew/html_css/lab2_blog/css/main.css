@@ -292,11 +292,23 @@ footer p {
   margin: 0 auto;
 }
 
+.desktop-on {
+  display: none;
+}
+
 
 /***** MEDIA QUERIES *****/
 
 
 @media (min-width: 768px) {
+
+  .nav-links a {
+    font-size: 14px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 20px 26px;
+  }
+
   .center-wrap,
   #about h2,
   #follow h2,
@@ -313,7 +325,6 @@ footer p {
   .thumbs { 
     height: 100px;
     margin-right: 25px;
-    padding: 0;
     width: 100px;
   }
   
@@ -326,11 +337,113 @@ footer p {
     font-size: 16px;
   }
 
+  footer {
+    margin-top: 175px;
+  }
+
 } 
 
+
 @media (min-width: 1024px) {
-  main {
-    margin: 0 125px;
+
+  .nav-links a {
+    font-size: 15.5px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 20px 32px;
+  }
+
+  /* main header title */
+  #header-text h1 {
+    font-size: 36px;
+  }
+
+  /* header subtitle */
+  #header-text h4 {
+    font-size: 18px;
+  }
+
+  .page-column1 {
+    float: left;
+    width: 66.66%;
+  }
+
+  .page-column2 {
+    background-color: rgba(191, 205, 217, 0.15);
+    border-left: 1px solid #3264A6;
+    border-bottom: 1px solid #3264A6;
+    float: left;
+    width: 33.33%;
+  }
+
+  .page-row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .blog-column2 article .center-wrap {
+    margin-right: 6.25%;
+  }
+
+  .blog-column3 article .center-wrap {
+    margin-left: 6.25%;
+  }
+
+  .blog-column2 {
+    float: left;
+    width: 50%;
+  }
+
+  .blog-column3 {
+    float: left;
+    width: 50%;
+  }
+
+  .blog-row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .desktop-off {
+    display: none;
+  }
+
+  #about h2 {
+    padding-top: 80px;
+  }
+
+  #about-image img {
+    padding-top: 25px;
+  }
+
+  .thumbs { 
+    height: 50px;
+    margin-right: 15px;
+    width: 50px;
+  }
+
+  .recent-articles h3 {
+    font-size: 15px;
+    margin-top: 26px;
+  }
+  
+  .recent-articles p {
+    font-size: 11px;
+  }
+
+  #recent-last {
+    margin-bottom: 130px;
+  }
+
+  .desktop-on {
+    display: block;
+  }
+
+  footer {
+    margin-top: 200px;
+    padding: 50px 0 70px;
   }
 
 }
