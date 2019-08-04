@@ -28,7 +28,7 @@
 
   .container {
       margin: auto;
-      max-width: 1224px;
+      width:80%;
   }
 
 body {
@@ -91,6 +91,8 @@ nav ul li {
     margin-top: 20px;
     padding-left: 10px;
     text-align: center;
+    margin-bottom: 10px;
+    display: none;
 }
 
 .learning ul {
@@ -155,7 +157,9 @@ section {
 .blog-container {
     background-color:#ececec;
     height: 100%;
-    width: 100%;
+    width: 80%;
+    
+    margin: auto;
 }
 
 .blog-heading, .blog-date {
@@ -209,16 +213,17 @@ hr {
 }
 
 @media screen and (min-width: 960px) {
-    .container {
+    /* .container {
         width: 80%;
-    }
+    } */
     .header {
         width: 20%;
         max-width: 200px;
         height: 100%;
         padding: 0 5px 0 0;
+        /* margin-right: 100px; */
         /* margin-right: 5px; */
-        /* position: fixed; */
+        
     }
 
     .blog-container {
@@ -229,6 +234,8 @@ hr {
 
     .learning {
         width: 20%;
+        max-width: 200px;
         float: right;
+        display: block;
     }
 }
