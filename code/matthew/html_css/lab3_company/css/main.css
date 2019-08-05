@@ -1,0 +1,47 @@
+/***** FULL PAGE *****/
+
+
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+/* .clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+} */
+
+
+/***** BODY *****/
+
+
+
+
+
+/***** HEADER *****/
+
+
+
+
+
+/***** FOOTER *****/
+
+
+
+
+/***** MEDIA QUERIES *****/
+
+
+@media (min-width: 768px) {
+
+
+} 
+
+
+@media (min-width: 1024px) {
+
+
+}
