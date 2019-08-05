@@ -147,10 +147,6 @@ a:hover {
   transition: all .025s ease;
 }
 
-.column {
-  background-color: rgba(255,255,255,.5);
-}
-
 @media (min-width: 768px) {
 
   .header {
@@ -163,81 +159,6 @@ a:hover {
     float: left;
   }
 
-  .container-columns {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .column {
-    width: 50%;
-  }
-  
-  .container-images {
-    display: flex;
-    /* flex-wrap: wrap; */
-    justify-content: space-evenly;
-    align-items: center;
-    align-content: center;
-  }
-  
-  .container-images > div {
-    width: 300px;
-    margin: 6px;
-    background-color: black;
-  }
-
-  .container-grid {
-    display: grid;
-    grid-template-columns: [first] 1fr [second] 1fr [third last];
-    grid-template-rows: auto 400px 200px 200px auto;
-    grid-template-areas:
-      "quote quote"
-      "pre pre"
-      "divp tables"
-      "ulli olli"
-      "form form";
-      grid-gap: 1em;
-      /* justify-items: center;
-      align-items: center; */
-
-  }
-
-  .item-quote {
-    /* grid-column-start: first;
-    grid-column-end: last;
-    grid-row-start: 1;
-    grid-row-end: -4; */
-    grid-area: quote;
-  }
-
-  .item-pre {
-    /* grid-column: first / span 2;
-    grid-row: 2 / 3; */
-    grid-area: pre;
-    justify-self: center;
-    align-self: center;
-  }
-
-  .item-tables {
-    /* grid-area: 2 / third / 3 / span 1; */
-    grid-area: tables;
-  }
-
-  .item-divp {
-    grid-area: divp;
-  }
-
-  .item-ulli {
-    grid-area: ulli;
-  }
-
-  .item-olli {
-    grid-area: olli;
-  }
-
-  .item-form {
-    grid-area: form; 
-  }
 }
 
 @media (min-width: 1024px) {
@@ -248,24 +169,6 @@ a:hover {
 
   .two-column {
     width: calc(33% - 24px);
-  }
-
-  .column {
-    width: 33.333%;
-  }
-
-  .container-columns {
-    flex-wrap: nowrap;
-  }
-
-  .container-grid {
-    grid-template-columns: [first] 1fr [second] 1fr [third] 2fr [fourth last];
-    grid-template-rows: auto 400px 200px auto;
-    grid-template-areas:
-      "quote quote quote"
-      "pre pre tables"
-      "divp ulli olli"
-      "form form form";
   }
 
 }
