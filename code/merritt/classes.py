@@ -117,8 +117,8 @@
 #         self.type = "anteater"
 #         super().__init__(name, food) # invoke the parent's initializer
 
-# s = Squirrel('Jimmy')
-# a = Anteater('Earl')
+# s = Squirrel('Jimmy', 'beans')
+# a = Anteater('Earl', 'ants')
 
 # print(s.name, s.type)
 # print(a.type, a.fav_food)
