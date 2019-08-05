@@ -1,0 +1,265 @@
+
+.braces{
+    width: 100%;
+    
+    height: 680px;
+    padding: 0px;
+    background-image: url("baby-ladder2.png");
+    background-repeat: no-repeat;
+    overflow: hidden;
+    border: 0px;
+    opacity: .7;
+    z-index: -10;
+}
+
+
+h1{
+    color: rgb(253, 252, 252);
+    z-index: 10;
+    font-family: 'Kalam', cursive;
+    font-size: 95px;
+    position: absolute;
+    top: 230px;
+    left: 320px;
+    text-shadow: 5px 5px black;
+}
+
+body {margin:0
+}
+
+
+
+.dev-bar {
+    position: absolute;
+    top:10px; 
+    left:10px;
+    color: grey;
+    font-family: 'Open Sans', sans-serif;
+    font-size: x-large;
+    
+    z-index: 10;
+}
+
+.info-bar {
+    position: absolute;
+    top: 10px;
+    left:210px;
+    color: grey;
+    font-family: 'Open Sans', sans-serif;
+    font-size: x-large;
+    
+    z-index: 10;
+}
+
+.donate-bar{
+    position: absolute;
+    top: 10px;
+    left: 290px;
+    color: grey;
+    font-family: 'Open Sans', sans-serif;
+    font-size: x-large;
+    z-index: 10;
+    
+}
+
+.article-1 h1{
+    position: absolute;
+    top: 840px;
+    font-size: 55px;
+    left: 280px;
+    color: black;
+    margin: 0;
+    text-shadow: initial;
+    
+}
+
+
+
+p{
+    position: absolute;
+    text-align: left;
+    font-size: 35px;
+    right: 30px;
+    left: 65px;
+    
+    top: 890px;
+}
+
+.magnifying-icon{
+    position: absolute;
+    top: 730px;
+    right: 420px;
+    
+}
+
+
+.thumbs-icon{
+    position: absolute;
+    top: 1140px;
+    right: 420px;
+}
+
+
+.article-2 h2{
+    position: absolute;
+    top: 1260px;
+    font-size: 55px;
+    right: 230px;
+    color: black;
+    margin: 0;
+    font-family: 'Kalam', cursive;
+
+}
+
+
+
+.article-2 p{
+    position: absolute;
+    text-align: left;
+    font-size: 35px;
+    left: 65px;
+    right: 30px;
+    
+    top: 1300px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 960px - 1100px) {
+
+
+    .intro h1{
+        left: 750px;
+    }
+
+
+
+
+
+    .braces {
+        background-size: 1000px;
+        height: 650px;
+
+    }
+
+
+    .info-bar{
+        font-size: large;
+        left:calc(20% - 210px);
+
+    }
+
+    .dev-bar{
+        font-size: large;
+        left:calc(2% - 10px);
+    }
+
+    .donate-bar{
+        font-size: large;
+        left:calc(27% - 290px);
+    }
+    
+
+    .article-1 h1{
+        position: absolute;
+        top: 790px;
+        left: 170px;
+        
+        
+    }
+    
+    
+    
+    .article-1 p{
+        position: absolute;
+        text-align: left;
+        font-size: 30px;
+        right: 1100px;
+        left: 40px;
+        
+        top: 900px;
+    }
+    
+  
+
+
+
+    .article-2 h2{
+        position: absolute;
+        top: 790px;
+        right: 170px;
+        
+    }
+    
+    
+    
+    .article-2 p{
+        position: absolute;
+        text-align: left;
+        font-size: 30px;
+        left: 1100px;
+        right: 40px;
+        
+        top: 900px;
+    }
+
+
+
+
+    .magnifying-icon{
+        position: absolute;
+        top: 680px;
+        left: 345px;
+        
+    }
+
+
+
+
+    .thumbs-icon{
+        position: absolute;
+        top: 680px;
+        right: 350px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
