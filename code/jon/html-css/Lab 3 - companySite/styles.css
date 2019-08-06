@@ -1,0 +1,165 @@
+/*****
+
+    Colors:
+        #F2F2F2
+        #F1C3F2
+        #F072F1
+        #DA73D2
+        #41103B
+
+
+    Fonts:
+        font-family: 'Montserrat Alternates', sans-serif;
+        font-family: 'Open Sans', sans-serif;
+
+*****/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.container {
+    
+    border: 1px solid yellow;
+    background-color: white;
+}
+
+body {
+    background-color: #F1C3F2;
+    color: #F2F2F2;
+    font-family: 'Open Sans', sans-serif;
+    border: 1px solid red;
+    /* margin: 10px; */
+}
+
+/* Header */
+
+header {
+    width: 100%;
+    /* height: 200px; */
+}
+
+.header-contents {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #F2F2F2;
+    padding: 10px;
+}
+
+.flos-logo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.nav ul {
+    list-style: none;    
+}
+
+.nav ul li {
+    margin-top: 10px;
+    border: 2px solid blue;
+    text-align: center;
+    padding: 5px;
+}
+
+/* Hero */
+
+.hero {
+    width: 100%;
+    height: 175px;
+    background-image: url('img/coffee-beans2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.specials {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-content: flex-end; */
+    text-align: center;
+    align-self: stretch;
+    padding-top: 20px;
+}
+
+#specialty-coffee {
+    border: 2px solid blue;
+    padding: 10px;
+    background-color: rgba(0,0,0,0.5);
+}
+
+/* Hours and location */
+
+.shop-hours-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    background-color: #F1C3F2;
+    color: #41103B;
+}
+
+.shop-hours {
+    margin: 0 auto 10px;
+    text-align: center;
+    width: 200px;
+}
+
+.shop-hours ul {
+    list-style: none;
+    padding-right: 20px;
+}
+
+.address {
+    margin-top: 20px;
+}
+
+.address > h2 {
+    margin-bottom: 10px;
+}
+
+/* About */
+
+.about-container {
+    margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .shop-hours {
+    flex-grow: 2;
+    text-align: center;
+    width: 200px;
+    border: 1px solid blue;
+}
+
+.shop-hours ul {
+    list-style: none;
+    padding-right: 20px;
+} */
+
