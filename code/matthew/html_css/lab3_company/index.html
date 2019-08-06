@@ -2,91 +2,137 @@
 <html>
 
   <head> <!-- HTML HEAD / START -->
-    <title>Directive Strategy Group | Thoughtful Assessment, Clear Direction</title>
+    <title>Directive Strategy Group</title>
     <meta name="author" content="Matthew Hughes" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" />
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,800|Roboto:400,400i,700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/02b8298c98.js"></script>
   </head> <!-- HTML HEAD / END -->
 
-  <body>
+  <body class="body-grid">
 
-    <header> <!-- HEADER / START ... -->
+    <header class="header-grid item-header"> <!-- HEADER / START ... -->
       
-      <div id="top-bar">
-        <div id="top-contact">
-          <i class="fas fa-phone-alt"></i>
-          <p>+1-916-599-2597</p>
-          <i class="far fa-envelope"></i>
-          <p>alyssa@directivestrategygroup.com</p>
+      <div id="top-bar" class="top-bar-grid item-top-bar">
+        <div class="item-top-contact">
+          <div class="top-phone">
+            <i class="fas fa-phone-alt"></i>
+            <p><a href="tel:916-599-2597">916-599-2597</a></p>
+          </div>
+          <div class="top-email">
+            <i class="far fa-envelope"></i>
+            <p><a href="mailto:alyssa@directivestrategygroup.com" target="_top">alyssa@directivestrategygroup.com</a></p>
+          </div>
         </div>
+        <div class="item-top-slogan">
+          <p>Thoughtful Assessment, Clear Direction</p>
+        </div> 
       </div>
 
-      <div id="banner-wrap">
-        <div id="logo">
-          <img src="img/logo.png" alt="Logo for Directive Strategy Group" />
-        </div>
-        <nav id="nav-bar"> <!-- NAV BAR / START -->
-          <ul>
-            <li class="nav-links">
-              <a href="#about">About</a>
-            </li>
-            <li class="nav-links">
-              <a href="services">What We Do</a>
-            </li>
-            <li class="nav-links">
-              <a href="#contact">Contact</a>
-            </li>
-          </ul>
-        </nav> <!-- NAV BAR / END -->
+      <nav class="item-nav"> <!-- NAV BAR / START -->
+        <ul class="nav-flex">
+          <li class="nav-links">
+            <a href="#about">About</a>
+          </li>
+          <li class="nav-links">
+            <a href="#services">What We Do</a>
+          </li>
+          <li class="nav-links">
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+      </nav> <!-- NAV BAR / END -->
+
+      <div id="banner" class="item-banner">
+        <img src="img/logo.png" alt="Logo for Directive Strategy Group" />
       </div>
 
     </header> <!-- ... HEADER / END -->
 
-    <main>
-      <div id="hero-img">
+    <main class="main-grid item-main">
+      <div class="item-hero">
+        <img src="img/woman-banner.png" />
       </div>
 
-      <div id="clients">
+      <div id="clients" class="item-clients">
       </div>
 
-      <div id="services">
-        <div class="service">
-          <h2>Reimbursement Landscape Assessment and Strategy Development</h2>
-          <p>Understanding the current and potential coding, coverage and payment landscape is key to developing a realistic and achievable strategy and tactical plan. We will show you the way.</p>
+      <div id="services" class="services-grid item-services">
+        <div class="service item-service1">
+          <div class="service-grid">
+            <i class="fas fa-hand-holding-usd"></i>
+            <h3>Reimbursement Landscape Assessment and Strategy Development</h3>
+            <p>Understanding the current and potential coding, coverage and payment landscape is key to developing a realistic and achievable strategy and tactical plan. We will show you the way.</p>
+          </div>
         </div>
-        <div class="service">
-          <h2>Coding / Payment Applications</h2>
-          <p>We help our clients secure CPT, HCPCS and ICD-10 codes as well as transitional pass-through status and new technology add-on payments (NTAP).</p>
+        <div class="service item-service2">
+          <div class="service-grid">
+            <i class="fas fa-mobile-alt"></i>
+            <h3>Coding / Payment Applications</h3>
+            <p>We help our clients secure CPT, HCPCS and ICD-10 codes as well as transitional pass-through status and new technology add-on payments (NTAP).</p>
+          </div> 
         </div>
-        <div class="service">
-          <h2>Payer Coverage / Healthcare Policy Monitoring and Reporting</h2>
-          <p>We regularly monitor active and future payer coverage policies to ensure our clients are up to date on the coverage status of their products and procedures. We also develop healthcare industry policy reports.</p>
+        <div class="service item-service3">
+          <div class="service-grid">
+            <i class="far fa-chart-bar"></i>
+            <h3>Payer Coverage / Healthcare Policy Monitoring and Reporting</h3>
+            <p>We regularly monitor active and future payer coverage policies to ensure our clients are up to date on the coverage status of their products and procedures. We also develop healthcare industry policy reports.</p>
+          </div>
         </div>
-        <div class="service">
-          <h2>Patient/Provider Support Services</h2>
-          <p>We help our clients identify an appropriate level of customer/patient support needed for a successful product launch, can assist in the selection of service vendor(s), oversee program design and development phases, as well as manage and audit post-launch.</p>
+        <div class="service item-service4">
+          <div class="service-grid">
+            <i class="far fa-handshake"></i>
+            <h3>Patient / Provider Support Services</h3>
+            <p>We help our clients identify an appropriate level of customer/patient support needed for a successful product launch, can assist in the selection of service vendor(s), oversee program design and development phases, as well as manage and audit post-launch.</p>
+          </div>
         </div>
-        <div class="service">
-          <h2>Customer/Patient/Payer Marketing Resources</h2>
-          <p>Effectively communicating to your customers is crucial. We create best-in-class billing and coding guides, informational slide decks, leave behinds and sales aids, and other marketing materials aimed to optimize information dissemination in a clear and concise manner.</p>
+        <div class="service item-service5">
+          <div class="service-grid">
+            <i class="fas fa-comments-dollar"></i>
+            <h3>Customer / Patient / Payer Marketing Resources</h3>
+            <p>Effectively communicating to your customers is crucial. We create best-in-class billing and coding guides, informational slide decks, leave behinds and sales aids, and other marketing materials aimed to optimize information dissemination in a clear and concise manner.</p>
+          </div>
         </div>
-        <div class="service">
-          <h2>Reimbursement and Market Access Training</h2>
-          <p>From the C-suite to the sales force, we take complicated concepts and break it down into digestible content.</p>
+        <div class="service item-service6">
+          <div class="service-grid">
+            <i class="fas fa-desktop"></i>
+            <h3>Reimbursement and Market Access Training</h3>
+            <p>From the C-suite to the sales force, we take complicated concepts and break it down into digestible content.</p>
+          </div>
         </div>
       </div>
 
-      <div id="about">
+      <div id="about" class="item-about">
+        <h2>About Directive Strategy Group</h2>
+        <p>Healthcare reimbursement and market access has become the most important variable in the success of emerging healthcare treatments and procedures. Without it, even the best products will fall flat in today’s market.</p>
+        <p>Directive Strategy Group provides comprehensive reimbursement consulting services to pharma, medical device and molecular diagnostic companies. We work with companies from early on in the pre-commercialization stage, all the way through the product's life cycle. Our services center on understanding the current and potential reimbursement landscapes, which enables us to provide strategic direction and tactical planning to help our clients reach their objectives.</p>
       </div>
 
-      <div id="contact">
+      <div id="contact" class="item-contact">
+        <h2>Contact</h2>
+        <p>To get started, please give us a call, e-mail or complete the form below:</p>
+        <form action="action_page.php">
+          <label for="fname">First Name *</label>
+          <input type="text" id="fname" name="firstname">
+      
+          <label for="lname">Last Name *</label>
+          <input type="text" id="lname" name="lastname">
+      
+          <label for="email">Email Address *</label>
+          <input type="text" id="email" name="email">
+      
+          <label for="message">Message *</label>
+          <textarea id="message" name="message"></textarea>
+      
+          <input type="submit" value="Submit">
+        </form>
       </div>
 
     </main>
 
-    <footer> <!-- FOOTER / START -->
+    <footer class="item-footer"> <!-- FOOTER / START -->
       <p>© 2018 - 2019 | Directive Strategy Group</p>
     </footer> <!-- FOOTER / END -->
 
