@@ -19,6 +19,7 @@ html {
 
 h1, h2, h3, h4, h5, h6, p, a, label {
   font-family: 'Montserrat', sans-serif;
+
 }
 
 
@@ -235,6 +236,8 @@ h1, h2, h3, h4, h5, h6, p, a, label {
   grid-area: service-p;
   text-align: center;
   font-size: 13px;
+  line-height: 1.5;
+  letter-spacing: 1.5px;
 }
 
 
@@ -259,6 +262,8 @@ h1, h2, h3, h4, h5, h6, p, a, label {
 
 #about p {
   font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 1.5px;
 }
 
 #about p:last-child {
@@ -290,6 +295,8 @@ h1, h2, h3, h4, h5, h6, p, a, label {
   text-align: center;
   font-size: 14px;
   padding-bottom: 22px;
+  line-height: 1.5;
+  letter-spacing: 1.5px;
 }
 
 input[type=text], textarea {
@@ -308,7 +315,7 @@ input[type=text], textarea {
 }
 
 textarea {
-  height: 200px;
+  height: 100px;
 }
 
 input[type=submit] {
@@ -337,4 +344,145 @@ input[type=submit]:hover {
   font-size: 10px;
   letter-spacing: 2px;
   margin: 40px auto;
+}
+
+
+
+
+
+@media (min-width: 768px) {
+
+  .header-grid {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto ;
+    grid-template-areas:
+      "top-bar top-bar"
+      "banner nav";
+  }
+
+  .item-top-contact {
+    font-size: 11px;
+    justify-content: flex-start;
+    margin-left: 50px;
+  }
+
+  .top-phone p {
+    padding-right: 25px;
+    border-right: 1px solid #ccc;
+  }
+
+  .top-email i {
+    padding-left: 25px;
+  }
+
+  .item-nav {
+    align-self: center;
+    border-bottom: none;
+  }
+
+  #services {
+    margin-top: 20px;
+  }
+
+  .services-grid {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "service1 service2"
+      "service3 service4"
+      "service5 service6";
+  }
+
+  .service-grid {
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 65px auto;
+    grid-template-areas:
+      "service-icon service-h3"
+      "service-p service-p";
+  }
+
+  .item-service1, .item-service3, .item-service5 {
+    margin-right: 7.5%;
+  }
+
+  .item-service2, .item-service4, .item-service6 {
+    margin-left: 7.5%;
+  }
+
+  .item-about, .item-contact {
+    padding: 0 15%;
+  }
+
+}
+
+
+
+
+
+@media (min-width: 1024px) {
+
+  .item-nav a {
+    font-size: 18px;
+    padding: 20px 30px;
+  }
+
+  .main-grid {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+      "hero hero"
+      "clients clients"
+      "services services"
+      "about contact";
+  }
+
+  #services {
+    margin-top: 0;
+  }
+
+  .service {
+    margin-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .item-services {
+    padding: 0 5%;
+  }
+
+  .services-grid {
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "service1 service2 service3"
+      "service4 service5 service6";
+  }
+
+  .item-service1, .item-service3, .item-service5 {
+    margin-right: 0;
+  }
+
+  .item-service2, .item-service4, .item-service6 {
+    margin-left: 0;
+  }
+
+  .item-service1, .item-service2, .item-service4, .item-service5 {
+    margin-right: 7.5%;
+  }
+
+  .item-service2, .item-service3, .item-service5, .item-service6 {
+    margin-left: 7.5%;
+  }
+
+  #about {
+    margin-top: 75px;
+  }
+
+  #about p:last-child {
+    border-bottom: none;
+  }
+
+  #contact {
+    margin-top: 75px;
+  }
+
 }
