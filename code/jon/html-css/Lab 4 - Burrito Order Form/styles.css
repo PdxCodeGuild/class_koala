@@ -1,0 +1,59 @@
+/*
+
+Colors: 
+    background: #F2E3D5
+    fonts: #BFA450
+    links: #D9382A
+
+Fonts:
+    font-family: 'Saira Stencil One', cursive;
+
+*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #F2E3D5;
+    color: #BFA450;
+}
+
+header {
+    height: 200px;
+    background-image: url('img/chicken-burrito.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.logo {
+    text-align: center;
+    padding-top: 50px;
+    text-shadow: 0 0 3px crimson;
+}
+.logo h1 {
+    margin: 0;
+}
+
+.logo h2 {
+    padding-top: 20px;
+}
+
+.order-form-container {
+    width: 95%;
+    padding: 5px;
+    border: 2px solid black;
+    margin: auto;
+    box-shadow: 0 0 5px black;
+}
+
+.heading {
+    text-decoration: underline;
+    text-align: center;
+}
+
+.order-form-container {
+    margin-top: 10px;
+}
