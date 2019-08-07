@@ -1,0 +1,124 @@
+/***** FULL PAGE *****/
+
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* .clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+} */
+  
+  
+/***** BODY *****/
+  
+#body-grid {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 100px auto 75px;
+  grid-template-areas:
+    "item-header"
+    "item-main"
+    "item-footer";
+}
+  
+
+  
+/***** HEADER *****/
+
+header {
+  background: linear-gradient(to right, rgba(0, 128, 0, 0.8), rgba(255, 255, 255, .8), rgba(255, 255, 255, .8), rgba(255, 0, 0, .8));
+}
+
+#item-header {
+  grid-area: item-header;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#item-main {
+  grid-area: item-main;
+}
+
+  
+ 
+/***** MAIN *****/
+
+h2 {
+  margin: 50px auto 0;
+  text-align: center;
+}
+
+form {
+  margin: 35px 5%;
+}
+
+fieldset {
+  margin: 10px auto;
+}
+
+.label-space {
+  padding-left: 10px;
+}
+
+.radio-select, .checkbox-select {
+  width: 45%;
+  display: inline-block;
+}
+
+input {
+  margin-left: 10px;
+}
+
+.data-select label {
+  display: inline-block;
+  width: 30%;
+}
+
+.data-select input, .data-select select {
+  border: 1px solid rgba(128, 128, 128, 0.4);
+  width: 60%;
+}
+
+.data-select select {
+  margin-left: 10px;
+}
+
+
+/***** FOOTER *****/
+
+footer {
+  background: linear-gradient(to right, rgba(0, 128, 0, 0.8), rgba(255, 255, 255, .8), rgba(255, 255, 255, .8), rgba(255, 0, 0, .8));
+}
+
+#item-footer {
+  grid-area: item-footer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p {
+  font-size: 12px;
+}
+  
+  
+  /***** MEDIA QUERIES *****/
+  
+
+@media (min-width: 768px) {
+
+
+} 
+
+
+@media (min-width: 1024px) {
+
+
+}
