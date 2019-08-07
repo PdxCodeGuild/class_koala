@@ -126,27 +126,41 @@
             <li>Pear</li>
         </ol>
       </div>
-      <div class="item item-form">
-        <button>this is a button</button>
+      <form class="item item-form" action="https://webhook.site/f969cb91-3c03-4b61-b51b-dfb2b25176c5" method="post" style="display:flex;">
+        <fieldset>
+          <legend>authenticate yourself</legend>
+          <label for="input-user">Username:</label>
+          <input type="text" name="user" id="input-user" placeholder="required" required pattern="[a-z]{4,16}" title="username must be between 4 and 16 characters, all lowercase"/>
+          <label for="input-password">Password:</label>
+          <input type="password" name="password" id="input-password" />
+        </fieldset>
+        
+        <fieldset>
+          <legend>submit or don't, i don't care</legend>
+          <input type="submit" value="Press me!">
+          <input type="reset" value="I messed up.">
+        </fieldset>
 
-        <input type="text"/>
-        <input type="date"/>
-        <input type="color"/>
-        <input type="password"/>
-        <input type="radio"/>
-        <input type="checkbox"/>
+        <fieldset>
+          <legend>personal information</legend>
+          <input type="date" name="date" disabled />
+          <input type="number" name="favorite-integer"/>
+          <input type="color" name="color"/>
+          <input type="checkbox" name="am-i-checked"/>
 
-        <input type="radio" name="gender" value="male"> Male
-        <input type="radio" name="gender" value="female"> Female
-        <input type="radio" name="gender" value="other"> Other
+          <input type="radio" name="gender" value="male" id="gender-male"><label for="gender-male">Male</label>
+          <input type="radio" name="gender" value="female" id="gender-female"><label for="gender-female">Female</label>
+          <input type="radio" name="gender" value="other" id="gender-other"><label for="gender-other">Other</label>
 
-        <select>
-          <option value="volvo">Volvo</option>
-          <option value="saab">Saab</option>
-          <option value="mercedes">Mercedes</option>
-          <option value="audi">Audi</option>
-        </select>
-      </div>
+          <select name="car">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option selected disabled>please choose a car</option>
+            <option value="mercedes">Mercedes</option>
+            <option value="audi">Audi</option>
+          </select>
+        </fieldset>
+      </form>
     </div>
   </body>
 </html>

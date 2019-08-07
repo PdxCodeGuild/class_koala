@@ -19,8 +19,8 @@
     font-family: 'Kalam', cursive;
     font-size: 95px;
     position: absolute;
-    top: 330px;
-    left: 300px;
+    top: 400px;
+    left: 350px;
     text-shadow: 5px 5px black;
 }
 
@@ -153,101 +153,23 @@ p{
 
 
 
-@media only screen and (min-width: 960px - 1100px) {
+@media only screen and (min-width: 960px) {
 
 
     .intro h1{
-        left: 800px;
+        position: absolute;
+        right:inherit;
     }
 
 
-
-
-
-    .braces {
-        width: 100%;
-        
-
-    }
-
-
-    .info-bar{
-        font-size: large;
-        left:calc(20% - 210px);
-
-    }
-
-    .dev-bar{
-        font-size: large;
-        left:calc(2% - 10px);
-    }
-
-    .donate-bar{
-        font-size: large;
-        left:calc(27% - 290px);
-    }
-    
 
     .article-1 h1{
-        position: absolute;
-        top: 790px;
-        left: 170px;
-        
-        
+        left: 450px;
+
     }
-    
-    
-    
-    .article-1 p{
-        position: absolute;
-        text-align: left;
-        font-size: 30px;
-        right: 1100px;
-        left: 40px;
-        
-        top: 900px;
-    }
-    
-  
-
-
-
-    .article-2 h2{
-        position: absolute;
-        top: 790px;
-        right: 170px;
-        
-    }
-    
-    
-    
-    .article-2 p{
-        position: absolute;
-        text-align: left;
-        font-size: 30px;
-        left: 1100px;
-        right: 40px;
-        
-        top: 900px;
-    }
-
-
-
 
     .magnifying-icon{
-        position: absolute;
-        top: 680px;
-        left: 345px;
-        
-    }
-
-
-
-
-    .thumbs-icon{
-        position: absolute;
-        top: 680px;
-        right: 350px;
+        left: 650px;
     }
 
 
@@ -258,6 +180,12 @@ p{
 
 
 
+    
+    
+    
+
+    
+  
 
 
 
@@ -265,3 +193,16 @@ p{
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

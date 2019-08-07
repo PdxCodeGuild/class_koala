@@ -111,7 +111,6 @@ header {
 .shop-hours {
     margin: 0 auto 10px;
     text-align: center;
-    width: 200px;
 }
 
 .shop-hours ul {
@@ -127,12 +126,20 @@ header {
     margin-bottom: 10px;
 }
 
+.address > p {
+    margin-bottom: 10px;
+}
+
 /* About */
 
 .about-container {
     margin-top: 10px;
 }
 
+.about {
+    width: auto;
+    line-height: 1.5;
+}
 
 
 

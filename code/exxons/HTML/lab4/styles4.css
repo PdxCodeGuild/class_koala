@@ -1,0 +1,39 @@
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.burrito-back{
+    grid-auto-flow: row;
+    grid-column: h1 / span h3;
+    grid-row: span;
+    background-image: url("burrito.png");
+   
+    
+    
+    
+}
+
+.color-back{
+    grid-column: h1 / span h3;
+    grid-row: m1 / span f3;
+    background-color: brown;
+    
+    
+    
+}
+
+
+
+.container-grid{
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 33.333vh 33.333vh 33.333vh;
+    grid-template-areas:
+        " h1 h2 h3"
+        "m1 m2 m3"
+        "f1 f2 f3";
+}
