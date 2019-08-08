@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Loco Burrito</title>
+</head>
+<body>
+       <header>
+           <div class="logo">
+               <h1>Loco Burrito</h1>
+               <h2>What would you like on your burrito?</h2>
+           </div>
+       </header>
+       <section>
+           <div class="order-form-container">
+                <div class="heading">
+                    <h1>Customize Your Burrito Here</h1>
+                </div>
+                <form action="http://webhook.site/7125a784-ac75-41d1-ab5c-e4b3f0982200" method="post" >
+                    
+                        <div class="tortilla">
+                            <label for="tortilla">Choose your tortilla:</label><br>
+                            <input type="radio" name="tortilla" value="whiteFlour" id="tortilla">White Flour
+                            <input type="radio" name="tortilla" value="wheatFlour" id="tortilla">Wheat Flour
+                            <input type="radio" name="tortilla" value="spinach" id="tortilla">Spinach
+                            <input type="radio" name="tortilla" value="corn" id="tortilla">Corn
+                        </div>
+
+                        <div class="rice">
+                            <label for="rice">Choose your Rice:</label><br>
+                            <input type="radio" name="rice" value="whiteRice" id="rice">White Rice
+                            <input type="radio" name="rice" value="brownRice" id="rice">Brown Rice
+                        </div>
+
+                        <div class="beans">
+                            <label for="beans">What kind of beans: </label><br>
+                            <input type="radio" name="beans" value="blackBeans" id="beans">Black beans
+                            <input type="radio" name="beans" value="pintoBeans" id="beans">Pinto beans
+                        </div>
+
+                        <div class="protein">
+                            <label for="protein">Any protein: </label><br>
+                            <input type="radio" name="protein" value="carnitas" id="protein">Carnitas
+                            <input type="radio" name="protein" value="chicken" id="protein">Chicken
+                            <input type="radio" name="protein" value="sofritas" id="protein">Sofritas
+                            <input type="radio" name="protein" value="none" id="protein">None
+                        </div>
+
+                        <div class="additional">
+                            <label for="additional">Additional Ingredients:</label><br>
+                            <input type="checkbox" name="additional" value="cheese" id="cheese">Cheese
+                            <input type="checkbox" name="additional" value="sourCream" id="sourcream">Sour Cream
+                        </div>
+                    
+                    <fieldset class="info">
+                        <legend>Username/Password:</legend>
+                        <label for="user-name">Username: </label>
+                        <input type="text" name="user" id="user-name" placeholder="username" required pattern="[a-z]{6,18}" title="username must be between 4 and 16 characters, all lowercase" required/><br>
+
+                        <label for="user-password">Password: </label>
+                        <input type="password" name="password" id="user=password" pattern=".{6,}" placeholder="password" required/>
+                        <br>
+                    </fieldset>
+
+                    <fieldset class="info">
+                        <legend>Personal Info</legend>
+                        <label for="first-name">First name: </label>
+                        <input type="text" pattern="[a-z]{3,15}" title="First name must be between 3 and 10 characters." placeholder="First name"required/><br>
+
+                        <label for="last-name">Last name: </label>
+                        <input type="text" pattern="[a-z]{3,15}" title="Last name must be between 3 and 10 characters." placeholder="Last name"required/><br>
+
+                        <label for="email">Email Address: </label>
+                        <input type="email" name="email" id="email" placeholder="Email Address"><br>
+
+                        <label for="phone">Phone number: </label>
+                        <input type="tel" name="phonenumber" id="phone" placeholder="phone number"><br>
+
+                        <label for="birthday">Date of birth: </label>
+                        <input type="date" name="birthday" id="dateOfBirth"><br>
+
+                        <label for="socialSN">Social Security Number</label>
+                        <input type="text" name="socialSN" id="socialSN" placeholder="Social Security Number"><br>
+
+                        <label for="address">Street</label>
+                        <input type="text" name="address" id="address" placeholder="Street Address"><br>
+
+                        <label for="city">City</label>
+                        <input type="text" name="city" id="city" placeholder="City"><br>
+
+                        <label for="state">State</label>
+                        <input type="text" name="state" id="state" placeholder="State"><br>
+
+                        <label for="zipcode">Zipcode</label>
+                        <input type="text" name="zipcode" id="zipcode" placeholder="Zipcode"><br>
+                    </fieldset>
+                    <input type="submit" value="Submit Order">
+                    <input type="reset" value="Reset">
+                    
+                </form>
+           </div>
+       </section>
+
+</body>
+</html>

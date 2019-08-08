@@ -1,0 +1,109 @@
+/* FULL PAGE */
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* BODY */
+
+body {
+  background-image: url("../img/evenfall.jpg");
+  background-size: cover;
+  color: white;
+  font-family: "Times New Roman";
+  margin: 3% 15% 0 15%;
+  text-align: center;
+  text-shadow: 2px 2px black;
+}
+
+.hr-small {
+  width: 60%;
+  margin: 30px auto;
+}
+
+hr {
+  margin: 30px;
+}
+
+a {
+  color: rgba(0, 255, 255, 0.685);
+  text-decoration-color: white;
+}
+
+/* HEADER */
+
+h1 {
+  clear: right;
+  color: black;
+  font-family: fantasy;
+  font-size: 36px;
+  text-shadow: 2px 2px white;
+}
+
+
+/* MAIN */
+
+h2 {
+  font-family: fantasy;
+  font-size: 30px;
+}
+
+#img-main {
+  border-radius: 100%;
+  margin-bottom: 20px;
+  width: 280px;
+}
+
+#home {
+  margin: auto;
+  width: 215px;
+}
+
+#home ul {
+  margin: auto;
+}
+
+#home li {
+  letter-spacing: 2.5px;
+  line-height: 23px;
+  list-style-type: lower-greek;
+}
+
+#introduction {
+  letter-spacing: 2.5px;
+  line-height: 23px;
+  margin: auto;
+  width: 80%;
+
+}
+
+#introduction img {
+  border-radius: 5%;
+  float: left;
+  margin-right: 20px;
+  width: 50px;
+}
+
+/* FOOTER */
+
+footer {
+  font-family: cursive;
+  font-size: 16px ;
+  letter-spacing: 2px;
+  padding-top: 10px;
+}
+
+footer img {
+  display: block;
+  margin: 20px auto;
+  transition: width 2s;
+  width: 25px;
+}
+
+footer img:hover {
+  transition: linear 1s;
+  width: 40px;
+}
