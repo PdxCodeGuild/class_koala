@@ -16,6 +16,21 @@ Labor Day -- September 2nd, 2019
 - Merritt Lawrenson
     - merritt@pdxcodeguild.com
 
+## HTML/CSS Lab Assigned:
+
+Lab 01 Bio  
+Lab 02 Blog  
+Lab 03 Business  
+Lab 04 Burrito Order Form  
+Lab 05 Personal Portfolio  
+
+#### Optional HTML/CSS
+
+Optional Animations  
+Grid Garden  
+Flexbox Froggy  
+CSS Diner  
+
 ## Python Labs Assigned:
 
 Lab 09 Unit Converter  
@@ -97,6 +112,15 @@ https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest
 
 Using XMLHttpRequest  
 https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest
+
+Awesome CSS  
+https://github.com/ikkou/awesome-css
+
+Sass Basics  
+https://sass-lang.com/guide
+
+BEM  
+http://getbem.com/introduction/
 
 MDN: How To Style Forms  
 https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Styling_HTML_forms  
