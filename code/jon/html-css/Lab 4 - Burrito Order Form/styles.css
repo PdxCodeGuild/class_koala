@@ -18,7 +18,7 @@ Fonts:
 
 body {
     background-color: #F2E3D5;
-    color: #BFA450;
+    color: #732620;
 }
 
 header {
@@ -31,7 +31,8 @@ header {
 .logo {
     text-align: center;
     padding-top: 50px;
-    text-shadow: 0 0 3px crimson;
+    text-shadow: 0 0 3px yellow;
+    color: #732620;
 }
 .logo h1 {
     margin: 0;
@@ -54,6 +55,64 @@ header {
     text-align: center;
 }
 
+/*** Order Form ***/
+
 .order-form-container {
     margin-top: 10px;
+}
+
+legend {
+    text-shadow: 1px 1px 1px green;
+}
+
+.tortilla, 
+.rice, 
+.beans, 
+.protein, 
+.additional {
+    /* border: 1px solid purple; */
+    padding-bottom: 20px;
+}
+
+div > label {
+    text-decoration: underline;
+}
+
+input {
+    margin: 0 5px;
+}
+
+.info {
+    margin-bottom: 10px;
+
+}
+
+.info > label,
+.info > input {
+    /* border: 1px solid red; */
+    margin-bottom: 10px;
+}
+
+.info > input {
+    padding: 2px;
+    box-shadow: 0 0 1px black;
+}
+
+.info > input:hover {
+    cursor: pointer;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    padding: 5px;
+    margin-bottom: 10px;
+    display: inline-block;
+    border: 1px solid black;
+    background-color: gray;
+    box-shadow: 0 0 1px black;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: green;
 }

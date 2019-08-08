@@ -52,11 +52,11 @@
 
                         <div class="additional">
                             <label for="additional">Additional Ingredients:</label><br>
-                            <input type="checkbox" name="additional" value="cheese" id="additional">Cheese
-                            <input type="checkbox" name="additional" value="sourCream" id="additional">Sour Cream
+                            <input type="checkbox" name="additional" value="cheese" id="cheese">Cheese
+                            <input type="checkbox" name="additional" value="sourCream" id="sourcream">Sour Cream
                         </div>
-                    <fieldset>
-
+                    
+                    <fieldset class="info">
                         <legend>Username/Password:</legend>
                         <label for="user-name">Username: </label>
                         <input type="text" name="user" id="user-name" placeholder="username" required pattern="[a-z]{6,18}" title="username must be between 4 and 16 characters, all lowercase" required/><br>
@@ -66,13 +66,13 @@
                         <br>
                     </fieldset>
 
-                    <fieldset>
+                    <fieldset class="info">
                         <legend>Personal Info</legend>
                         <label for="first-name">First name: </label>
-                        <input type="text" pattern="[a-z]{3,10}" title="First name must be between 3 and 10 characters." placeholder="First name"required/><br>
+                        <input type="text" pattern="[a-z]{3,15}" title="First name must be between 3 and 10 characters." placeholder="First name"required/><br>
 
                         <label for="last-name">Last name: </label>
-                        <input type="text" pattern="[a-z]{3,10}" title="Last name must be between 3 and 10 characters." placeholder="Last name"required/><br>
+                        <input type="text" pattern="[a-z]{3,15}" title="Last name must be between 3 and 10 characters." placeholder="Last name"required/><br>
 
                         <label for="email">Email Address: </label>
                         <input type="email" name="email" id="email" placeholder="Email Address"><br>
@@ -84,15 +84,22 @@
                         <input type="date" name="birthday" id="dateOfBirth"><br>
 
                         <label for="socialSN">Social Security Number</label>
-                        <input type="text" name="socialSN" id="socialSN"><br>
+                        <input type="text" name="socialSN" id="socialSN" placeholder="Social Security Number"><br>
 
                         <label for="address">Street</label>
-                        <input type="text" name="address" id="address"><br>
+                        <input type="text" name="address" id="address" placeholder="Street Address"><br>
 
-                        
+                        <label for="city">City</label>
+                        <input type="text" name="city" id="city" placeholder="City"><br>
 
-                        
+                        <label for="state">State</label>
+                        <input type="text" name="state" id="state" placeholder="State"><br>
+
+                        <label for="zipcode">Zipcode</label>
+                        <input type="text" name="zipcode" id="zipcode" placeholder="Zipcode"><br>
                     </fieldset>
+                    <input type="submit" value="Submit Order">
+                    <input type="reset" value="Reset">
                     
                 </form>
            </div>
