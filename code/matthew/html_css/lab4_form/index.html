@@ -2,7 +2,7 @@
 <html>
 
   <head> <!-- HTML HEAD / START -->
-    <title></title>
+    <title>Mateo's Burrito Bar</title>
     <meta name="author" content="Matthew Hughes" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" />
@@ -23,8 +23,8 @@
     <main id="item-main">
 
       <h2>Online Order Form</h2>
-      <form action="http://webhook.site/dddd4d66-814c-44b5-b0e7-1bd04815bb40" method="post"> 
-        <fieldset>
+      <form id="form-grid" action="http://webhook.site/dddd4d66-814c-44b5-b0e7-1bd04815bb40" method="post"> 
+        <fieldset id="item-tortilla">
           <legend>Tortilla</legend>
 
           <div class="radio-select">
@@ -44,7 +44,7 @@
           </div>
 
         </fieldset>
-        <fieldset>
+        <fieldset id="item-rice">
           <legend>Rice</legend>
 
           <div class="radio-select">
@@ -52,11 +52,11 @@
           </div>
 
           <div class="radio-select">
-            <input type="radio" name="rice" value="brown-rice" id="brown-rice"/><label for="brown-rice" class="label-space">Brown Rice</label>
+            <input type="radio" name="rice" value="spanish-rice" id="spanish-rice"/><label for="spanish-rice" class="label-space">Spanish Rice</label>
           </div>
 
           <div class="radio-select">
-            <input type="radio" name="rice" value="spanish-rice" id="spanish-rice"/><label for="spanish-rice" class="label-space">Spanish Rice</label>
+            <input type="radio" name="rice" value="brown-rice" id="brown-rice"/><label for="brown-rice" class="label-space">Brown Rice</label>
           </div>
 
           <div class="radio-select">
@@ -64,7 +64,7 @@
           </div>
 
         </fieldset>
-        <fieldset>
+        <fieldset id="item-beans">
           <legend>Beans</legend>
 
           <div class="radio-select">
@@ -72,11 +72,11 @@
           </div>
 
           <div class="radio-select">
-            <input type="radio" name="beans" value="pinto-beans" id="pinto-beans" /><label for="pinto-beans" class="label-space">Pinto Beans</label>
+            <input type="radio" name="beans" value="refried-beans" id="refried-beans" /><label for="refried-beans" class="label-space">Refried Beans</label>
           </div>
 
           <div class="radio-select">
-            <input type="radio" name="beans" value="refried-beans" id="refried-beans" /><label for="refried-beans" class="label-space">Refried Beans</label>
+            <input type="radio" name="beans" value="pinto-beans" id="pinto-beans" /><label for="pinto-beans" class="label-space">Pinto Beans</label>
           </div>
 
           <div class="radio-select">
@@ -84,11 +84,11 @@
           </div>
 
         </fieldset>
-        <fieldset>
+        <fieldset id="item-cheese">
           <legend>Cheese</legend>
 
           <div class="radio-select">
-            <input type="radio" name="cheese" value="monterey-jack" id="monterey-jack" /><label for="monterey-jack" class="label-space">Monterey Jack</label>
+            <input type="radio" name="cheese" value="cheddar" id="cheddar" /><label for="cheddar" class="label-space">Cheddar</label>
           </div>
 
           <div class="radio-select">
@@ -100,7 +100,7 @@
           </div>
 
           <div class="radio-select">
-            <input type="radio" name="cheese" value="cheddar" id="cheddar" /><label for="cheddar" class="label-space">Cheddar</label>
+            <input type="radio" name="cheese" value="monterey-jack" id="monterey-jack" /><label for="monterey-jack" class="label-space">Monterey Jack</label>
           </div>
 
           <div class="radio-select">
@@ -112,7 +112,7 @@
           </div>
 
         </fieldset>
-        <fieldset>
+        <fieldset id="item-filling">
           <legend>Filling</legend>
 
           <div class="radio-select">
@@ -124,11 +124,11 @@
           </div>
 
           <div class="radio-select">
-            <input type="radio" name="filling" value="carne-asada" id="carne-asada" /><label for="carne-asada" class="label-space">Carne Asada</label>
+            <input type="radio" name="filling" value="carnitas" id="carnitas" /><label for="carnitas" class="label-space">Carnitas</label>
           </div>
 
           <div class="radio-select">
-            <input type="radio" name="filling" value="carnitas" id="carnitas" /><label for="carnitas" class="label-space">Carnitas</label>
+            <input type="radio" name="filling" value="carne-asada" id="carne-asada" /><label for="carne-asada" class="label-space">Carne Asada</label>
           </div>
 
           <div class="radio-select">
@@ -148,7 +148,7 @@
           </div>
             
         </fieldset>
-        <fieldset>
+        <fieldset id="item-extras">
           <legend>Extras</legend>
 
           <div class="checkbox-select">
@@ -176,7 +176,7 @@
           </div>
 
           <div class="checkbox-select">
-            <input type="checkbox" name="extras" value="pico-de-gallo" id="pico-de-gallo" /><label for="pico-de-gallo" class="label-space">Pico de Gallo</label>
+            <input type="checkbox" name="extras" value="olives" id="olives" /><label for="olives" class="label-space">Olives</label>
           </div>
 
           <div class="checkbox-select">
@@ -188,7 +188,7 @@
           </div>
 
           <div class="checkbox-select">
-            <input type="checkbox" name="extras" value="olives" id="olives" /><label for="olives" class="label-space">Olives</label>
+            <input type="checkbox" name="extras" value="pico-de-gallo" id="pico-de-gallo" /><label for="pico-de-gallo" class="label-space">Pico de Gallo</label>
           </div>
 
           <div class="checkbox-select">
@@ -201,7 +201,7 @@
 
         </fieldset>
 
-        <fieldset>
+        <fieldset id="item-sauce">
           <legend>Sauce</legend>
 
           <div class="radio-select">
@@ -222,7 +222,7 @@
             
         </fieldset>
 
-        <fieldset>
+        <fieldset id="item-authenticate">
           <legend>Authenticate</legend>
 
           <div class="data-select">
@@ -237,17 +237,17 @@
 
         </fieldset>
 
-        <fieldset>
+        <fieldset id="item-personal-info">
           <legend>Personal Info</legend>
 
           <div class="data-select">
             <label for="firstname">First Name:</label>
-            <input type="text" name="firstname" id="firstname" minlength="2" title="First name must have at least two characters" required />
+            <input type="text" name="firstname" id="firstname" placeholder="Mateo" minlength="2" title="First name must have at least two characters" required />
           </div>
 
           <div class="data-select">
             <label for="lastname">Last Name:</label>
-            <input type="text" name="lastname" id="lastname" minlength="6" title="Last name must have at least two characters" required />
+            <input type="text" name="lastname" id="lastname" placeholder="Burrito" minlength="6" title="Last name must have at least two characters" required />
           </div>
 
           <div class="data-select">
@@ -267,17 +267,17 @@
 
         </fieldset>
 
-        <fieldset>
+        <fieldset id="item-delivery-info">
           <legend>Delivery Info</legend>
 
           <div class="data-select">
             <label for="street">Street:</label>
-            <input type="text" name="street" id="street" required />
+            <input type="text" name="street" id="street" placeholder="2828 SW Corbett Ave." required />
           </div>
 
           <div class="data-select">
             <label for="city">City:</label>
-            <input type="text" name="city" id="city" required />
+            <input type="text" name="city" id="city" placeholder="Portland" required />
           </div>
 
           <div class="data-select">
@@ -340,11 +340,13 @@
 
           <div class="data-select">
             <label for="zip">Zip Code:</label>
-            <input type="text" name="zip" id="zip" required />
+            <input type="text" name="zip" id="zip" placeholder="97201" required />
           </div>
 
         </fieldset>
-        <input type="submit" value="Submit">
+        <div id="submit" class="item-submit">
+          <input type="submit" value="Submit">
+        </div>
       </form>
 
     </main>
