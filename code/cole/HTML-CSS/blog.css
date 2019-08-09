@@ -1,0 +1,12 @@
+/*blog.css*/
+body{
+  text-align: center
+}
+
+body h {
+  font-size: 40px;
+}
+body p {
+  padding-left: 400px;
+  padding-right: 400px;
+}
