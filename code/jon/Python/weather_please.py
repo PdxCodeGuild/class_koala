@@ -2,7 +2,7 @@ import forecastio
 import requests
 import os
 import argparse
-import secrets
+import secret
 from datetime import datetime
 
 """
@@ -35,7 +35,7 @@ def header():
 
 # Gets latitude and longitude of the zipcode
 def get_latlon(zipcode):
-    map_api = secrets.map_api
+    map_api = secret.map_api
     map_url = 'http://www.mapquestapi.com/geocoding/v1/address?key=' + map_api + '&location=' + str(zipcode)
 
     # Retrieves the info from the mapquest API
@@ -54,7 +54,7 @@ def get_latlon(zipcode):
 
 # Gets the weather from the Dark Sky API using the Lat/Lon from get_latlon()
 def weather(zipcode):
-    weather_api = secrets.weather_api
+    weather_api = secret.weather_api
     weather_latitude = get_latlon(req_zipcode)[0]
     weather_longitude = get_latlon(req_zipcode)[1]
     print(f'Latitude: {weather_latitude}')
