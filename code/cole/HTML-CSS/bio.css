@@ -1,0 +1,35 @@
+/*bio.css*/
+html {
+  background-color: rgb(43, 54, 75);
+}
+body {
+  text-align: center;
+  color: rgb(184, 213, 217);
+}
+body p a {
+  color: rgb(128, 173, 191);
+}
+
+body h {
+  font-size: 40px;
+}
+ul {
+  font-family: "Times New Roman";
+  font-style: normal;
+  list-style-image: url("C:/Users/TheNationatWar/Documents/github/class_koala/code/cole/HTML-CSS/gear-bullet-point-yellow.png");
+  list-style-position: inside;
+}
+body img[src] {
+  width: 300px;
+	height: 250px;
+  border: solid rgb(79, 101, 115);
+	border-radius: 50%;
+}
+body blockquote {
+  font-family: "Arial";
+  font-style: italic;
+}
+body p {
+  font-family: "Times New Roman";
+  font-style: normal;
+}
