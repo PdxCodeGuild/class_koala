@@ -1,0 +1,76 @@
+/*****
+
+    Colors:
+        #F2F2F2
+        #F1C3F2
+        #F072F1
+        #DA73D2
+        #41103B
+
+
+    Fonts:
+        font-family: 'Montserrat Alternates', sans-serif;
+        font-family: 'Open Sans', sans-serif;
+
+*****/
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 200px 200px 500px 200px 100px;
+    grid-template-areas:
+        "logo location"
+        "hero hero"
+        "about picture1"
+        "picture2 price"
+        "footer footer"
+}
+
+nav {
+    display: none;
+}
+
+.picture {
+    width: 200px;
+    height: 200px;
+}
+
+ul li {
+    list-style: none;    
+    margin: 0;
+    padding: 0;
+}
+
+ul li a {
+    text-decoration: none;
+}
+
+.logo {
+    grid-area: logo;
+    border: 1px solid blue;
+}
+
+.hours-location {
+    grid-area: location;
+}
+
+.hero-container {
+    grid-area: hero;
+    text-align: center;
+}
+
+.about-us-container {
+    grid-area: about;
+}
+
+.picture1 {
+    grid-area: picture1;
+}
+
+.picture2 {
+    grid-area: picture2;
+}
+
+footer {
+    grid-area: footer;
+}
