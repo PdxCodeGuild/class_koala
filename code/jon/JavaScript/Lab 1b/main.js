@@ -5,7 +5,6 @@ let cipherAnswer = document.getElementById('cipher');
 
 function cipher() {
     let word = originalWord.value;
-    console.log(`word is ${word}`);
     let letters = 'abcdefghijklmnopqrstuvwxyz';
     let cipherLetters = 'nopqrstuvwxyzabcdefghijklm';
     let encrypted = '';
