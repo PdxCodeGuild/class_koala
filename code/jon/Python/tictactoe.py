@@ -30,12 +30,17 @@ class Game:
 start = Game()
 
 def refresh_screen():
-    os.system('clear')
+    # os.system('clear')
     start.board()
 
 
 while True:
     refresh_screen()
+    
+    print('Hello!  Welcome to Tic-Tac-Toe!')
+    player1 = input('Player1, what is your name: ')
+    player2 = input ('Player2, what is your name: ')
+
 
     p1_choice = int(input('What box do you want (1 - 9)? '))
     start.move(p1_choice, 'X')

@@ -1,0 +1,59 @@
+body {
+  background-image: url("CipherDisk2000.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main {
+  margin: 10% 25%;
+  border: 1px solid black;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+h1 {
+  text-align: center;
+  margin: 30px auto;
+}
+
+form {
+  width: 66.66%;
+  min-width: 380px;
+  margin: auto;
+}
+
+label, input[type="textarea"] {
+  margin-left: 10px;
+  margin-bottom: 4px;
+}
+
+.block-label, input[type="textarea"] {
+  display: block;
+}
+
+input[type="textarea"], input[type="number"] {
+  margin-bottom: 10px;
+  border: 1px solid rgba(184, 123, 31, 0.9);
+}
+
+input[type="textarea"] {
+  height: 100px;
+  width: 100%;
+  background-color: white;
+}
+
+input[type="number"] {
+  display: inline-block;
+  width: 50px;
+}
+
+#encrypt {
+  display: block;
+  margin: 20px auto 25px;
+  padding: 10px 25px;
+  background-color: rgba(184, 123, 31, 0.2);
+  border-radius: 2px;
+}
+
+#encrypted {
+  margin-bottom: 50px;
+}

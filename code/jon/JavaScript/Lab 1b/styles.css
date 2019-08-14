@@ -1,0 +1,74 @@
+/*
+    colors:
+        header: #222831
+        body: #393e46
+        font: #eeeeee
+
+    font:
+        font-family: 'Russo One', sans-serif;
+        font-family: 'Ubuntu', sans-serif;
+
+
+
+*/
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #393e46;
+    color: #eeeeee;
+}
+
+.container {
+    margin: auto;
+    background-color: #222831;
+}
+
+.title-header {
+    font-family: 'Russo One', sans-serif;
+    font-size: 3em;
+    background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 5px 5px 2px #f2f2f2;
+}
+
+.content {
+   width: 80%;
+   height: 100vh;
+   margin: auto;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.content-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    padding: 20px;
+}
+
+#originalWord {
+    width: 200px;
+    box-shadow: 5px 5px 20px gold;
+}
+
+#button {
+    background-color: white;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+#button:active {
+    background-color: yellow;
+}
+
+#cipher {
+    color: red;
+    font-size: 2.5em;
+}
