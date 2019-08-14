@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Lab 1b</title>
+    <meta name="author" content="Matthew Hughes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+
+  <body>
+
+    <main>
+      <h1>ROT Cipher</h1>
+      <form>
+        <label for="original" class="block-label">Original Text:</label>
+        <input type="textarea" name="original" id="original"></input>
+
+        <label for="rotation">Rotation To Use ROT-N, N=</label>
+        <input type="number" name="rotation" id="rotation"></input>
+
+        <input id="encrypt" type="button" value="ENCRYPT">
+
+        <label for="encrypted" class="block-label">Encrypted Text:</label>
+        <p id="encrypted"></p>
+      </form>
+    </main>
+
+    <footer>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+
+</html>
