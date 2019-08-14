@@ -1,0 +1,21 @@
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+}
+
+
+
+.background_main{
+    background-image: url("binary_tunnel.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 632px;
+    background-position: 60%;
+    
+}
+
+body{
+    margin: 0;
+}
