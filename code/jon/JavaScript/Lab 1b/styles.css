@@ -1,5 +1,66 @@
+/*
+    colors:
+        header: #222831
+        body: #393e46
+        font: #eeeeee
+
+    font:
+        font-family: 'Russo One', sans-serif;
+        font-family: 'Ubuntu', sans-serif;
+
+
+
+*/
+
+
 html, body {
     margin: 0;
     padding: 0;
-    background-color: #f2f2f2;
+    background-color: #393e46;
+    color: #eeeeee;
+}
+
+.container {
+    margin: auto;
+    /* width: 80%; */
+    background-color: #222831;
+}
+
+.content {
+   width: 80%;
+   height: 100vh;
+   margin: auto;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.content-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    padding: 20px;
+}
+
+#originalWord {
+    width: 200px;
+    box-shadow: 5px 5px 20px gold;
+}
+
+#button {
+    background-color: white;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+#button:active {
+    background-color: yellow;
+}
+
+#cipher {
+    color: red;
+    font-size: 2.5em;
 }
