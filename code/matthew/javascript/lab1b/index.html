@@ -18,12 +18,12 @@
         <input type="textarea" name="original" id="original"></input>
 
         <label for="rotation">Rotation To Use ROT-N, N=</label>
-        <input type="number" name="rotation" id="rotation"></input>
+        <input type="number" name="rotation" id="rotation" min="1" max="13"></input>
 
         <input id="encrypt" type="button" value="ENCRYPT">
 
         <label for="encrypted" class="block-label">Encrypted Text:</label>
-        <p id="encrypted"></p>
+        <input type="textarea" name="encrypted" id="encrypted"></input>
       </form>
     </main>
 

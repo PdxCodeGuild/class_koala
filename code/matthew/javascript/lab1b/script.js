@@ -16,7 +16,7 @@ function rot_cipher(e) {
         cipher_string += rot_tuple[parseInt(rot_tuple.indexOf(char)) - r_value];
     }
   }
-  encrypted.innerText = cipher_string;
+  encrypted.value = cipher_string;
 }
 
 encrypt.addEventListener("click", rot_cipher);
