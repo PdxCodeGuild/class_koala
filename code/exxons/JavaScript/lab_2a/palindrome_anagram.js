@@ -1,7 +1,8 @@
 
 
-let user_word = prompt("which word would you like to check?");
+let user_word = prompt("which word would you like to check?").toLowerCase();
 
+var userPalword;
 
 
 
@@ -9,6 +10,14 @@ let user_word = prompt("which word would you like to check?");
 
 
 function check_anagram () {
+    
+    
+    palword_2 = userPalword.replace(/\s/g,'');
+    palword_2 = userPalword.split('').sort().join('');
+    console.log(palword_2);
+    
+    
+    
     lower_case = `${user_word2}`.toLowerCase();
     
     no_space_string = lower_case.replace(/\s/g,'');
@@ -23,10 +32,10 @@ function check_anagram () {
     
     console.log(no_space_string);
 
-    if (lower_case === user_word2) {
-        alert(`${lower_case} and ${user_word2} are anagrams!`);
+    if (palword_2 === no_space_string) {
+        alert(`${userPalword} and ${user_word2} are anagrams!`);
     } else {
-        alert(`${lower_case} and ${user_word2} are not anagrams!`);
+        alert(`${userPalword} and ${user_word2} are not anagrams!`);
     }
 
 
@@ -36,24 +45,27 @@ function check_anagram () {
 
 
 
+
+
+
 function check_palindrome() {
-
-const str = user_word
-
-lower = str.toLowerCase();
-
-const userPalword = lower 
-    .split('')
-    .reverse()
-    .join('');
     
-    console.log(userPalword);
+    var str = user_word
     
+    lower = str.toLowerCase();
 
-    if (user_word === userPalword){
-        alert(`The word is a palindrome`);
-    } else {    alert('Sorry, thats not a palindrome.');
-};
+    userPalword = lower 
+        .split('')
+        .reverse()
+        .join('');
+        
+        //console.log(userPalword);
+        
+
+        if (user_word === userPalword){
+            alert(`The word is a palindrome`);
+        } else {    alert('Sorry, thats not a palindrome.');
+    };
 
 
 }
@@ -72,3 +84,6 @@ let user_word2 = prompt("now enter another word to see if it is an anagram for y
 
 
 check_anagram()
+
+
+
