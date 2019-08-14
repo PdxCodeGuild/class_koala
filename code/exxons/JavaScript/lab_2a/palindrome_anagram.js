@@ -1,6 +1,6 @@
 
 
-let user_word = prompt("which word would you like to check?").toLowerCase();
+let user_word = prompt("which word would you like to check to see if its a palindrome?").toLowerCase();
 
 var userPalword;
 
@@ -50,7 +50,7 @@ function check_anagram () {
 
 function check_palindrome() {
     
-    var str = user_word
+    var str = user_word;
     
     lower = str.toLowerCase();
 
@@ -59,7 +59,7 @@ function check_palindrome() {
         .reverse()
         .join('');
         
-        //console.log(userPalword);
+        console.log(userPalword);
         
 
         if (user_word === userPalword){
@@ -83,7 +83,7 @@ check_palindrome();
 let user_word2 = prompt("now enter another word to see if it is an anagram for your word:");
 
 
-check_anagram()
+check_anagram();
 
 
 
