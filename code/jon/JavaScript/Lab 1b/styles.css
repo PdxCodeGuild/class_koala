@@ -22,8 +22,16 @@ html, body {
 
 .container {
     margin: auto;
-    /* width: 80%; */
     background-color: #222831;
+}
+
+.title-header {
+    font-family: 'Russo One', sans-serif;
+    font-size: 3em;
+    background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 5px 5px 2px #f2f2f2;
 }
 
 .content {
