@@ -1,11 +1,7 @@
 
 
 
-var div_choice = "/";
-var add_choice = "+";
-var mult_choice = '*';
-var sub_choice = '-';
-var user_finished = 'done';
+
 
 
 
