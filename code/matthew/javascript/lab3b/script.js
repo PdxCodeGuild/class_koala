@@ -11,26 +11,25 @@ let text_out = document.getElementById("output-distance");
 let units_in = document.getElementById("input-units");
 let units_out = document.getElementById("output-units");
 
-function conversion(e) {
+function conversiona(e) {
   console.log(e);
   let input_distance = parseInt(document.getElementById("input-distance").value);
   let input_units = document.getElementById("input-units").value;
-  let output_distance = parseInt(document.getElementById("output-distance").value);
   let output_units = document.getElementById("output-units").value;
   let in_meters = input_distance * to_meter_table[input_units];
   let in_units = in_meters * from_meter_table[output_units];
   if (isNaN(in_units) === true) {
     in_units = 0;
   }
+  in_units = Number(Math.round(in_units+'e5')+'e-5');
   text_out.value = in_units;
 }
 
-text_in.addEventListener("input", conversion);
-units_in.addEventListener("input", conversion);
+text_in.addEventListener("input", conversiona);
+units_in.addEventListener("input", conversiona);
 
 function conversionb(e) {
   console.log(e);
-  let input_distance = parseInt(document.getElementById("input-distance").value);
   let input_units = document.getElementById("input-units").value;
   let output_distance = parseInt(document.getElementById("output-distance").value);
   let output_units = document.getElementById("output-units").value;
@@ -39,6 +38,7 @@ function conversionb(e) {
   if (isNaN(out_units) === true) {
     out_units = 0;
   }
+  out_units = Number(Math.round(out_units+'e5')+'e-5');
   text_in.value = out_units;
 }
 
