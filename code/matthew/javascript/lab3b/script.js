@@ -43,4 +43,3 @@ function conversionb(e) {
 }
 
 text_out.addEventListener("input", conversionb);
-units_out.addEventListener("input", conversionb);
