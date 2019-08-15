@@ -6,27 +6,13 @@ let card5 = document.getElementById("card5");
 let evaluate = document.getElementById("evaluate");
 let advice = document.getElementById("advice");
 
-function bj_advice() {
+function blackjack_advice() {
   let card_list = [];
-  let card_value = card1.value;
-  card_list.push(card_value);
-  card_value = card2.value;
-  card_list.push(card_value);
-  card_value = card_values[(card3.value).toUpperCase()];
-  if (card_value === undefined) {
-    card_value = 0;
-  }
-  card_list.push(card_value);
-  card_value = card_values[(card4.value).toUpperCase()];
-  if (card_value === undefined) {
-    card_value = 0;
-  }
-  card_list.push(card_value);
-  card_value = card_values[(card5.value).toUpperCase()];
-  if (card_value === undefined) {
-    card_value = 0;
-  }
-  card_list.push(card_value);
+  card_list.push(parseInt(card1.value));
+  card_list.push(parseInt(card2.value));
+  card_list.push(parseInt(card3.value));
+  card_list.push(parseInt(card4.value));
+  card_list.push(parseInt(card5.value));
   const arrSum = arr => arr.reduce((a, b) => a + b, 0);
   let card_total = arrSum(card_list);
   if (card_total < 17) {
@@ -40,4 +26,4 @@ function bj_advice() {
   }
 }
 
-evaluate.addEventListener("click", bj_advice);
+evaluate.addEventListener("click", blackjack_advice);
