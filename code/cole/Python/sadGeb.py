@@ -4,7 +4,7 @@ import random
 import datetime
 import asyncio
 
-TOKEN = "NjA0MDkxMzcwNDkxMDg0ODAw.XUBzsQ.CBzP0WFLU6HFeI4WSYlp6ivZ45o"
+TOKEN = "NjA0MDkxMzcwNDkxMDg0ODAw.XVTCzg.PDWcnFah5BUUGKg-hL_xL05sn8c"
 
 client = discord.Client()
 

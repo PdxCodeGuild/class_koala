@@ -11,8 +11,7 @@
 
  */
  
- * {
-     margin: 0;
+ * { 
      padding: 0;
      box-sizing: border-box;
  }
@@ -95,4 +94,9 @@ button:active {
 
 .tests, .answers {
     margin-top: 20px;
+}
+
+#anagram1, #anagram2, #is_palindrome {
+    padding: 5px;
+    margin: 5px;
 }

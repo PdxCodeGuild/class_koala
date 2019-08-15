@@ -1,25 +1,3 @@
-/*averageNum.js*/
-/*let again = true;
-let numbers = [];
-while(again == true) {
-  let num = prompt("Please enter a number or 'done'");
-  if (num == 'done'){
-    again = false;
-  }
-  else {
-    numbers.push(num);
-  }
-}
-
-let i = 0;
-let total = 0;
-while (i < numbers.length) {
-  total = parseInt(total) + parseInt(numbers[i]);
-  i++;
-}
-
-average = total/numbers.length;
-alert(average);*/
 
 let enter = document.getElementsByName("button");
 let body = document.querySelector("body");
