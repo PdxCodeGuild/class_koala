@@ -1,0 +1,88 @@
+ /*
+    colors:
+        header: #142d4c
+        body: #385170
+        #9fd3c7
+        text: #ececec
+
+    Fonts:
+        font-family: 'Righteous', cursive;
+        font-family: 'Lato', sans-serif;
+
+ */
+ 
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ html, body {
+     background-color: #385170;
+     color: #ececec;
+     font-family: 'Lato', sans-serif;
+     height: 100%;
+ }
+
+ body {
+     padding-bottom: 50px;
+     padding: 10px;
+ }
+
+ .container {
+     min-height: 100%;
+     position: relative;
+ }
+
+ header {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background-color: #142d4c;
+     font-family: 'Righteous', cursive;
+    text-align: center;
+    height: 100px;
+    font-size: 2em;
+ }
+
+ main {
+     /* width: 90%; */
+     max-width: 800px;
+     margin: auto;
+     padding-bottom: 50px;
+ }
+
+section {
+    padding: 20px;
+    margin-top: 10px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #142d4c;
+    height: 50px;
+    font-size: 1em;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+p {
+    margin-top: 5px;
+}
+
+.palindrome, .anagram {
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+
+.heading {
+    color: #9fd3c7;
+    margin-bottom: 5px;
+}
+
+.tests, .answers {
+    margin-top: 20px;
+}
