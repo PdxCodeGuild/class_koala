@@ -1,0 +1,65 @@
+html {
+  background-image: url("ruler.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100%;
+}
+
+body {
+  margin: 15% 20%;
+  background: rgba(255, 255, 255, 0.5);
+  padding-top: 20px;
+  padding-bottom: 75px;
+}
+
+h1 {
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 11.25% 35% 7.5% 35% 11.25%;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    ". input equals output ."
+    ". input equals output .";
+}
+
+#input-div {
+  grid-area: input;
+}
+
+#equal-sign {
+  grid-area: equals;
+  align-self: center;
+  justify-self: center;
+}
+
+.fas {
+  font-size: 2vw;
+  padding: 5px;
+}
+
+#output-div {
+  grid-area: output;
+}
+
+input[type="text"] {
+  font-size: 1.75em;
+  text-align: center;
+}
+
+#input-distance, #input-units, #output-distance, #output-units {
+  display: block;
+}
+
+#input-distance, #output-distance {
+  height: 50px;
+  width: calc(100% - 5px);
+}
+
+#input-units, #output-units {
+  height: 35px;
+  width: 100%;
+}

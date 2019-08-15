@@ -1,0 +1,87 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <link href="https://fonts.googleapis.com/css?family=Lato|Righteous&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+     <link rel="stylesheet" href="styles.css">
+     <title>Anagram/Palindrome</title>
+ </head>
+ <body>
+     <div class="container">
+     <header>
+         <p>
+             is_palindrome / is_anagram
+        </p> 
+     </header>
+
+     <main>
+         <section>
+            <h2 class='heading'>
+                    What is a Palindrome?
+            </h2>
+
+            <div class="palindrome">
+                <p>
+                    A Palindrome is a word or a phrase that reads the same forward and backward.  For example: <em>rotor</em>, <em>kayak</em>, <em>racecar</em> and <em>madam</em>
+                </p>
+                <p>
+                    No matter how you read it, it's the same word.
+                </p> 
+            </div>
+
+            <h2 class='heading'>
+                What is an Anagram?
+            </h2>
+
+            <div class="anagram">
+                An Anagram is a word or phrase that has more than one word in it with the same letters in a different order.
+                <p>
+                    Examples of Anagrams are: <em>debit card / bad credit</em>, <em>astronomer / moon starrer</em> and <em>school master / the classroom</em>
+                </p> 
+            </div>
+        </section>
+
+        <section>
+            <h2 class="heading">Test Things Out</h2>
+
+            Now that you know what they are, I know you want to test things out!  Well here is your chance!
+
+            <div class="tests">
+                Is <input type="text" id='is_palindrome'> a Palindrome?
+                <p>
+                    <button id="check_pali_answer">Check</button>
+                </p>
+                
+            </div>
+            <div class="answers">
+                Answer: <span id="palindrome_answer"></span>
+            </div>
+            
+        </section>
+
+        <section>
+                <div class="tests">
+                        Are <input type="text" id='anagram1'> and <input type="text" id='anagram2'> anagrams?
+                        <p>
+                            <button id="check_anagram_answer">Check</button>
+                        </p>
+                        
+                    </div>
+                    <div class="answers">
+                        Answer: <span id="anagram_answer"></span>
+                    </div>
+        </section>
+
+
+     </main>
+     
+     <footer>
+         Copyright &copy; 2019 <a href="https://www.jonbascos.com">Jon Bascos</a>
+     </footer>
+    <script src="main.js"></script>
+</div> <!-- End of container-->
+ </body>
+ </html>
