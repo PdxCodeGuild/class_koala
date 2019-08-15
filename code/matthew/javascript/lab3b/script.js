@@ -1,55 +1,46 @@
-// let to_meter_table = {
-//   "feet": .3048, "miles": 1609.34, "meters": 1, "kilometers": 1000, "yards": .9144, "inches": .0254
-// }
+let to_meter_table = {
+  "feet": .3048, "miles": 1609.34, "meters": 1, "kilometers": 1000, "yards": .9144, "inches": .0254
+}
 
-// let from_meter_table = {
-//   "feet": 3.28084, "miles": 0.000621371, "meters": 1, "kilometers": 0.001, "yards": 1.09361, "inches": 39.3701
-// }
+let from_meter_table = {
+  "feet": 3.28084, "miles": 0.000621371, "meters": 1, "kilometers": 0.001, "yards": 1.09361, "inches": 39.3701
+}
 
-// let distance = parseInt(prompt("What is the distance? "));
-// let input_unit = prompt("What are the input units? ").toLowerCase();
+let text_in = document.getElementById("input-distance");
+let text_out = document.getElementById("output-distance");
+let units_in = document.getElementById("input-units");
+let units_out = document.getElementById("output-units");
 
-// if (input_unit.startsWith("f")) {
-//   input_unit = "feet";
-// } else if (input_unit.startsWith("mi")) {
-//   input_unit = "miles";
-// } else if (input_unit.startsWith("me")) {
-//   input_init = "meters";
-// } else if (input_unit.startsWith("k")) {
-//   input_unit = "kilometers";
-// } else if (input_unit.startsWith("y")) {
-//   input_unit = "yards";
-// } else if (input_unit.startsWith("i")) {
-//   input_unit = "inches";
-// } else {
-//   alert("Error. Requires a unit of measurement (e.g. miles, meters, feet, etc.) Exiting... ");
-// }
+function conversion(e) {
+  console.log(e);
+  let input_distance = parseInt(document.getElementById("input-distance").value);
+  let input_units = document.getElementById("input-units").value;
+  let output_distance = parseInt(document.getElementById("output-distance").value);
+  let output_units = document.getElementById("output-units").value;
+  let in_meters = input_distance * to_meter_table[input_units];
+  let in_units = in_meters * from_meter_table[output_units];
+  if (isNaN(in_units) === true) {
+    in_units = 0;
+  }
+  text_out.value = in_units;
+}
 
-// let in_meters = distance * to_meter_table[input_unit];
+text_in.addEventListener("input", conversion);
+units_in.addEventListener("input", conversion);
 
-// let output_unit = prompt("What are the output units? ").toLowerCase();
+function conversionb(e) {
+  console.log(e);
+  let input_distance = parseInt(document.getElementById("input-distance").value);
+  let input_units = document.getElementById("input-units").value;
+  let output_distance = parseInt(document.getElementById("output-distance").value);
+  let output_units = document.getElementById("output-units").value;
+  let out_meters = output_distance / from_meter_table[output_units];
+  let out_units = out_meters / to_meter_table[input_units];
+  if (isNaN(out_units) === true) {
+    out_units = 0;
+  }
+  text_in.value = out_units;
+}
 
-// if (output_unit.startsWith("f")) {
-//   output_unit = "feet";
-// } else if (output_unit.startsWith("mi")) {
-//   output_unit = "miles";
-// } else if (output_unit.startsWith("me")) {
-//   output_unit = "meters";
-// } else if (output_unit.startsWith("k")) {
-//   output_unit = "kilometers";
-// } else if (output_unit.startsWith("y")) {
-//   output_unit = "yards";
-// } else if (output_unit.startsWith("i")) {
-//   output_unit = "inches";
-// } else {
-//   alert("Error. Requires a unit of measurement (e.g. miles, meters, feet, etc.) Exiting... ");
-// }
-
-// let in_units = in_meters * from_meter_table[output_unit];
-
-// alert(`${distance} ${input_unit} converts to ${in_units} ${output_unit}.` )
-
-
-
-
-
+text_out.addEventListener("input", conversionb);
+units_out.addEventListener("input", conversionb);
