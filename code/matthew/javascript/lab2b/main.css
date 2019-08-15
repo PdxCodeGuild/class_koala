@@ -26,9 +26,9 @@ form {
   margin: 5px auto;
 }
 
-input[type="text"] {
-  margin-left: 10px;
-  width: 50px;
+select {
+  margin-left: 12.5px;
+  width: 125px;
 }
 
 #evaluate {
@@ -38,9 +38,13 @@ input[type="text"] {
   background-color: rgba(0, 128, 0, 0.4);
 }
 
-input[type="textarea"] {
-  display: block;
+#advice {
+  display: flex;
   margin: 5px auto auto;
   height: 100px;
   width: 50%;
+  border: 1px solid black;
+  font-size: 2.5em;
+  align-items: center;
+  justify-content: center;
 }

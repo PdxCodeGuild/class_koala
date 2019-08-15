@@ -16,13 +16,13 @@ function blackjack_advice() {
   const arrSum = arr => arr.reduce((a, b) => a + b, 0);
   let card_total = arrSum(card_list);
   if (card_total < 17) {
-    advice.value = `${card_total} - Hit!`;
+    advice.innerText = `${card_total} - Hit!`;
   } else if (card_total < 21) {
-    advice.value = `${card_total} - Stay!`;
+    advice.innerText = `${card_total} - Stay!`;
   } else if (card_total === 21) {
-    advice.value = `${card_total} - Blackjack!`;
+    advice.innerText = `${card_total} - Blackjack!`;
   } else if (card_total > 21)  {
-    advice.value = `${card_total} - BUSTED.`;
+    advice.innerText = `${card_total} - BUSTED.`;
   }
 }
 
