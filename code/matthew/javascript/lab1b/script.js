@@ -6,7 +6,7 @@ let encrypted = document.getElementById("encrypted");
 function rot_cipher(e) {
   console.log(e);
   let cipher_string = "";
-  let o_value = original.value;
+  let o_value = (original.value).toLowerCase();
   let r_value = parseInt(rotation.value);
   let rot_tuple = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
   for (let char of o_value) {
