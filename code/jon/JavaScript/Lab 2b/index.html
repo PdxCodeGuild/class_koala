@@ -22,13 +22,14 @@
     </header>
     <main>
         <p>
-            <h1>What 2 cards are you holding right now?</h1>
+            <h1>What cards are you holding right now?</h1>
         </p>
+        <form action="" id="myForm">
         <div class="cards-container">
             <div class="cards-held">
                 <h2>Card 1:</h2>
                     <select id='card1'> <br>
-                        <option value="" disabled selected value>--Select Card--</option>
+                        <option value="n" disabled selected value>--Select Card--</option>
                         <option value="A">Ace/A</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -42,12 +43,13 @@
                         <option value="J">Jack/J</option>
                         <option value="Q">Queen/Q</option>
                         <option value="K">King/K</option>
+                        <option value="n">None</option>
                     </select><br>
             </div>
             <div class="cards-held">
                 <h2>Card 2:</h2>
                 <select id='card2'> <br>
-                    <option value="" disabled selected value>--Select Card--</option>
+                    <option value="n" disabled selected value>--Select Card--</option>
                         <option value="a">Ace/A</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -61,9 +63,91 @@
                         <option value="j">Jack/J</option>
                         <option value="q">Queen/Q</option>
                         <option value="k">King/K</option>
+                        <option value="n">None</option>
                     </select>
             </div>
+            <div class="cards-held">
+                <h2>Card 3:</h2>
+                <select id='card3'> <br>
+                    <option value="n" disabled selected value>--Select Card--</option>
+                        <option value="a">Ace/A</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="j">Jack/J</option>
+                        <option value="q">Queen/Q</option>
+                        <option value="k">King/K</option>
+                        <option value="n">None</option>
+                    </select>
+            </div>
+            <div class="cards-held">
+                <h2>Card 4:</h2>
+                    <select id='card4'> <br>
+                        <option value="n" disabled selected value>--Select Card--</option>
+                        <option value="A">Ace/A</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="J">Jack/J</option>
+                        <option value="Q">Queen/Q</option>
+                        <option value="K">King/K</option>
+                        <option value="n">None</option>
+                    </select><br>
+            </div>
+            <div class="cards-held">
+                <h2>Card 5:</h2>
+                    <select id='card5'> <br>
+                        <option value="n" disabled selected value>--Select Card--</option>
+                        <option value="A">Ace/A</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="J">Jack/J</option>
+                        <option value="Q">Queen/Q</option>
+                        <option value="K">King/K</option>
+                        <option value="n">None</option>
+                    </select><br>
+            </div>
+            <div class="cards-held">
+                <h2>Card 6:</h2>
+                    <select id='card6'> <br>
+                        <option value="n" disabled selected value>--Select Card--</option>
+                        <option value="A">Ace/A</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="J">Jack/J</option>
+                        <option value="Q">Queen/Q</option>
+                        <option value="K">King/K</option>
+                        <option value="n">None</option>
+                    </select><br>
+            </div>
         </div>
+        </form>
         <div class="buttons-container">      
             <button id="button">What Should I do?</button>
             <input type='reset' id="reset"></input>
@@ -72,7 +156,11 @@
             <span id="suggestion"></span>
         </section>
     </main>
-    
+    <footer>
+        <div class="copyright">
+            Copyright &copy; 2019 Jon Bascos
+        </div>
+    </footer>
     <script src="main.js"></script>
 </body>
 </html>
