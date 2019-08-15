@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>To Do List</title>
+    <meta name="author" content="Matthew Hughes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+
+  <body>
+
+    <header>
+      <h1>TO DO LIST</h1>
+    </header>
+
+    <main>
+
+      <div id="new-event">
+        <form>
+          <textarea name="new-event" id="new-text" placeholder="Pick up cat food after work"></textarea>
+          <input type="button" id="create-btn" value="CREATE" />
+        </form>
+      </div>      
+
+      <div id="in-progress">
+        <h2>IN-PROGRESS</h2>
+        <form>
+          <div class="in-progress-div">
+            <input type="checkbox" class="checkbox" />
+            <p class="in-progress-text">Pick up bananas</p>
+          </div>
+          <div class="in-progress-div">
+            <input type="checkbox" class="checkbox" />
+            <p class="in-progress-text">Take out the trash</p>
+          </div>
+          <div class="in-progress-div">
+            <input type="checkbox" class="checkbox" />
+            <p class="in-progress-text">Drop off rent check</p>
+          </div>
+        </form>
+      </div>
+
+      <div id="completed">
+        <h2>COMPLETED</h2>
+        <form>
+
+        </form>
+      </div>
+    </main>
+
+    <footer>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/02b8298c98.js"></script>
+    <script src="script.js"></script>
+  </body>
+
+</html>

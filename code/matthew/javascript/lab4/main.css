@@ -1,0 +1,97 @@
+/***** FULL PAGE *****/
+
+html {
+  box-sizing: border-box;
+  background-image: url("beach.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100%;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/***** BODY *****/
+
+h1 {
+  margin: 0;
+  padding: 25px 0;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.75);
+  letter-spacing: 1px;
+  color: #525252;
+}
+
+main {
+  margin: 20px 20px 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 125px 500px;
+  grid-template-areas:
+    "new-event new-event"
+    "in-progress completed";
+  grid-gap: 20px;
+}
+
+#new-event {
+  grid-area: new-event;
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 10px;
+}
+
+#new-event form {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#new-text {
+  width: 350px;
+  height: 55px;
+  font-size: 18px;
+  margin: 0 20px;
+  padding: 6px 7.5px;
+}
+
+#create-btn {
+  height: 55px;
+  padding: 0 35px;
+  font-size: 20px;
+}
+
+#in-progress form {
+  padding: 15px 25px;
+}
+
+.in-progress-text {
+  margin: 0;
+  padding: 10px 5px;
+}
+
+#in-progress, #completed {
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 10px;
+}
+
+h2 {
+  margin: 0;
+  padding: 20px 0;
+  text-align: center;
+  border-bottom: 2px solid #525252;
+  color: #525252;
+  letter-spacing: 1px;
+}
+
+#in-progress {
+  grid-area: in-progress;
+}
+
+.checkbox, .in-progress-text {
+  display: inline-block;
+}
+
+#completed {
+  grid-area: completed;
+}
