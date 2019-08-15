@@ -30,7 +30,7 @@ label, input[type="textarea"] {
   display: block;
 }
 
-input[type="textarea"], input[type="number"] {
+input[type="textarea"], select {
   margin-bottom: 10px;
   border: 1px solid rgba(184, 123, 31, 0.9);
 }
@@ -39,11 +39,14 @@ input[type="textarea"] {
   height: 100px;
   width: 100%;
   background-color: white;
+  text-align: center;
+  font-size: 2em;
 }
 
-input[type="number"] {
+select {
   display: inline-block;
-  width: 50px;
+  width: 45px;
+  text-align: center;
 }
 
 #encrypt {
