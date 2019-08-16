@@ -16,7 +16,8 @@ create_btn.addEventListener("click", create);
 let trashCans = document.getElementsByClassName("fa-trash-alt");
 
 for(var i = 0; i < trashCans.length; i++) {
-  trashCans[i].addEventListener('click', function() {
-    document.getElementsByClassName("in-progress-div")[0].remove();
+  trashCans[i].addEventListener('click', function(e) {
+    console.log(e);
+    this.parentNode.remove();
   });
 }
