@@ -21,3 +21,15 @@ for(var i = 0; i < trashCans.length; i++) {
     this.parentNode.remove();
   });
 }
+
+/***** COMPLETE ITEM *****/
+
+let checkboxes = document.getElementsByClassName("checkbox");
+
+for(var i = 0; i < checkboxes.length; i++) {
+  checkboxes[i].addEventListener('click', function(e) {
+    console.log(e);
+    let checkedText = this.parentNode.innerText;
+    this.parentNode.remove();
+  });
+}
