@@ -3,6 +3,8 @@
 function create(e) {
   console.log(e);
   let newEvent = document.getElementById("new-text").value;
+  let clearText = document.getElementById("new-text");
+  clearText.value = "";
   let inProgressDiv = document.createElement("div");
   inProgressDiv.className = "in-progress-div";
   let inProgressInput = document.createElement("input");
@@ -46,10 +48,20 @@ function complete(e) {
   completedForm.appendChild(completedDiv);
 }
 
+function keyPress(e) {
+  if (e.which === 13) {
+    create(e);
+    e.preventDefault();
+  }
+}
+
 /***** CREATE ITEM *****/
 
+let newEventField = document.getElementById("new-text");
+newEventField.addEventListener("keydown", keyPress);
 let createBtn = document.getElementById("create-btn");
 createBtn.addEventListener("click", create);
+
 
 /***** DELETE ITEM *****/
 
