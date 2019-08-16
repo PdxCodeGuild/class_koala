@@ -72,7 +72,7 @@ main {
   font-size: 20px;
 }
 
-/***** IN PROGRESS *****/
+/***** IN PROGRESS (+ some COMPLETED) *****/ 
 
 #in-progress, #completed {
   background: rgba(255, 255, 255, 0.75);
@@ -83,11 +83,11 @@ main {
   grid-area: in-progress;
 }
 
-#in-progress form {
+#in-progress form, #completed-form {
   padding: 15px 10% 0;
 }
 
-.in-progress-div {
+.in-progress-div, .completed-div {
   display: flex;
   align-items: center;
   border-bottom: 1px solid black;
@@ -97,7 +97,7 @@ main {
   display: inline-block;
 }
 
-.in-progress-text {
+.in-progress-text, .completed-text {
   margin: 0;
   padding: 13.5px 6px 10px;
 }
@@ -107,8 +107,12 @@ main {
   color: #525252;
 }
 
-/***** COMPLETED *****/
+/***** COMPLETED ONLY *****/
 
 #completed {
   grid-area: completed;
+}
+
+.completed-text {
+  text-decoration: line-through;
 }

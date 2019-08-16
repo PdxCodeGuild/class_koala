@@ -33,10 +33,14 @@ for(var i = 0; i < checkboxes.length; i++) {
     console.log(checkedText);
     console.log(typeof checkedText);
     this.parentNode.remove();
+    let completedDiv = document.createElement("div");
+    completedDiv.className = "completed-div";
     let completedPara = document.createElement("p");
+    completedPara.className = "completed-text";
     checkedText = document.createTextNode(checkedText);
+    completedDiv.appendChild(completedPara);
     completedPara.appendChild(checkedText);
     completedForm = document.getElementById("completed-form");
-    completedForm.appendChild(completedPara);
+    completedForm.appendChild(completedDiv);
   });
 }
