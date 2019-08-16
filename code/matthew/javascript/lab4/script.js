@@ -1,3 +1,5 @@
+/***** CREATE ITEM *****/
+
 let create_btn = document.getElementById("create-btn");
 
 function create(e) {
@@ -7,3 +9,18 @@ function create(e) {
 }
 
 create_btn.addEventListener("click", create);
+
+
+/***** DELETE ITEM *****/
+
+let trash = document.getElementById("target-i");
+console.log(trash);
+
+function remove(e) {
+  console.log(e);
+  document.getElementById("target-div").remove();
+}
+
+
+
+trash.addEventListener("click", remove);
