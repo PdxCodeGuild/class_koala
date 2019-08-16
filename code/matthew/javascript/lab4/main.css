@@ -23,6 +23,15 @@ h1 {
   color: #525252;
 }
 
+h2 {
+  margin: 0;
+  padding: 20px 0;
+  text-align: center;
+  border-bottom: 2px solid #525252;
+  color: #525252;
+  letter-spacing: 1px;
+}
+
 main {
   margin: 20px 20px 0 20px;
   display: grid;
@@ -33,6 +42,8 @@ main {
     "in-progress completed";
   grid-gap: 20px;
 }
+
+/***** NEW EVENT *****/
 
 #new-event {
   grid-area: new-event;
@@ -61,36 +72,42 @@ main {
   font-size: 20px;
 }
 
-#in-progress form {
-  padding: 15px 25px;
-}
-
-.in-progress-text {
-  margin: 0;
-  padding: 10px 5px;
-}
+/***** IN PROGRESS *****/
 
 #in-progress, #completed {
   background: rgba(255, 255, 255, 0.75);
   border-radius: 10px;
 }
 
-h2 {
-  margin: 0;
-  padding: 20px 0;
-  text-align: center;
-  border-bottom: 2px solid #525252;
-  color: #525252;
-  letter-spacing: 1px;
-}
-
 #in-progress {
   grid-area: in-progress;
+}
+
+#in-progress form {
+  padding: 15px 10% 0;
+}
+
+.in-progress-div {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid black;
 }
 
 .checkbox, .in-progress-text {
   display: inline-block;
 }
+
+.in-progress-text {
+  margin: 0;
+  padding: 13.5px 6px 10px;
+}
+
+.fas {
+  margin-left: auto;
+  color: #525252;
+}
+
+/***** COMPLETED *****/
 
 #completed {
   grid-area: completed;
