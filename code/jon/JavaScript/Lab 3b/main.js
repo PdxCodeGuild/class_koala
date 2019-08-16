@@ -1,5 +1,6 @@
 function is_palindrome() {
     let palindromeWord = document.getElementById('is_palindrome').value;
+    palindromeWord = palindromeWord.toLowerCase();
 
     let palindromeNoSpace = palindromeWord.replace(/\s+/g, '');
 
