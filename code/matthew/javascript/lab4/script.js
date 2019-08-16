@@ -30,6 +30,13 @@ for(var i = 0; i < checkboxes.length; i++) {
   checkboxes[i].addEventListener('click', function(e) {
     console.log(e);
     let checkedText = this.parentNode.innerText;
+    console.log(checkedText);
+    console.log(typeof checkedText);
     this.parentNode.remove();
+    let completedPara = document.createElement("p");
+    checkedText = document.createTextNode(checkedText);
+    completedPara.appendChild(checkedText);
+    completedForm = document.getElementById("completed-form");
+    completedForm.appendChild(completedPara);
   });
 }
