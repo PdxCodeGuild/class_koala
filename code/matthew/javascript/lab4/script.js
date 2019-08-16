@@ -13,14 +13,10 @@ create_btn.addEventListener("click", create);
 
 /***** DELETE ITEM *****/
 
-let trash = document.getElementById("target-i");
-console.log(trash);
+let trashCans = document.getElementsByClassName("fa-trash-alt");
 
-function remove(e) {
-  console.log(e);
-  document.getElementById("target-div").remove();
+for(var i = 0; i < trashCans.length; i++) {
+  trashCans[i].addEventListener('click', function() {
+    document.getElementsByClassName("in-progress-div")[0].remove();
+  });
 }
-
-
-
-trash.addEventListener("click", remove);
