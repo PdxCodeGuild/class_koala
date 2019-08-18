@@ -1,0 +1,79 @@
+/*
+    regular check circle: <i class="far fa-check-circle"></i>
+    solid check circle: <i class="fas fa-check-circle"></i>
+    delete icon : <i class="fas fa-times-circle"></i>
+
+*/
+ 
+ 
+ html {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ body {
+     color: white;
+     background-image: linear-gradient(to bottom right, rgb(0,0,100), rgb(0,155,155));
+ }
+
+ header {
+     border: 1px solid yellow;
+     width: 100%;
+     height: 100px;
+     text-align: center;
+ }
+
+ h2 {
+     text-align: center;
+     text-decoration: underline;
+ }
+
+ li {
+     list-style: none;
+ }
+
+ .inputArea {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin: 10px auto;
+     border: 1px solid red;
+     width: 80%;
+     height: 100px;
+ }
+
+ #todo {
+     width: 300px;
+     height: 25px;
+ }
+
+ #submitButton {
+     padding: 10px;
+     border-radius: 5px;
+     margin-left: 10px;
+ }
+
+ section {
+     border: 1px solid lime;
+     width: 80%;
+     height: 200px;
+     margin: 10px auto;
+     display: flex;
+     flex-direction: row;
+ }
+
+ .far {
+     margin-right: 10px;
+     color: green;
+ }
+
+ .fas {
+    margin-left: 10px;
+    color: red;
+ }
+
+ #list > li {
+     text-decoration: underline;
+     margin-top: 10px;
+ }
