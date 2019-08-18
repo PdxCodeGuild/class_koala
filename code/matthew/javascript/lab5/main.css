@@ -2,6 +2,10 @@
 
 html {
   box-sizing: border-box;
+  background-image: url("launch.jpg");
+  background-size: cover;
+  background-position: no-repeat;
+  min-height: 100%;
 }
 
 *, *:before, *:after {
@@ -10,3 +14,80 @@ html {
 
 /***** BODY *****/
 
+main {
+  margin: 10% 10% 0;
+}
+
+#countdown-grid {
+  display: grid;
+  grid-template-columns: 5fr 1fr 5fr 2fr 5fr 1fr 5fr 2fr 5fr 1fr 5fr;
+  grid-template-rows: auto 200px;
+  grid-template-areas:
+    "hours hours hours . minutes minutes minutes . seconds seconds seconds"
+    "num1 . num2 . num3 . num4 . num5 . num6";
+  align-items: center;
+  min-width: 800px;
+}
+
+#hours {
+  grid-area: hours;
+}
+
+#minutes {
+  grid-area: minutes;
+}
+
+#seconds {
+  grid-area: seconds;
+}
+
+h1 {
+  color: white;
+  margin: 0;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 40px;
+  letter-spacing: 1.5px;
+}
+
+#num1 {
+  grid-area: num1;
+}
+
+#num2 {
+  grid-area: num2;
+}
+
+#num3 {
+  grid-area: num3;
+}
+
+#num4 {
+  grid-area: num4;
+}
+
+#num5 {
+  grid-area: num5;
+}
+
+#num6 {
+  grid-area: num6;
+}
+
+.nums {
+  background-color: rgba(0, 0, 0, 0.25);
+  color: white;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h2 {
+  text-align: center;
+  font-size: 72px;
+  color: white;
+  background: rgba(0, 0, 0, 0);
+  transform: scale(2, 1.75);
+  margin: 0;
+}
