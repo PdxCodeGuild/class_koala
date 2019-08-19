@@ -1,0 +1,105 @@
+/***** FULL PAGE *****/
+
+html {
+  box-sizing: border-box;
+  background: rgb(238, 238, 238);
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/***** BODY *****/
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+    "clock stopwatch countdown";
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#clock, #stopwatch, #countdown {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 10vh 45vh 45vh;
+  justify-content: center;
+}
+
+#clock-main, #stopwatch-main, #countdown-main {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+/***** CLOCK *****/
+
+#clock {
+  grid-area: clock;
+  grid-template-areas:
+    "clock-header"
+    "clock-main"
+    "clock-image";
+}
+
+#clock-header {
+  grid-area: clock-header;
+}
+
+#clock-main {
+  grid-area: clock-main;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#clock-image {
+  grid-area: clock-image;
+  background: url("pocket-watch.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.clock-time {
+  font-size: 48px;
+}
+
+/***** STOPWATCH *****/
+
+#stopwatch {
+  grid-area: stopwatch;
+  grid-template-areas:
+    "stopwatch-header"
+    "stopwatch-main"
+    "stopwatch-laps";
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+#stopwatch-header {
+  grid-area: stopwatch-header;
+}
+
+#stopwatch-main {
+  grid-area: stopwatch-main;
+}
+
+#stopwatch-laps {
+  grid-area: stopwatch-laps;
+}
+
+/***** COUNTDOWN *****/
+
+#countdown {
+  grid-area: countdown;
+  grid-template-areas:
+    "countdown-header"
+    "countdown-main"
+    "countdown-complete";
+}
