@@ -47,7 +47,7 @@ check_button.addEventListener("click", check_palindrome);
 
 
 
-// made user_word2 a globall variable need to do this without making it global variable
+// made user_word2 a global variable need to do this without making it global variable
 var user_word2;
 
 
