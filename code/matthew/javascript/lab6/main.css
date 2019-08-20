@@ -23,7 +23,14 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  letter-spacing: 1.5px;
+  letter-spacing: 4px;
+  color: rgb(96, 96, 96);
+  transition: ease-in-out 1s;
+}
+
+h1:hover {
+  color: rgb(140, 0, 0);
+  cursor: pointer;
 }
 
 #clock, #stopwatch, #countdown {
@@ -31,11 +38,7 @@ h1 {
   grid-template-columns: 1fr;
   grid-template-rows: 10vh 45vh 45vh;
   justify-content: center;
-}
-
-#clock-main, #stopwatch-main, #countdown-main {
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  border: 1px solid black;
 }
 
 /***** CLOCK *****/
@@ -93,6 +96,8 @@ h1 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
 #stopwatch-time {
@@ -107,6 +112,12 @@ button {
   background: linear-gradient(to bottom right, grey, white, white, grey);
   border-radius: 10px;
   box-shadow: 2px 2px grey;
+  transition: ease-in-out 1s;
+}
+
+button:hover {
+  color: rgb(140, 0, 0);
+  cursor: pointer;
 }
 
 #stopwatch-laps {
@@ -171,4 +182,15 @@ select {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+/* DEFAULT - START LAYOUT */
+
+main {
+  grid-template-areas:
+    "clock stopwatch countdown";
+}
+
+#clock-main, #clock-image, #countdown-main, #countdown-complete {
+  display: none;
 }
