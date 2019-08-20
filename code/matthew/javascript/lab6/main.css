@@ -38,7 +38,6 @@ h1:hover {
   grid-template-columns: 1fr;
   grid-template-rows: 10vh 45vh 45vh;
   justify-content: center;
-  border: 1px solid black;
 }
 
 /***** CLOCK *****/
@@ -49,6 +48,7 @@ h1:hover {
     "clock-header"
     "clock-main"
     "clock-image";
+  border-left: 1px solid black;
 }
 
 #clock-header {
