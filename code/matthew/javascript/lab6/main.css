@@ -111,6 +111,17 @@ button {
 
 #stopwatch-laps {
   grid-area: stopwatch-laps;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+}
+
+#stopwatch-laps p {
+  margin: 6px 0;
+  font-size: 22px;
 }
 
 /***** COUNTDOWN *****/

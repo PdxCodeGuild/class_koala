@@ -43,8 +43,16 @@ stop.addEventListener("click", function() {
 
 // STOPWATCH - LAP //
 
+function lapCount() {
+  let lapTime = document.getElementById("stopwatch-time").innerText;
+  let newLapTime = document.createElement("p");
+  newLapTime.innerText = lapTime;
+  let laps = document.getElementById("stopwatch-laps");
+  laps.appendChild(newLapTime);
+}
 
-
+var lap = document.getElementById("lap");
+lap.addEventListener("click", lapCount);
 
 // STOPWATCH - RESET //
 
