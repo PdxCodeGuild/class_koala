@@ -1,0 +1,20 @@
+/***** FULL PAGE *****/
+
+html {
+  box-sizing: border-box;
+  background: black;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/***** BODY *****/
+
+#hacker-text {
+  color: #00FF00;
+  font-family: monospace;
+  margin: 0;
+  padding: 50px;
+}
+
