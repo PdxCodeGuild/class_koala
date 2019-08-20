@@ -133,3 +133,42 @@ button {
     "countdown-main"
     "countdown-complete";
 }
+
+#countdown-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#countdown-set {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#countdown-date {
+  width: 130px;
+  height: 35px;
+  text-align: center;
+  font-size: 18px;
+  margin: 10px 6px;
+  padding: 0;
+}
+
+select {
+  height: 35px;
+  margin: 10px 2px;
+}
+
+#countdown-time {
+  margin: 24px 0;
+  height: 55px;
+}
+
+#countdown-complete {
+  background: url("countdown.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}

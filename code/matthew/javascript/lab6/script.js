@@ -16,6 +16,7 @@ setInterval (function() {
 
 let stopTimer; // related to STOP function
 function stopwatch() {
+  document.getElementById("stopwatch-time").innerText = "00:00:00";
   let d = new Date();
   d.setHours(0, 0, 0, 0);
   stopTimer = setInterval (function() {
@@ -61,3 +62,8 @@ reset.addEventListener("click", function() {
   clearInterval(stopTimer);
   document.getElementById("stopwatch-time").innerText = "00:00:00";
 });
+
+// STOPWATCH - DEFAULT //
+
+document.getElementById("stopwatch-time").innerText = "00:00:00"; // sets default on load
+
