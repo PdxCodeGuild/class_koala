@@ -1,0 +1,20 @@
+body {
+    background-image: linear-gradient(to bottom, black, white);
+    color: #f2f2f2;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#clock {
+    background-color: rgba(0,0,0,.4);
+    height: 100px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-size: 2em;
+    text-align: center;
+}
