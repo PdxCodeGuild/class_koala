@@ -7,14 +7,22 @@ body {
     align-items: center;
 }
 
-#clock {
+/* section {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    border: 1px solid yellow;
+} */
+
+/* #clock, #stopwatch {
     background-color: rgba(0,0,0,.4);
     height: 100px;
-    width: 500px;
+    width: 100%;
+    margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px;
     font-size: 2em;
     text-align: center;
-}
+} */
