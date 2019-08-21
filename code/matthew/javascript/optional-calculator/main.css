@@ -1,0 +1,164 @@
+/***** FULL PAGE *****/
+
+html {
+  box-sizing: border-box;
+  background: black;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/***** BODY *****/
+
+#main {
+  background: white;
+  width: 400px;
+  height: 600px;
+  margin: 20px auto 0;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 100px 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px 100px 100px 100px;
+  grid-template-areas:
+    "result result result result"
+    "clear negate percent divide"
+    "seven eight nine mult"
+    "four five six subt"
+    "one two three addition"
+    "zeroth blank point equal";
+}
+
+/* STYLES */
+
+.col-top, .col-main {
+  border-bottom: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.col-top {
+  justify-content: flex-end;
+}
+
+.col-top p, .col-main p {
+  margin: 0;
+}
+
+.col-top p {
+  font-size: 68px;
+  color: white;
+  padding-right: 40px;
+}
+
+.col-main p {
+  font-size: 36px;
+}
+
+.col-darkgrey {
+  background-color: rgb(70, 70, 70);
+}
+
+.col-grey {
+  background-color: grey;
+}
+
+.col-lightgrey {
+  background-color: lightgrey;
+}
+
+.col-orange {
+  background-color: orange;
+}
+
+.border-left {
+  border-left: 1px solid black;
+}
+
+
+/* ASSIGNS EACH GRID PLACE */
+
+#result {
+  grid-area: result;
+}
+
+#clear {
+  grid-area: clear;
+}
+
+#negate {
+  grid-area: negate;
+}
+
+#percent {
+  grid-area: percent;
+}
+
+#divide {
+  grid-area: divide;
+}
+
+#seven {
+  grid-area: seven;
+}
+
+#eight {
+  grid-area: eight;
+}
+
+#nine {
+  grid-area: nine;
+}
+
+#mult {
+  grid-area: mult;
+}
+
+#four {
+  grid-area: four;
+}
+
+#five {
+  grid-area: five;
+}
+
+#six {
+  grid-area: six;
+}
+
+#subt {
+  grid-area: subt;
+}
+
+#one {
+  grid-area: one;
+}
+
+#two {
+  grid-area: two;
+}
+
+#three {
+  grid-area: three;
+}
+
+#add {
+  grid-area: addition;
+}
+
+#zeroth {
+  grid-area: zeroth;
+}
+
+#blank {
+  grid-area: blank;
+}
+
+#point {
+  grid-area: point;
+}
+
+#equal {
+  grid-area: equal;
+}
