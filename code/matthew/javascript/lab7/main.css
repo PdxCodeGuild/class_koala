@@ -18,3 +18,8 @@ html {
   padding: 50px;
 }
 
+#cursor {
+  color: #00FF00;
+  font-family: monospace;
+  display: inline-block;
+}

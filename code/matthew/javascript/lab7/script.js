@@ -1,5 +1,13 @@
-document.body.addEventListener("keydown", function() {
-  let hackerText = document.getElementById("hacker-text");
-  hackerText.innerText = "";
-});
+let hackerArray = ["\n", "fun", "cti", "on i", "nit", "ial", "ize", "() {", "\n", "\t", "// ", "Ini", "tia", "liz", "e ma", "p, s", "et ", "up ", "til", "es/", "con", "tro", "ls/", "lay", "er ", "gro", "ups", ", f", "etc", "h ge", "oJS", "ON ", "rou", "te o", "bje", "ct", "\n", "\n", "\t", "map", " = ", "L.ma", "p('m", "ap')", ".fi", "tBo", "und", "s([", "\n", "\t", "\t", "[45", ".60", "776", "82,", " -1", "22.", "994", "537", "5] ", "\n", "\t", "\t", "[45.", "4289", "472", ", -1", "22.", "413", "983", "5]", "\n", "\t", "]);", "\n", "\n", "\t", "L.c", "ont", "rol", ".lo", "cat", "e({", "\n", "\t", "\t", "fly", "To:", " tr", "ue,", "\n", "\t", "\t", "sho", "wPo", "pup", ": f", "als", "e, ", "\n", "\t", "\t", "loc", "ate", "Opt", "ion", "s: ", "{en", "abl", "eHi", "ghA", "ccu", "rac", "y: ", "tru", "e, ", "max", "Zoo", "m: ", "15},", "\n", "\t", "\t", "str", "ing", "s: ", "{ti", "tle", ": '", "Fin", "d c", "urr", "ent", " lo", "cat", "ion', ", "out", "sid", "eMa", "pBo", "und", "sMs", "g: '", "Tri", "Met", " do", "es ", "not", " se", "rve", " th", "is ", "loc", "ati", "on'}", "\n", "\t", "}).", "add", "To(", "map", ");", "\n", "\n", "\t", "L.e", "asy", "But", "ton", "('f", "a-r", "efr", "esh", "', ", "fun", "cti", "on(", "btn", ", m", "ap)", " {", "\n", "\t", "\t", "res", "etR", "efr", "esh", "Int", "erv", "al(", ");", "\n", "\t", "\t", "ref", "res", "h();", "\n", "\t", "}).", "add", "To(", "map", ");", "\n", "\n", "fun", "cti", "on ", "add", "Veh", "icl", "e(v", "ehi", "cle", ") {", "\n", "\t", "// ", "Add", " cu", "rre", "nt ", "veh", "icl", "e t", "o m", "ap", "\n", "\n", "\t", "// ", "Con", "fig", "ure", " ci", "rcl", "e m", "ark", "ers", ", c", "onf", "igu", "re ", "pop", "ups", ", a", "dd ", "to ", "lay", "er ", "gro", "ups", "\n", "\n", "\t", "if ", "(ve", "hic", "le.", "sig", "nMe", "ssa", "geL", "ong", " ==", "= n", "ull", ") {", "\n", "\t", "\t", "veh", "icl", "e.s", "ign", "Mes", "sag", "eLo", "ng ", "= '", "Ina", "cti", "ve/", "Off", "-Ro", "ute';", "\n", "\t", "}", "\n", "\t", "mar", "ker", "s[v", "ehi", "cle", ".ve", "hic", "leI", "D] =", " L.", "cir", "cle", "([ve", "hic", "le.", "lat", "itu", "de,", " ve", "hic", "le.", "lon", "git", "ude", "], ", "100", ", {", "\n", "\t", "\t", "col", "or: ", "par", "seC", "olo", "r(v", "ehi", "cle", "),", "\n", "\t", "\t", "fil", "lOp", "aci", "ty:", " 0.5", "\n", "\t", "})", "\n"];
 
+let hackerText = document.getElementById("hacker-text");
+let i = 0;
+
+document.body.addEventListener("keydown", function() {
+  if (typeof(hackerArray[i]) != "undefined") {
+    hackerText.innerText += hackerArray[i];
+    i++;
+  } else {
+    i = 0;
+  }
+});
