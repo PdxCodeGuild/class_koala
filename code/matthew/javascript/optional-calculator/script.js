@@ -1,25 +1,17 @@
-let one = document.getElementById("one");
-let two = document.getElementById("two");
-let three = document.getElementById("three");
-let four = document.getElementById("four");
-let five = document.getElementById("five");
-let six = document.getElementById("six");
-let seven = document.getElementsByClassName("seven");
-let eight = document.getElementById("eight");
-let nine = document.getElementById("nine");
-
+let nonDisplay = ["C", "±", "%", "÷", "×", "−", "+", "="];
 
 function math(e) {
   console.log(e);
   let result = document.getElementById("result-field");
-  for (let i = 0; i < seven.length; i++) {
-    if (e.target == seven[i]) {
-      e.stopPropagation();
-      result.innerText += "7";
-    }
+  if (result.innerText == "0") {
+    result.innerText = "";
+  }
+  if (nonDisplay.includes(this.children[0].innerText) == true) {
+    e.preventDefault();
+  } else {
+    result.innerText += this.children[0].innerText;
   }
 }
-
 
 let calcButtons = document.getElementsByClassName("button");
 console.log(calcButtons);
