@@ -46,8 +46,6 @@ function stopwatch() {
 
         let stopwatchDisplay = `${hours}:${minutes}:${seconds}`;
         stopwatchLocation.innerText = stopwatchDisplay;
-        
-        
     }, 1000)
 };
 
@@ -62,8 +60,6 @@ function lap() {
     //Create the text to be displayed in the lap timer list
     let newLi = document.createElement('li');
 
-    // let timeToAdd = document.createTextNode(stopwatchValue);
-    
     let timeToAdd = document.createTextNode(`Lap: ${stopwatchValue}`);
     newLi.appendChild(timeToAdd);
 
@@ -78,8 +74,9 @@ function reset() {
     let stopwatchLocation = document.getElementById('actual-stopwatch');
     clearInterval(startWatch);
     stopwatchLocation.innerText = `00:00:00`;
+
+    //Deletes the contents of the Lap Timer List
     let lapList = document.getElementById('lap');
-    // lapTimerList.parentNode.removeChild(lapList);
     while (lapList.firstChild) {
         lapList.removeChild(lapList.firstChild);
     }
@@ -91,19 +88,15 @@ let lapButton = document.getElementById('lapButton');
 let stopButton = document.getElementById('stopButton');
 let ResetButton = document.getElementById('resetButton');
 
+//starts stopwatch
 startButton.addEventListener('click', stopwatch);
+
+//takes current time on stopwatch and places it in the lap timer list
 lapButton.addEventListener('click', lap);
+
+//Stops the stopwatch from counting
 stopButton.addEventListener('click', stop);
+
+//Resets the stopwatch and removes contents of the Lap Timer list
 ResetButton.addEventListener('click', reset);
-
-// let stopwatchDate = new Date();
-// stopwatchDate.setHours(0,0,0,0);
-// let stopwatchLocation = document.getElementById('actual-stopwatch');
-
-// let minutes = stopwatchDate.getMinutes();
-// let seconds = stopwatchDate.getSeconds();
-// let ms = stopwatchDate.getMilliseconds();
-
-// stopwatchLocation.innerText = `${minutes}:${seconds}:${ms}`;
-
 
