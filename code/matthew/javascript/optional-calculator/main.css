@@ -56,6 +56,10 @@ html {
   font-size: 36px;
 }
 
+.button {
+  cursor: pointer;
+}
+
 .col-darkgrey {
   background-color: rgb(70, 70, 70);
 }
