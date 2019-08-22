@@ -48,7 +48,7 @@ window.requestAnimationFrame(main_loop);
 
 - Also add some friction. Each time the ball makes contact with a boundary, try multiplying its x-velocity and y-velocity by 0.99. This means each time it hides a side, it'll lose 1% of its velocity.
 
-## Version 3 (other options)
+## Version 3 (optional) (other options)
 
 - Instead of using `clearRect`, use `fillRect` with some opacity, this will result in a streaking effect.
 
