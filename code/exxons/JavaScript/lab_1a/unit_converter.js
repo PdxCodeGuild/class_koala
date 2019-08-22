@@ -5,4 +5,3 @@ let response = user_feet * 0.3048
 alert (response)
 
 
-
