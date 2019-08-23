@@ -155,6 +155,7 @@ function moveBall() {
       ball.py = height - ball.radius - movement;
       flipAndFricY();
   }
+  ball.vy += gravity;
 }
 
 function loop() {
@@ -177,12 +178,13 @@ let ball = {
   radius: 100,
   px: Math.random() * width, // ball's x location
   py: Math.random() * height, // ball's y location
-  vx: 12, // ball's x velocity
-  vy: 12 // ball's y velocity
+  vx: (2 * Math.random() - 1) * 10, // ball's x velocity
+  vy: (2 * Math.random() - 1) * 10 // ball's y velocity
 };
 
 // sets loop variables
 let friction = .99; // slows down ball after each collision with image border
 let movement = .001; // moves x or y positions
+let gravity = .5; // causes ball to eventually finish on the ground
 
 window.requestAnimationFrame(loop); // enters loop
