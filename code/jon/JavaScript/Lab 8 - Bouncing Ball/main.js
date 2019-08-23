@@ -4,11 +4,13 @@ let ctx = cnv.getContext('2d');
 
 let ball = {
     radius: 10,
-    px: Math.random() * cnv.width,
-    py: Math.random()* cnv.height,
-    vx: (2*Math.random()-1)*10,
-    vy: (2*Math.random()-1)*10
+    px: Math.floor(Math.random() * cnv.width),
+    py: Math.floor(Math.random()* cnv.height),
+    vx: Math.floor((2*Math.random()-1)*10),
+    vy: Math.floor((2*Math.random()-1)*10)
 };
+
+console.log(`Ball starts at (${ball.px}, ${ball.py}) and has a vx of ${ball.vx} and a vy of ${ball.vy}`);
 
 //draws the ball
 ctx.beginPath();
@@ -39,11 +41,13 @@ function main_loop() {
         ball.vy = -ball.vy;
     }
     // draw the ball
-    ctx.clearRect(ball.px, ball.py, cnv.width, cnv.height);
+    // ctx.clearRect(ball.px, ball.py, cnv.width, cnv.height);
     ctx.beginPath();
+    ctx.clearRect(0, 0, cnv.width, cnv.height);
     ctx.arc(ball.px, ball.py, ball.radius, 0, 2 * Math.PI, false);
     ctx.fillStyle = 'black';
     ctx.fill();
+    // ctx.clearRect(ball.px, ball.py, cnv.width, cnv.height);
 
     window.requestAnimationFrame(main_loop);
 }
