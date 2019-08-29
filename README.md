@@ -15,8 +15,30 @@ Labor Day -- September 2nd, 2019
 
 - Merritt Lawrenson
     - merritt@pdxcodeguild.com
+    
+## Django Labs Assigned:
 
-## HTML/CSS Lab Assigned:
+ 
+
+#### Optional Django
+
+ 
+    
+## JavaScript Labs Assigned:
+
+Lab 01-03 Pick Three  
+Lab 04 Vanilla Todo  
+Lab 05 Random Redirect  
+Lab 06 Clock  
+Lab 07 Hacker Typer  
+Lab 08 Bouncing Ball
+
+#### Optional JavaScript
+
+Optional Calculator  
+Optional Validation
+
+## HTML/CSS Labs Assigned:
 
 Lab 01 Bio  
 Lab 02 Blog  

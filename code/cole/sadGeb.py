@@ -9,7 +9,7 @@ TOKEN = "NjA0MDkxMzcwNDkxMDg0ODAw.XUBzsQ.CBzP0WFLU6HFeI4WSYlp6ivZ45o"
 client = discord.Client()
 
 reminders = {}
-replies = ["Give Khepri a gun","They don't think it be like it is, but it do", "Sobek is a lizard", "What are you gonna do, kill me?", "Did you know that Petey is gay?"]
+replies = ["With that's the second time bout of you go away", "Give Khepri a gun","They don't think it be like it is, but it do", "Sobek is a lizard", "What are you gonna do, kill me?", "Did you know that Petey is gay?"]
 
 @client.event
 async def on_message(message):
