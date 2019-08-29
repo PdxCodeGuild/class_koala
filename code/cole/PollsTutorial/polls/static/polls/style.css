@@ -1,0 +1,16 @@
+/*style.css*/
+h1 {
+  color: teal;
+}
+
+li a {
+  color: silver;
+}
+
+body{
+  background: url("images/wallpaper.jpg");
+  background-repeat: no-repeat;
+  background-size: 1740px;
+  text-align: center;
+  font-size: 50px
+}
