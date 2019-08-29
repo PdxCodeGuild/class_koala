@@ -27,7 +27,7 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('base/', views.base),
-    path('base/<int:id>/', views.base_capture),
+    path('base/<str:id>/', views.base_capture),
     path('base/wont_match/', views.base_wont_match),  # this will never match because of _both_ of above routes.
 ]
 ```
