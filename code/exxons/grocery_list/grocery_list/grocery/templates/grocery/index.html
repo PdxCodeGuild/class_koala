@@ -1,0 +1,9 @@
+<h1>{{ 'Grocery List'}}</h1>
+
+{% if grocery_list %}
+    <ul>
+    {% for item in grocery_list %}
+        <li>{{item.item_text}}</li>
+    {% endfor %}
+    </ul>
+{% endif %}
