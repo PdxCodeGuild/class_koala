@@ -1,0 +1,21 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'url_app/main.css' %}" />
+
+<form action="{% url 'url_app:submit' %}" method="post" id="submit-form">
+	{% csrf_token %}
+	<label for="long_url">Please copy and paste URL to shorten:</label>
+	<input type="text" name="long_url" id="long_url"></input>
+	<button type="submit" id="submit-button">Shorten URL</button>
+</form>
+
+<hr />
+
+	<form action="{% url 'url_app:redirect'%}" method="post" id="redirect-form">
+		{% csrf_token %}
+		<label for="short_url">Please type shortended URL to be redirected - <em>https://goo.gl/</em></label>
+		<input type="text" name="short_url" id="short_url"></input>
+		<button type="submit" id="submit-button">Take Me There</button>
+	</form>
+
+<hr />
