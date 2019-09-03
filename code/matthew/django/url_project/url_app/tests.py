@@ -1,7 +1,7 @@
 from django.test import TestCase
 from django.urls import reverse
 
-from .models import UrlShortener
+from .models import UrlShortener, ClickData
 
 class UrlShortenerIndexViewTests(TestCase):
 

@@ -1,16 +1,27 @@
 {% load static %}
 
+<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" />
 <link rel="stylesheet" href="{% static 'url_app/main.css' %}" />
+
+<div id="header-div">
+	<h1>UR(ke)L</h1>
+</div>
+
 
 <form action="{% url 'url_app:submit' %}" method="post" id="submit-form">
 	{% csrf_token %}
-	<label for="long_url">Please copy and paste URL to shorten:</label>
-	<input type="text" name="long_url" id="long_url"></input>
-	<button type="submit" id="submit-button">Shorten URL</button>
+	<label for="long_url"></label>
+	<input type="text" name="long_url" id="long_url" placeholder="Please copy and paste URL"></input>
+	<button type="submit" id="submit-button">Shorten</button>
 </form>
 
 {% if messages %}
 	{% for message in messages %}
-		<p>{{ message }}</p>
+		<div id="message-div">
+			<p>{{ message }}</p>
+			<i class="fas fa-glasses"></i>
+		</div>
 	{% endfor %}
 {% endif %}
+
+<script src="https://kit.fontawesome.com/02b8298c98.js"></script>

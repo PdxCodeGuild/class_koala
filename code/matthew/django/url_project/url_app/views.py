@@ -26,7 +26,7 @@ def submit(request):
     """
     code = codeGenerator()
     UrlShortener.objects.create(code = code, long_url = request.POST["long_url"])
-    code_message = f"New Code: {code} - Please keep for records. To use in browser, add code/{code} to existing url."
+    code_message = f"New Code: {code} - Please keep for records. To use in browser, add code/{code} to existing URL."
     messages.success(request, code_message)
     return HttpResponseRedirect(reverse("url_app:index"))
 
