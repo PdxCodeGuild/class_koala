@@ -9,13 +9,8 @@
 	<button type="submit" id="submit-button">Shorten URL</button>
 </form>
 
-<hr />
-
-	<form action="{% url 'url_app:redirect'%}" method="post" id="redirect-form">
-		{% csrf_token %}
-		<label for="short_url">Please type shortended URL to be redirected - <em>https://goo.gl/</em></label>
-		<input type="text" name="short_url" id="short_url"></input>
-		<button type="submit" id="submit-button">Take Me There</button>
-	</form>
-
-<hr />
+{% if messages %}
+	{% for message in messages %}
+		<p>{{ message }}</p>
+	{% endfor %}
+{% endif %}
