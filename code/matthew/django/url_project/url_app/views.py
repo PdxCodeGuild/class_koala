@@ -34,10 +34,10 @@ def redirect(request, short_url):
     """
     accepts a six character shortened URL, checks if it exists in database and redirects user to full length URL, if so; also, adds user instance to database and increases # of clicks on respective URL
     """
-    selected_url = UrlShortener.objects.get(code = short_url)
+    selected_url = get_object_or_404(UrlShortener, code=short_url)
     redirected_url = selected_url.long_url
     ip = request.META['REMOTE_ADDR']
-    ClickData.objects.create(ip = ip, url_code = short_url)
+    ClickData.objects.create(ip = ip, url_id = selected_url.id)
     selected_url.clicks += 1
     selected_url.save()
     return HttpResponseRedirect(redirected_url)

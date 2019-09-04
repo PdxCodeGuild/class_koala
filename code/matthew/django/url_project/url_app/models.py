@@ -12,4 +12,4 @@ class UrlShortener(models.Model):
 class ClickData(models.Model):
     ip = models.CharField(max_length=45)
     time = models.DateTimeField(default = timezone.now)
-    url_code = models.CharField(max_length=6)
+    url = models.ForeignKey(UrlShortener, on_delete=models.CASCADE)
