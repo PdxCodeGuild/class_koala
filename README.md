@@ -101,6 +101,15 @@ In all three presentations, you should first explain the development process and
 An Illustrated (and Musical) Guide to Map, Reduce, and Filter Array Methods  
 https://css-tricks.com/an-illustrated-and-musical-guide-to-map-reduce-and-filter-array-methods/
 
+Django by example  
+https://www.youtube.com/playlist?list=PLAF3anQEEkzS-mjdX7s-D63bjLWRdhuFM
+
+Python Django tutorial  
+https://www.youtube.com/playlist?list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p
+
+Django girls tutorial  
+https://tutorial.djangogirls.org/en/
+
 Django polls tutorial  
 https://docs.djangoproject.com/en/2.1/intro/tutorial01/
 
