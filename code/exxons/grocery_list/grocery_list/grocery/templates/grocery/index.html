@@ -1,9 +1,77 @@
-<h1>{{ 'Grocery List'}}</h1>
+{% load static %}
 
-{% if grocery_list %}
+<link rel="stylesheet" href="{% static 'grocery/style.css' %}">
+
+<div class= grid-container>
+   
+    <h1>{{ 'Grocery List'}}</h1>
+
+
+    <form action="{% url 'grocery:item' %}" method="post">
+        {%csrf_token%}
+        Item needed: <input type="text" name="item_name">
+        <input type="submit" value="Submit">
+    </form>
+
+        
+    {% if incomplete_list %}
+    
+    <div class= incomplete_list>
     <ul>
-    {% for item in grocery_list %}
-        <li>{{item.item_text}}</li>
+    {% for item in incomplete_list %}
+        <li>
+        <h4>{{item.item_text}}</h4> 
+        <form action="{% url 'grocery:delete_item' item.id %}" method="post">
+            {% csrf_token %}
+            <input type="submit" value="delete item" >
+        </form>
+
+        <form action="{% url 'grocery:complete_items' item.pk %}" method="post">
+        {% csrf_token %}
+        <input type="submit" value="completed" />
+        </form>
+        </li>
+
     {% endfor %}
     </ul>
-{% endif %}
+    </div>
+    {% endif %}
+    
+        
+    {% if complete_list %}
+
+    <div class= complete_list>
+    <ul>
+    {% for item in complete_list %}
+        <li>
+        <h4>{{item.item_text}}</h4> 
+       
+        <form action="{% url 'grocery:delete_item' item.id %}" method="post">
+            {% csrf_token %}
+            
+            <input type="submit" value="delete item" >
+        </form>
+        
+            
+        </li>
+
+    {% endfor %}
+    </ul>
+    </div>
+    {% endif %}
+
+    
+</div>
+        
+        
+
+        
+
+
+
+
+
+
+
+
+

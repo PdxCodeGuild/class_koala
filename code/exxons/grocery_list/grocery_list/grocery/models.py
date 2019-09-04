@@ -15,6 +15,5 @@ class Item(models.Model):
     def complete_or_not(self):
         return self.is_complete
 
-    def created_date(self):
-        return timezone.now()
+
         
