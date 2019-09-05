@@ -1,0 +1,23 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'grocery_app/main.css' %}" />
+
+<h1>Grocery List</h1>
+<hr />
+
+<form action="{% url 'grocery_app:additem' %}" method="post" id="add-form">
+	{% csrf_token %}
+	<textarea name="item_text"></textarea>
+	<button type="submit" id="add-button">Add Item</button>
+</form>
+
+<hr />
+
+<ul>
+	{% for item in grocery_items %}
+		<form action="{% url 'grocery_app:completeditem' item.id %}" method="post" class="item-forms">
+			{% csrf_token %}
+			<li><button type="submit" class="item-button">{{ item.item_text }}</button></li>
+		</form>
+	{% endfor %}
+</ul>

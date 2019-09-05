@@ -1,0 +1,16 @@
+<h2>URL Data</h2>
+<ul>
+	<li><strong>Code:</strong> {{ selected_url.code }}</li>
+	<li><strong>Redirected URL:</strong> {{ selected_url.long_url }}</li>
+	<li><strong># of Clicks:</strong> {{ selected_url.clicks }}</li>
+</ul>
+<hr />
+
+<h2>User History</h2>
+<ul>
+{% for data in user_data%}
+	<li><strong>IP Address:</strong> {{ data.ip }}</li>
+	<li><strong>Time Accessed:</strong> {{ data.time }}</li>
+	<br>
+{% endfor %}
+</ul>

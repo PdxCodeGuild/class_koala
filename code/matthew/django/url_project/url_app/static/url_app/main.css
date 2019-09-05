@@ -1,0 +1,62 @@
+html {
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+#header-div h1 {
+	text-align: center;
+	color: darkred;
+	font-size: 40px;
+}
+
+#submit-form {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	height: 125px;
+	background: red;
+}
+
+#long_url, #submit-button {
+	border-radius: 10px;
+	height: 50%;
+}
+
+#long_url {
+	width: 750px;
+	margin-left: 10px;
+	padding: 0 25px;
+	font-size: 20px;
+	font-style: italic;
+}
+
+#submit-button {
+	width: 250px;
+	margin: 0 10px;
+	font-size: 18px;
+	text-transform: uppercase;
+	font-weight: 800;
+	cursor: pointer;
+	transition: color .5s ease-in-out;
+}
+
+#submit-button:hover {
+	color: darkred;
+}
+
+#message-div {
+	margin: auto;
+	text-align: center;
+}
+
+#message-div p {
+	margin: 50px 0;
+	font-size: 24px;
+}
+
+.fa-glasses {
+	font-size: 44px;
+	color: darkred;
+}
