@@ -7,12 +7,20 @@
     <link rel="stylesheet" href = "{% static 'css/base.css'%}">
   </head>
   <body>
-    <header>
-      <h1><a href = {% url 'posts:home' %}>Django blog</a></h1>
-    </header>
-    <div class="conatined">
+    <div class="container">
+      <header>
+
+      </header>
+      <div class="nav-left">
+        <h1><a href = {% url 'posts:home' %}>Django blog</a></h1>
+      </div>
+      <div class="nav-right">
+        <h2><a href = {% url 'posts:new' %}>Django blog</a></h2>
+      </div>
+    </div>
       {% block content %}
       {% endblock %}
     </div>
+
   </body>
 </html>
