@@ -26,13 +26,15 @@
         <div class='current-list'>
             <h2>Need to buy:</h2>
             <ul>
-            {% for GroceryItem in current_grocery_list %}
-                <form action="{% url 'groceryList:completed' GroceryItem.id %}" method='post'>
+            {% for item in current_grocery_list %}
+                <form action="{% url 'groceryList:completed' item.id %}" method='post'>
                     {% csrf_token %}
-                        <li><input type='submit' value='Got it'>  - {{ GroceryItem }}</li>
+                        <li><input type='submit' value='Got it'>  - {{ item }}</li>
+                </form>
                     {% endfor %}
+                
             </ul>
-            </form>
+            
         </div><!-- End current list Div -->
 
         <div class='completed-list'>
@@ -48,7 +50,7 @@
                 <input type='Submit' value='Delete All'>
             </form>
             {% else %}
-                    <h2> Empty </h2>
+                    Empty
             {% endif %}
             
         </div><!-- End Completed list Div -->
