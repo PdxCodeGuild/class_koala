@@ -25,24 +25,32 @@
 
         <div class='current-list'>
             <h2>Need to buy:</h2>
-            <form action='groceryList:choice' method='post'>
             <ul>
-                {% csrf_token %}
-                {% for item in current_grocery_list %}
-                    <li>{{ item }} - <input type='checkbox' name='completed'> </li>
-                {% endfor %}
+            {% for GroceryItem in current_grocery_list %}
+                <form action="{% url 'groceryList:completed' GroceryItem.id %}" method='post'>
+                    {% csrf_token %}
+                        <li><input type='submit' value='Got it'>  - {{ GroceryItem }}</li>
+                    {% endfor %}
             </ul>
-            <input type='Submit' value='Got Them'>
             </form>
         </div><!-- End current list Div -->
 
         <div class='completed-list'>
             <h2>Already Bought:</h2>
-            <ul>
-                {% for item in bought_grocery_list %}
-                    <li>{{ item }} - <input type='checkbox' name='completed' checked> </li>
-                {% endfor %}
-            </ul>
+            <form action="{% url 'groceryList:delete' %}" method='post'>
+            {% csrf_token %}
+            {% if bought_grocery_list %}
+                <ul>
+                    {% for item in bought_grocery_list %}
+                        <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+                <input type='Submit' value='Delete All'>
+            </form>
+            {% else %}
+                    <h2> Empty </h2>
+            {% endif %}
+            
         </div><!-- End Completed list Div -->
 
     </div><!-- End container Div -->
