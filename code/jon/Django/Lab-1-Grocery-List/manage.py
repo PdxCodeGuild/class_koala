@@ -5,7 +5,7 @@ import sys
 
 
 def main():
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'lab_1_grocery_list.settings')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'grocery_list.settings')
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
