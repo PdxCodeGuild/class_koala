@@ -41,6 +41,11 @@ header h1 a {
   text-decoration: none;
 }
 
+.post-entry h5, .post-entry h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 .post-entry p {
   margin: 0;
   font-weight: 400;
