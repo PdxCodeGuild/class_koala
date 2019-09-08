@@ -34,6 +34,27 @@ The below is the proposal for my capstone project. The deadline for the initial 
 * Gather the data of the food carts in Portland / store in model table
 * Display back to user in gallery format
 
+### User Story #2:
+* As a picky person, I want to be able to choose a food cart based on a variety of preferences, such as cuisine and price, because I know what I want and don't want to overspend.
+
+### Tasks:
+* Create functions to enable filters
+* Allow access to the functions by embedding them into the main page in the filter bar
+* When clicked, run function and display only the food carts that meet the criteria
+
+### User Story #3:
+* As a lazy person, I want to be able to locate the food carts nearest to me because I don't want to travel far. 
+
+### Tasks:
+* Enable geolocation feature and filter the food carts based on distance from user.
+
+### User Story #4:
+* As a frequest user, I want to be able to highlight my favorite food carts and also keep track of those which I have visited previously because I have a bad memory.
+
+### Tasks:
+* Enable a User Management System, which stores info on users.
+* Allow for a way the users can mark the food carts.
+
 ## Functionality Questions:
 
 **What will the user see on each page?**
@@ -58,12 +79,37 @@ The below is the proposal for my capstone project. The deadline for the initial 
 
 ### Cycle One: Bare Bones MVP
 
-* **Backend** Import all food cart data into database, potentially with Yelp API _(Build or update incomplete details, where necessary)_
-* **Frontend** Create simple navbar - just name of the app, plus logo, if ready
-* **Frontend** Create filter bar with dropdowns _(Hide the filters not yet programmed - all to start)_
-* **Frontend** Create the section for the food cart gallery
-* **Backend** Display all of the carts in the dedicated gallery, likely using a for loop
-* **Frontend** Create a window pop-up / detail view and enable it to be displayed when food cart square is clicked
+* **Backend:** Import all food cart data into database, potentially with Yelp API _(Build or update incomplete details, where necessary)_
+* **Frontend:** Create simple navbar - just name of the app, plus logo, if ready
+* **Frontend:** Create filter bar with dropdowns _(Hide the filters not yet programmed - all to start)_
+* **Frontend:** Create the section for the food cart gallery
+* **Backend:** Display all of the carts in the dedicated gallery, likely using a for loop
+* **Frontend:** Create a window pop-up / detail view and enable it to be displayed when food cart square is clicked
+
+### Cycle Two: Add Filters
+
+* **Backend:** Write programs to allow filtering based on various metrics. To start, focus on the simpler filters, such as cuisine and neighborhood, then add hours and/or price. Distance will come with a separate cycle
+* **Frontend:** Show the now active dropdowns in the filter bar. Little else likely needs to be done on the frontend during this cycle
+
+### Cycle Three: Add Location Features
+
+* **Backend:** Use a Google Map API or equivalent to locate user based on IP
+* **Backend:** Write a function that determines the distance of the user from each food cart and filters based off of which are nearest
+* **Frontend:** Show the now active distance option in the filter bar
+
+### Cycle Four: Add Google Map
+
+* **Backend:** Use a Google Map API or equivalent to create a custom map and place each food cart at their respective locations
+* **Backend:** Draw boundaries around each neighborhood and shade with distinct colors
+* **Frontend:** Display the Google Map on the website between the top bar and the filter bar. It will be one of the first things the user will see when opening the site
+* **Frontend:** Add various icons to food cart placement, based on cuisine _(taco icon for mexican food, etc.)_
+* **Frontend:** Ensure icons are clickable and the food cart info pops up when accessed
+
+### Cycle Five: Implement User Management System
+
+* **Frontend:** Add a sign in and register link to the top bar
+* **Frontend:** Create a separate template where users can create their own profile
+* **Backend:** Store all of the inputted information into a user database
 
 ## Ranking The Product Backlog
 
@@ -75,6 +121,6 @@ The below is the proposal for my capstone project. The deadline for the initial 
   * User location functionality - locate user, ascertain distance to respective food carts
   * Google Map with icons for each food cart
   * Distinct neighborhood boundaries on the Google Map
-  * User Managemen System with ability to mark favorite and visited food carts
+  * User Management System with ability to mark favorite and visited food carts
 * **Nice-To-Haves:**
   * Expanded user management system with ability to write internal reviews on food carts / specific dishes
