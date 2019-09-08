@@ -1,0 +1,12 @@
+{% extends "chirps/base.html" %}
+
+{% block content %}
+{% for chirp in chirp_list %}
+<div class="chirp-entry">
+	<h5>{{ chirp.username.profile.displayname }}</h5>
+  <h5><em>{{ chirp.username }}</em></h5>
+  <p>{{ chirp.body }}</p>
+</div>
+<hr />
+{% endfor %}
+{% endblock %}

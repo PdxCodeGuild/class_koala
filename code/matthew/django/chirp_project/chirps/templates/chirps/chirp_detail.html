@@ -1,0 +1,12 @@
+{% extends "chirps/base.html" %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+<div class="chirp-entry">
+  <h4>Chirped by: {{ chirp.username }}</h4>
+  <h4>Chirped at: {{ chirp.created }}</h4>
+  <p>{{ chirp.body }}</p>
+</div>
+
+{% endblock %}
