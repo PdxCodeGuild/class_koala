@@ -27,13 +27,13 @@ The below is the proposal for my capstone project. The deadline for the initial 
 ### User Story #1:
 * As a tourist, I want a listing and location of the food carts in Portland because I want to eat at one near to me.
 
-**Tasks:**
+### Tasks:
 * Gather the data of the food carts in Portland / store in model table
 * Obtain the location of the user
 * Filter carts based on nearest location to user
 * Display back to user
 
-### Functionality Questions:
+## Functionality Questions:
 
 **What will the user see on each page?**
 * There will essentially be one main page. This will display the map, the filters and the full listing of the food carts
@@ -61,7 +61,7 @@ The below is the proposal for my capstone project. The deadline for the initial 
 * Create display section
 * Write programs to filter by each selection
 
-## Product Backlog Rankings 
+## Ranking The Product Backlog
 
 * **Essential Features:**
 * **Really-Great-To-Haves:**
