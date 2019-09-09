@@ -1,0 +1,12 @@
+
+
+
+
+<h1>{{ 'URL Converter'}}</h1>
+
+
+<form action="{% url 'short:index' %}" method="post">
+    {%csrf_token%}
+    Your Url : <input type="text" name="item_name">
+    <input type="submit" value="Submit">
+</form>
