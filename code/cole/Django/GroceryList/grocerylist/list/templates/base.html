@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>GroceryList</title>
+
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="nav-home">
+          <h1><a href = {% url 'GroceryList:list' %}>Grocery List</a></h1>
+        </div>
+        <div class="nav-add">
+          <h2><a href = {% url 'GroceryList:add' %}>+ new item</a></h2>
+        </div>
+      </header>
+      {% block content %}
+      {% endblock %}
+    </div>
+  </body>
+</html>
