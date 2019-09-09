@@ -1,0 +1,61 @@
+{% extends 'groceryList/base.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+<body>
+    {% block content %}
+    <div class='container'>
+        <header>
+            <h1>Welcome to your Grocery List</h1>
+        </header>
+
+        <div class='grocery-list-form'>
+            <form action="{% url 'groceryList:add' %}" method='post'>
+                {% csrf_token %}
+                <label name = 'list_item'>Add groceries</label>
+                <input type='text' id = 'list_item' name='grocery_item'  placeholder='Add Grocery Item'>
+                <input type='Submit' value='Add'>
+            </form>
+        </div><!-- End Grocery List Form Div -->
+
+        <div class='current-list'>
+            <h2>Need to buy:</h2>
+            <ul>
+            {% for item in current_grocery_list %}
+                <form action="{% url 'groceryList:completed' item.id %}" method='post'>
+                    {% csrf_token %}
+                        <li><input type='submit' value='Got it'>  - {{ item }}</li>
+                </form>
+                    {% endfor %}
+                
+            </ul>
+            
+        </div><!-- End current list Div -->
+
+        <div class='completed-list'>
+            <h2>Already Bought:</h2>
+            <form action="{% url 'groceryList:delete' %}" method='post'>
+            {% csrf_token %}
+            {% if bought_grocery_list %}
+                <ul>
+                    {% for item in bought_grocery_list %}
+                        <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+                <input type='Submit' value='Delete All'>
+            </form>
+            {% else %}
+                    Empty
+            {% endif %}
+            
+        </div><!-- End Completed list Div -->
+
+    </div><!-- End container Div -->
+    {% endblock %}
+</body>
+</html>
