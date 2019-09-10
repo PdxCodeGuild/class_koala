@@ -1,0 +1,12 @@
+<h1>Turn your URL to a short URL</h1>
+
+<form action="{% url 'shortenerApp:add' %}" method='post'>
+    {% csrf_token %}
+    <label name='longurl'>Enter/Paste a URL here</label>
+    <input type='text' id='longUrl' name='longurl' placeholder='URL'>
+    <p>
+    <input type='Submit' value='Submit URL'>
+    </p>
+</form>
+
+Your short URL is: localhost:8000/{{longUrl}}
