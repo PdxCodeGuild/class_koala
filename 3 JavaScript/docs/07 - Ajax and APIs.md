@@ -449,6 +449,8 @@ axios.post(url, data, config)
 })
 ```
 
+For more information on Axios and the full list of options, be sure to check out the [official documentation.](https://github.com/axios/axios)
+
 ### Other Ajax Syntax
 
 There is an older syntax for making an Ajax request that does not use `addEventListener`. It's much clunkier to write, but you might see it in the wild, so it's worth being familiar with.
