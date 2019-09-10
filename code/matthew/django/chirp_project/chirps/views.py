@@ -25,7 +25,11 @@ class ChirpCreateView(LoginRequiredMixin, CreateView):
         form.instance.username = self.request.user
         return super().form_valid(form)
     
-class ChirpDeleteView(LoginRequiredMixin, DeleteView):
+class ChirpDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = Chirp
     template_name = "chirps/chirp_delete.html"
     success_url = reverse_lazy("chirps:home")
+
+    def test_func(self):
+        obj = self.get_object()
+        return self.request.user == obj.username

@@ -104,8 +104,7 @@ h1 a {
   padding-right: 10px;
 }
 
-/*** CHIRP DISPLAY ***/
-
+/***** CHIRP DISPLAY *****/
 
 .chirp-entry {
   padding: 28px 20px 20px;
@@ -125,13 +124,24 @@ h5 {
   color: rgba(0, 0, 0, 0.6);
 }
 
+.chirp-created {
+  display: block;
+  color: rgba(0, 0, 255, 0.8);
+  text-align: right;
+  margin-top: -25px;
+  font-size: 12px;
+}
+
 .chirp-body {
-  margin: 0;
+  margin: auto;
+  padding-right: 20px;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .delete {
   margin: 0;
-  margin-top: -20px;
+  margin-top: -19px;
   text-align: right;
 }
 
@@ -141,4 +151,37 @@ h5 {
 }
 
 
+/***** LOGIN *****/
 
+#login-container {
+  padding: 10px 25px 35px;
+}
+
+.login-submit {
+  margin-top: 10px;
+  width: 95px;
+  padding: 6px;
+  cursor: pointer;
+}
+
+.login-h3 {
+  margin-top: 50px;
+}
+
+.signup {
+  margin-top: 30px;
+}
+
+.signup a {
+  text-decoration: none;
+  color: white;
+  background-color: blue;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+/***** DELETE *****/
+
+#delete {
+  margin-top: 30px;
+}

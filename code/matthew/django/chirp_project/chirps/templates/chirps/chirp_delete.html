@@ -6,7 +6,7 @@
 <h2>Delete Chirp</h2>
 <form action="" method="post">
   {% csrf_token %}
-  <p>Are you sure you want to delete "{{ chirp.body }}"?</p>
-  <input type="submit" value="Confirm">
+  <p class="chirp-body">Are you sure you want to delete "{{ chirp.body }}"?</p>
+  <input type="submit" value="Confirm" id="delete">
 </form>
 {% endblock %}
