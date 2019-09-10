@@ -5,5 +5,5 @@ app_name = 'short'
 urlpatterns = [
     path('short/', views.index, name='index'),
     path('code/', views.coder, name='coder'),
-    path('success/<str:short_url>', views.success, name='success')
+    path('success/<short_url>', views.success, name='success')
 ]

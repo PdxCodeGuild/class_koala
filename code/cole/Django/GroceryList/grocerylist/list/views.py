@@ -18,7 +18,7 @@ class itemList(ListView):
 class addItem(CreateView):
     model = GroceryItem
     template_name = 'add.html'
-    fields = "__all__"
+    fields = "itemText", "itemCount"
 
 def complete(request, pk):
     item = get_object_or_404(GroceryItem.objects.all(), pk=pk)
