@@ -1,0 +1,187 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/***** BODY *****/
+
+.container {
+  margin: auto;
+  max-width: 500px;
+  background-color: rgba(115, 234, 255, 0.05);
+}
+
+/***** HEADER *****/
+
+/*** TOP BAR ***/
+
+#top-bar {
+  display: flex;
+  align-items: center;
+  height: 75px;
+  border-bottom: 4px solid black;
+}
+
+h1 {
+  margin: 0;
+  padding-left: 10px;
+  color: blue;
+  letter-spacing: 4px;
+  font-size: 46px;
+}
+
+h1 a {
+  text-decoration: none;
+  color: blue;
+}
+
+.chirp-logo {
+  margin-left: auto;
+}
+
+.fa-earlybirds {
+  padding-right: 10px;
+  text-align: right;
+  font-size: 40px;
+  color: blue;
+}
+
+/*** NAV BAR ***/
+
+#nav-bar {
+  display: flex;
+  align-items: center;
+  height: 55px;
+  border-bottom: 2px solid lightslategray;
+}
+
+.far, .fas {
+  font-size: 23px;
+}
+
+.fa-user-circle {
+  padding-left: 10px;
+  padding-right: 10px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.username a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.login {
+  margin-left: auto;
+  padding-right: 10px;
+}
+
+.login a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.8);
+  letter-spacing: 1.5px;
+  font-weight: 800;
+}
+
+.logout {
+  margin-left: auto;
+  padding-right: 10px;
+}
+
+.logout a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.chirp-new {
+  margin-left: auto;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.fa-feather-alt {
+  padding-right: 10px;
+}
+
+/***** CHIRP DISPLAY *****/
+
+.chirp-entry {
+  padding: 28px 20px 20px;
+}
+
+h5 {
+  display: inline-block;
+  margin: 0 0 10px;
+}
+
+.chirp-displayname {
+  font-size: 18px;
+}
+
+.chirp-username {
+  padding-left: 5px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.chirp-created {
+  display: block;
+  color: rgba(0, 0, 255, 0.8);
+  text-align: right;
+  margin-top: -25px;
+  font-size: 12px;
+}
+
+.chirp-body {
+  margin: auto;
+  padding-right: 20px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.delete {
+  margin: 0;
+  margin-top: -19px;
+  text-align: right;
+}
+
+.fa-trash-alt {
+  color: grey;
+  font-size: 14px;
+}
+
+
+/***** LOGIN *****/
+
+#login-container {
+  padding: 10px 25px 35px;
+}
+
+.login-submit {
+  margin-top: 10px;
+  width: 95px;
+  padding: 6px;
+  cursor: pointer;
+}
+
+.login-h3 {
+  margin-top: 50px;
+}
+
+.signup {
+  margin-top: 30px;
+}
+
+.signup a {
+  text-decoration: none;
+  color: white;
+  background-color: blue;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+/***** DELETE *****/
+
+#delete {
+  margin-top: 30px;
+}

@@ -5,8 +5,15 @@
 <h1>{{ 'URL Converter'}}</h1>
 
 
-<form action="{% url 'short:index' %}" method="post">
+<form action="{% url 'short:coder' %}" method="post">
     {%csrf_token%}
-    Your Url : <input type="text" name="item_name">
+    Your Url : <input type="text" name="url_name">
     <input type="submit" value="Submit">
 </form>
+
+
+
+<div class= new_link>
+    Your new Link:<br> <textarea id="new_url" readonly>         </textarea>
+    <p>{{new_code}}</p>
+</div>
