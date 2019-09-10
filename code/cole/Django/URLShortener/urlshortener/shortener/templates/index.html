@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% for url in url_list %}
+{% if url.shortURL != '' %}
+<div class="url-entry">
+  <p><a href={% url 'URLShortener:redirect' url.urlcode %}>{{url.shortURL}}</a></p>
+</div>
+{% else %}
+<<div class="longURL-entry">
+  <p>{{url.longURL}} <a href={% url 'URLShortener:createShortURL' url.id %}>shorten</a></p>
+</div>
+{% endif %}
+{% endfor %}
+{%endblock%}
