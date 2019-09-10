@@ -3,10 +3,16 @@
 <form action="{% url 'shortenerApp:add' %}" method='post'>
     {% csrf_token %}
     <label name='longurl'>Enter/Paste a URL here</label>
-    <input type='text' id='longUrl' name='longurl' placeholder='URL'>
+    <input type='text' id='longUrl' name='longurl' placeholder='http://....'>
     <p>
     <input type='Submit' value='Submit URL'>
     </p>
 </form>
 
-Your short URL is: localhost:8000/{{longUrl}}
+{% if messages %}
+<ul class='messages'>
+	{% for message in messages %}
+			<p>{{message}}</p>
+	{% endfor %}
+</ul>
+{% endif %}
