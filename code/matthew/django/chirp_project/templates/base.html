@@ -1,17 +1,23 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html>
 
   <head>
-    <title>Chirp</title>
+    <title>{% block title %}Chirp{% endblock %}</title>
     <meta name="author" content="Matthew Hughes" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" />
-    <link rel="stylesheet" href="css/main.css" />
+		<link rel="stylesheet" href="{% static 'css/base.css' %}" />
   </head>
 
   <body>
 		<div class="container">
 			<header>
+				<div id="top-bar">
+					<h1><a href="{% url 'chirps:home' %}">CHIRP</a></h1>
+					<a href="{% url 'chirps:home' %}" class="chirp-logo"><i class="fab fa-earlybirds"></i></a>
+				</div>
 			</header>
 
 			<main>
