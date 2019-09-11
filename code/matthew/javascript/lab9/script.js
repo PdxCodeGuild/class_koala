@@ -5,9 +5,9 @@ quoteButton.addEventListener("click", function(e) {
 	axios({
 		method: "get",
 		url: "https://favqs.com/api/qotd",
-		headers: {
-			Authorization: "Token token = '813c6ce13e128db13774ca6487ddb3ac'"
-		}
+		// headers: {
+		// 	Authorization: "Token token = ''"
+		// }
 	})
 	.then(function(response) {
 		console.log(response);
