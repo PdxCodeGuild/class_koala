@@ -1,11 +1,14 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    {% csrf_token %}
-  </head>
-  <body>
-    {%  %}
-  </body>
-</html>
+{% extends 'base.html' %}
+
+{% block content %}
+{% for item in groceryitem_list %}
+{% if item.completed == False %}
+  <div class = "item-entry">
+    <p><a href={% url 'GroceryList:complete' item.id %}>{{item.itemText}}</a></p>
+  </div>
+{% else %}
+  <div class = "completed-item">
+    <p><a href = {% url 'GroceryList:uncomplete' item.id %}>X {{item.itemText}}</a></p>
+{% endif %}
+{% endfor %}
+{% endblock %}

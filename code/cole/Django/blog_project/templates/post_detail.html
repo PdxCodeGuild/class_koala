@@ -9,4 +9,7 @@
   <p>Posted at: {{post.created}}</p>
   <p>{{post.body}}</p>
 </div>
+
+<p><a href="{% url 'post:edit' post.pk %}"></a></p>
+<p><a href="{% url 'post:delete' post.pk %}"></a></p>
 {% endblock %}
