@@ -10,7 +10,7 @@ quoteButton.addEventListener('click', function () {
             method: 'get',
             url: 'https://favqs.com/api/qotd',
             headers: {
-                Authorization: 'Token token="3d68d5c5e8944cb56e03d252e9036dba"'
+                Authorization: 'Token token=""'
             }
         })
         .then(function (response) {
@@ -55,8 +55,8 @@ specificButton.addEventListener('click', function () {
             for (let j = 0; j < results.length; j++) {
                 quote.innerHTML += `<li>${results[j]}</li>`; // displays the quotes by the author
             }
-            console.log(quotesList.last_page.value);
-            specificAuthor.value = '';
+            // console.log(quotesList.last_page.value);
+            // specificAuthor.value = '';
         })
         // .then(function(response) {
         //     if (quoteList.last_page)
