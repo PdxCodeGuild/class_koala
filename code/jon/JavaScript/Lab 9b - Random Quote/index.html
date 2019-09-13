@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Lab 9b - Random Quote Generator</title>
+</head>
+<body>
+    <h1>Quote Generator</h1>
+    <div class="randomQuotes">
+        <h2>Want a random quote?</h2>
+        <button id="button">Random Quote</button>
+    </div>
+    <div class="specificQuotes">
+        <h2>Or do you want a quote from a specific person?</h2>
+        <input type="text" id="author" placeholder='Type authors name here'>
+        <p><button id="specific">Specific Author</button></p>
+    </div>
+    
+
+    <div>
+        <div id=quotes-by></div>
+        <ol id="quote">
+
+        </ol>
+    </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
