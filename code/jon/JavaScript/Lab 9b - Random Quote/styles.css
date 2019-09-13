@@ -1,0 +1,29 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+    background-color: lightsteelblue;
+    color: coral;
+}
+
+button {
+    padding: 5px;
+    border-radius: 10px;
+    outline: none;
+}
+
+button:hover {
+    background-color: gray;
+}
+
+#quotes-by {
+    display: none;
+}
+
+#quote {
+    text-align: left;
+    line-height: 1.25em;
+}
