@@ -89,7 +89,7 @@ next_btn.addEventListener("click", function(e){
 
     let config = {
         headers: {
-          Authorization: 'Token token="7a90e6096038ba1c606f2400464af501"',
+          Authorization: 'Token token=""',
         },
         params:{
             page: +1
@@ -163,7 +163,7 @@ back_btn.addEventListener("click", function(e){
 
     let config = {
         headers: {
-          Authorization: 'Token token="7a90e6096038ba1c606f2400464af501"',
+          Authorization: 'Token token=""',
         },
         params:{
             page: -1
