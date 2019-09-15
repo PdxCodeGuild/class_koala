@@ -50,7 +50,7 @@ function getQuotes() {
                 page: pageNumber,
             },
             headers: {
-                Authorization: 'Token token="3349554fa3d88cf6a1eaa9f75482ac37"'
+                Authorization: 'Token token=""'
             },
         })
         .then(function (response) {
