@@ -10,15 +10,34 @@
 
 
     <body>
-        <div class= buttons>
+        <div class="flex-container">
+
+            
+                
             <button id="quote_btn">Give Me Some</button>
             <button class="back_btn" id="back_btn">Back Page</button>
             <button id="next_btn">Next Page</button>
 
-            <p id="text_area"></p>
+            
 
 
+        
+        
+            <div class="search_area">
+                <form class="search_author">
+                    <input type=text id="author_name">
+                    <input type="button" id="search_btn" value="Search for Author">
+
+                </form>
+            </div>
+            
         </div>
+
+        
+        <p id="text_area"></p>
+        
+
+
 
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
         <script src="app.js"></script>
