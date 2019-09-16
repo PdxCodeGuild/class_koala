@@ -18,28 +18,57 @@
 <body>
     <div class="container">
         <header>
-            <div class="logo">Coffee Shop Locator</div>
-            <nav class="navbar">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Blog</a></li>
-                </ul>
-            </nav>
-        </header>
-        <h1>Coffee Shop Locator</h1>
-        <h2><em>Find your next cup o' Joe</em></h2>
+            <nav class="navbar navbar-expand-lg navbar-light" style="background-color: coral;">
+                <a class="nav-brand mr-1" href='index.html'>Coffee Shop Locator</a>
+                <div class='navbar-nav justify-content-stretch'>
+                    <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="#">About</a>
+                    <a class="nav-item nav-link" href="#">Blog</a>
+                    <a class="nav-item nav-link" href="#">Contact Us</a>
+                </div>
+    </div>
+    </nav>
+    </header>
+    </div> <!-- End Container Div -->
+
+    <div class="hero">
+        <h1>Need a little "Pick Me Up"?</h1>
+        <h2><em>Get some Coffee!</em></h2>
         <p>
-            What's the name of the Coffee Shop you are looking for?
+            What City are you in?
             <br>
-            <input type="text" id="user-input" placeholder="Name of coffee shop">
+            <div id="input-box">
+                <input type="text" id="user-input" placeholder="Portland, OR">
+            </div>
             <br>
             <input type="Submit" id="submit" value='Submit'>
         </p>
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-        </script>
-    </div> <!-- End Container Div -->
+    </div>
+    <div id="results"></div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+
+
+<script src='main.js'></script>
 </body>
 
 </html>
+
+
+
+
+
+
+
+<!-- <h1>Coffee Shop Locator</h1>
+    <h2><em>Find your next cup o' Joe</em></h2>
+    <p>
+        What's the name of the Coffee Shop you are looking for?
+        <br>
+        <input type="text" id="user-input" placeholder="Name of coffee shop">
+        <br>
+        <input type="Submit" id="submit" value='Submit'>
+    </p> -->
