@@ -6,7 +6,7 @@ quoteButton.addEventListener('click', function () {
             method: 'get',
             url: 'https://favqs.com/api/qotd',
             headers: {
-                Authorization: 'Token token="3d68d5c5e8944cb56e03d252e9036dba"'
+                Authorization: 'Token token=""'
             }
         })
         .then(function (response) {
