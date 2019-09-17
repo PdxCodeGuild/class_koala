@@ -18,11 +18,15 @@ Labor Day -- September 2nd, 2019
     
 ## Django Labs Assigned:
 
- 
+Lab 01 Grocery List  
+Lab 02 URL Shortener  
+Lab 03 Chirp  
 
 #### Optional Django
 
- 
+Lab 00 Polls Tutorial  
+Lab 04 Library  
+Lab 05 Blog  
     
 ## JavaScript Labs Assigned:
 
@@ -31,10 +35,16 @@ Lab 04 Vanilla Todo
 Lab 05 Random Redirect  
 Lab 06 Clock  
 Lab 07 Hacker Typer  
-Lab 08 Bouncing Ball
+Lab 08 Bouncing Ball  
+Lab 09 Quote API  
+Lab 10 Any API  
+Lab 11 Vue Todos  
+Lab 12 Calculator  
+Lab 13 Quotes Vue  
 
 #### Optional JavaScript
 
+Lab 14 Any API Vue  
 Optional Calculator  
 Optional Validation
 
