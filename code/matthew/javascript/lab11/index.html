@@ -15,28 +15,28 @@
 	</head>
 
 	<body>
-		<div id="app">
+		<div id="app" class="container">
 
 		  <nav>
 				<div class="nav-wrapper">
 					<div class="input-field">
-						<input id="search" type="search" placeholder="Add Item" v-model="newTodo.task" />
+						<input type="search" id="search" class="flow-text" placeholder="Add Item" v-model="newTodo.task" />
 						<label v-on:click="addItem" class="label-icon" for="search"><i class="material-icons">add</i></label>
 						<i class="material-icons">close</i>
 					</div>
 				</div>
 			</nav>
 
-			<div class="container">
-				<ul v-if="todos" class="collection">
-					<li v-for="todo, i in todos" class="collection-item valign-wrapper row">
-						<a class="btn-floating btn-small waves-effect waves-light green pulse">
-							<i v-on:click="removeItem(i)" class="material-icons col 2">check</i>
+			<ul v-if="todos" class="collection">
+				<li v-for="todo, i in todos" class="collection-item valign-wrapper row">
+					<div class="col s1">
+						<a class="btn-floating btn-small waves-effect waves-light green lighten-1 pulse">
+							<i v-on:click="removeItem(i)" class="material-icons">check</i>
 						</a>
-						<p class="col 10">{{ todo.task }}</p>
-					</li>
-				</ul>
-			</div>
+					</div>
+					<p class="col s11 flow-text">{{ todo.task }}</p>
+				</li>
+			</ul>
 
 		</div>
 
