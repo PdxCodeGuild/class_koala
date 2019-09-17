@@ -1,3 +1,28 @@
+Vue.component('todo-item', {
+  props: ['todo'],
+  template:
+    `<li>
+      <p style="display: inline-block;" v-bind:class="{ completed: todo.isCompleted }" v-bind:style="{ color: todo.color }">{{ todo.text }}</p>
+      <input type="checkbox" v-model="todo.isCompleted">
+      <button @click="$emit('remove-todo', todo)">✕</button>
+    </li>`,
+    // <button @click="removeTodo(todo, $event)">✕</button>
+  methods: {
+    // removeTodo: function (todo, $event) {
+    //   let index = this.todos.indexOf(todo);
+    //   this.todos.splice(index , 1);
+
+    //   // let index = this.$parent.todos.indexOf(todo);
+    //   // this.$parent.todos.splice(index , 1);
+
+    //   // this.$parent.todos = this.$parent.todos.filter(item => item !== todo)
+    // }
+  },
+  mounted: function () {
+    console.log(`You mounted the todo item ${this.todo.text}`)
+  }
+})
+
 let app = new Vue({
   el: '#app',
   data: {
@@ -5,13 +30,15 @@ let app = new Vue({
     titleMessage: 'I typed this',
     exists: true,
     todos: [
-      { text: 'Learn JavaScript', isCompleted: false },
-      { text: 'Learn Vue', isCompleted: false },
-      { text: 'Build something awesome', isCompleted: false }
+      { id: 1, text: 'Learn JavaScript', isCompleted: false , color: '#ff7f50' },
+      { id: 2, text: 'Learn Vue', isCompleted: true, color: '#008080' },
+      { id: 3, text: 'Build something awesome', isCompleted: false, color: '#8b0000' }
     ],
     newTodo: {
       text: '',
-      isCompleted: false
+      isCompleted: false,
+      color: '#000000',
+      id: 4
     },
   },
   methods: {
@@ -19,10 +46,28 @@ let app = new Vue({
       this.message = this.message.split('').reverse().join('');
     },
     addTodo: function () {
-      this.todos.push({ text: this.newTodo.text, isCompleted: this.newTodo.isCompleted});
+      this.todos.push({ id: this.newTodo.id, text: this.newTodo.text, isCompleted: this.newTodo.isCompleted, color: this.newTodo.color });
+      this.newTodo.id++;
     },
-    removeTodo: function (index) {
+    removeTodo: function (todo, $event) {
+      let index = this.todos.indexOf(todo);
       this.todos.splice(index , 1);
+    }
+  },
+  mounted: function () {
+    console.log(this);
+  },
+  computed: {
+    incompleteTodos: function () {
+      return this.todos.filter(todo => !todo.isCompleted)
+    },
+    completeTodos: function () {
+      return this.todos.filter(todo => todo.isCompleted)
+    }
+  },
+  watch: {
+    "newTodo.text": function (newValue, oldValue) {
+      console.log(`You changed ${oldValue} to ${newValue}.`)
     }
   }
 });

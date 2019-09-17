@@ -10,10 +10,9 @@
 </head>
 <body>
     <div id="app">
-        {{ message }}
-
+        {{ message }} <br>
         <input type="text" placeholder="item needed" v-model="newTodo.text">
-        <input type="checkbox" v-model="newTodo.isComplete">
+        
         <button v-on:click="addTodo"> Add This Item </button>
 
         <ul v-if="todos">
