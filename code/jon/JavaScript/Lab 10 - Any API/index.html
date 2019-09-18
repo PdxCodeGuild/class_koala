@@ -12,14 +12,14 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
     <link rel="stylesheet" href="styles.css">
-    <title>Coffee Shop Finder</title>
+    <title>Find Me Food</title>
 </head>
 
 <body>
     <div class="container">
         <header>
             <nav class="navbar navbar-expand-lg navbar-light" style="background-color: coral;">
-                <a class="nav-brand mr-1" href='index.html'>Coffee Shop Locator</a>
+                <a class="nav-brand mr-1" href='index.html'>Find Me Food</a>
                 <div class='navbar-nav justify-content-stretch'>
                     <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
                     <a class="nav-item nav-link" href="#">About</a>
@@ -33,18 +33,24 @@
 
     <div class="hero">
         <h1>Need a little "Pick Me Up"?</h1>
-        <h2><em>Get some Coffee!</em></h2>
+        <h2><em>What are you looking for in Oregon City?</em></h2>
         <p>
-            What City are you in?
+            
             <br>
             <div id="input-box">
-                <input type="text" id="user-input" placeholder="Portland, OR">
+                <input type="text" id="user-input" placeholder="Pizza, Coffee, Burgers">
             </div>
             <br>
             <input type="Submit" id="submit" value='Submit'>
         </p>
     </div>
-    <div id="results"></div>
+    <div id="results">
+        
+        <ul>
+            
+        </ul>
+        
+    </div>
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
