@@ -5,6 +5,7 @@ new Vue({
 	data () {
 		return {
 			searchValue: null,
+			typeValue: null,
 			quoteResults: [],
 		}
 	},
@@ -16,6 +17,7 @@ new Vue({
 				params: {
 					page: 1,
 					filter: this.searchValue,
+					type: this.typeValue,
 				},
 				headers: {
 					Authorization: 'Token token=""'
@@ -35,8 +37,10 @@ new Vue({
 	}
 })
 
-
-
+document.addEventListener('DOMContentLoaded', function() {
+	var elems = document.querySelectorAll('select');
+	var instances = M.FormSelect.init(elems);
+});
 
 
 
