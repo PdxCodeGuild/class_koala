@@ -5,7 +5,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<title>Lab 13 - FavQs in Vue</title>
+		<title>quoteZilla</title>
 		<!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 		<!-- Material Design Icons -->
@@ -19,7 +19,7 @@
 			<header>
 				<nav>
 					<div class="nav-wrapper green lighten-1">
-						<a href="#" class="brand-logo center">dontQuoteMe</a>
+						<a href="#" class="brand-logo center">quoteZilla</a>
 					</div>
 				</nav>
 			</header>
@@ -45,6 +45,11 @@
 					<p>{{ quote.body }}</p>
 					<p><em><a :href="quote.url">{{ quote.author }}</a></em></p>
 					<div class="divider"></div>
+				</div>
+				<div style="margin: 25px 0 50px">
+					<ul class="pagination center-align">
+						<prev-button></prev-button>
+						<next-button></next-button>
 				</div>
 			</div>
 
