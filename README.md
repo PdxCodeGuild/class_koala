@@ -21,6 +21,7 @@ Labor Day -- September 2nd, 2019
 Lab 01 Grocery List  
 Lab 02 URL Shortener  
 Lab 03 Chirp  
+Lab 06 DRF Vue  
 
 #### Optional Django
 
@@ -37,7 +38,7 @@ Lab 06 Clock
 Lab 07 Hacker Typer  
 Lab 08 Bouncing Ball  
 Lab 09 Quote API  
-Lab 10 Any API  
+Lab 10 Any API ***OR*** Lab 14 Any API Vue  
 Lab 11 Vue Todos  
 Lab 12 Calculator  
 Lab 13 Quotes Vue  
