@@ -136,6 +136,65 @@ At this point we have our data in JavaScript, and can initialize our Vue instanc
 
 ### Better -- `mounted` API call
 
+If you have an API, you can avoid all the awkward conversions we just did. You can just use Django to load your Vue app, and then use an `axios` Ajax call in your `mounted` method to load the initial data when the page loads.
+
+This requires you to have an API to get the data from. You have two choices: create manual API endpoints by creating views that return a `JSONResponse` (see *02 - Views.md*), or use Django Rest Framework to quickly create a full API, and then call the endpoint that corresponds the data you would like to load.
+
+Once you have an API endpoint, your code is the same as any other API call. Make sure you either include the CSRF token or set your API views to be `csrf_exempt`.
+
+```django
+...
+  mounted: {
+    let crsf_token = document.querySelector("input[name=csrfmiddlewaretoken]").value;
+    axios({
+      url: 'api/grocery_item/',
+      method: 'get',
+      headers: {
+        X-CSRFToken: csrf_token
+      }
+    }).then(res => this.grocery_items = res.data)
+  }
+...
+```
+
+## Sending information back to Django
+
+You'll need to send a data object back to your API. Axios makes this easy. Again, this can be a custom API endpoint you created (see *02 - Views.md*) or it can be a Django Rest Framework endpoint.
+
+#### template.html
+```django
+...
+  methods:
+    save: {
+      let crsf_token = document.querySelector("input[name=csrfmiddlewaretoken]").value;
+      axios({
+        url: 'api/grocery_item/save',
+        method: 'post',
+        headers: {
+          X-CSRFToken: csrf_token
+        },
+        data: this.grocery_items
+      }).then(res => console.log(res))
+    },
+...
+```
+
+If you're using Django REST Framework, that's it! If it didn't work, read your own API documentation and the DRF documentation to make sure you are submitting properly.
+
+If you're using a custom API endpoint that you wrote, make sure it connects to a view. You can read the JSON body of your incoming request using `request.body` and parsing back from JSON to a Python dictionary.
+
+#### views.py
+```python
+def save(request):
+  if request.method == 'POST':
+    json_data = json.loads(request.body)
+    try:
+      # access data here. you probably want to get an object, edit it, and save it.
+    except KeyError:
+      HttpResponseServerError("Malformed data!")
+    HttpResponse("Thumbs up, you did it!")
+```
+
 ## Templates vs Vue
 
 Vue and Dango templates fulfill the same role: presentation of data. With this in mind, decide which you are going to use to render your page. For instance, trying to use `{% for %}` and `v-for` in the same template will quickly make things complicated.
