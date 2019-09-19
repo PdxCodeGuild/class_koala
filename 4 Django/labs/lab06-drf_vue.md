@@ -12,9 +12,9 @@ Use the [DRF Quickstart](https://www.django-rest-framework.org/tutorial/quicksta
 
 Build a Vue frontend for our students! I already provided you with a `home.html` template you can use. Make sure to leave the links to the login/logout/signup pages so that a user can get themselves authenticated (otherwise the API won't work!).
 
-Your frontend should display a list of students upon loading. It should also offer the ability to edit a student -- for this you'll want a method to save the student data you edited.
+Your frontend should display a list of students upon loading. It should also offer the ability to create new students in the database.
 
 ## Part 3 (Optional)
 
-Add student create and delete functionality to your Vue application.
+Add student update and delete functionality to your Vue application.
 
