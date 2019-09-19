@@ -80,7 +80,59 @@ Let's look at how to do both!
 
 ### Good -- Passing context to Javascript
 
+This requires modifying our Django view a little bit. Our context needs to include JSON data that our JavaScript code can read. Remember, a Django QuerySet is a Python object, JSON is a text string that JavaScript can parse into a data object.
 
+We need to use something called a *serializer* to go through our QuerySet object and turn it into JSON. Luckly, Python has one built in. We then need to pass this JSON data into our context so that we can access it in our template. In the following example I'm using a functional view so I've added it to my context object. If you're using a class-based view, you can use `get_context_data` to add extra content to your context.
+
+#### views.py
+```python
+...
+incomplete_items = serializers.serialize('json', GroceryItem.objects.filter(is_completed=False).order_by('-date_created'))
+complete_items = serializers.serialize('json', GroceryItem.objects.filter(is_completed=True).order_by('-date_completed'))
+...
+context = {
+  'incomplete_items': incomplete_items,
+  'complete_items': complete_items,
+  ...
+  }
+...
+```
+
+Now we need to load our JSON into JavaScript. Django 2.2 adds a very handy new template tag called `json_script` that takes an object in context (it won't work with a standard QuerySet!) and creates a `<script>` tag containing the JSON code. We can then use `JSON.parse()` to load it as a normal JavaScript variable.
+
+The syntax for `json_script` is `{{ <value containing JSON>|json_script:"<id of script tag to create>" }}`
+
+At this point we have our data in JavaScript, and can initialize our Vue instance using our new JavaScript variables.
+
+#### template.html
+```django
+...
+<script src="https://unpkg.com/vue"></script>
+{{ complete_items|json_script:"init-complete" }}
+{{ incomplete_items|json_script:"init-incomplete" }}
+<script>
+  let json_incomplete_items = JSON.parse(JSON.parse(document.getElementById('init-incomplete').textContent));
+  let json_complete_items = JSON.parse(JSON.parse(document.getElementById('init-complete').textContent));
+  let app = new Vue({
+    el: '#app',
+    delimiters: ['[[', ']]'], // This is new
+    data: {
+        incomplete_items: json_incomplete_items,
+        complete_items: json_complete_items,
+        message: "Hello World!"
+    },
+    methods: {
+      logMessage: function () {
+        console.log(this);
+      }
+    },
+    mounted: function () {
+      logMessage();
+    }
+  });
+</script>
+...
+```
 
 ### Better -- `mounted` API call
 
