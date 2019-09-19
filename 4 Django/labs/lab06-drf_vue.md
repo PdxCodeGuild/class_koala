@@ -1,4 +1,4 @@
-# Lab 06 - Django REST Framework and vue
+# Lab 06 - Django REST Framework and Vue
 
 I built a Django app. It's got a basic user framework, a model, and a database full of data. Let's build it an API, and then use that API to build a single page Vue application.
 
