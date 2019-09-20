@@ -164,6 +164,8 @@ You'll need to send a data object back to your API. Axios makes this easy. Again
 #### template.html
 ```django
 ...
+{% csrf_token %}
+...
   methods:
     save: {
       let crsf_token = document.querySelector("input[name=csrfmiddlewaretoken]").value;
