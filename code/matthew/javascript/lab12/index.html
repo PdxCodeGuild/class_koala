@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>calculaTron</title>
+		<!-- Compiled and minified CSS -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+		<!-- Material Design Icons -->
+		<!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+    <link rel="stylesheet" href="main.css" />
+	</head>
+
+  <body>
+
+    <div class="container">
+
+      <div id="app">
+        <div class="calculator">
+          <div class="display">{{ current || '0' }}</div>
+          <clearbutton v-on:clear="clear($event)"></clearbutton>
+          <signbutton v-on:sign="sign($event)"></signbutton>
+          <percentbutton v-on:percent="percent($event)"></percentbutton>
+          <divbutton v-on:divide="divide($event)"></divbutton>
+          <numbutton v-bind:num="7" v-on:append="append($event)"></numbutton>
+          <numbutton v-bind:num="8" v-on:append="append($event)"></numbutton>
+          <numbutton v-bind:num="9" v-on:append="append($event)"></numbutton>
+          <multbutton v-on:multiply="multiply($event)"></multbutton>
+          <numbutton v-bind:num="4" v-on:append="append($event)"></numbutton>
+          <numbutton v-bind:num="5" v-on:append="append($event)"></numbutton>
+          <numbutton v-bind:num="6" v-on:append="append($event)"></numbutton>
+          <subbutton v-on:subtract="subtract($event)"></subbutton>
+          <numbutton v-bind:num="1" v-on:append="append($event)"></numbutton>
+          <numbutton v-bind:num="2" v-on:append="append($event)"></numbutton>
+          <numbutton v-bind:num="3" v-on:append="append($event)"></numbutton>
+          <addbutton v-on:add="add($event)"></addbutton>
+          <numbutton class="zero" v-bind:num="0" v-on:append="append($event)"></numbutton>
+          <dotbutton v-on:dot="dot($event)"></dotbutton>
+          <equalbutton v-on:equal="equal($event)"></equalbutton>
+        </div>
+      </div>
+    </div>
+
+		<!-- Axios -->
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		<!-- Vue -->
+		<script src="https://unpkg.com/vue"></script>
+		<!-- Personal JavaScript -->
+		<script src="script.js"></script>
+		<!-- Compiled and minified JavaScript -->
+		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
+
+  </body>
+
+</html>
