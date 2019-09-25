@@ -1,4 +1,0 @@
-#contactList
-f = open("contacts.txt", "r")
-lines = f.read().split("\n")
-print(lines)
