@@ -1,0 +1,50 @@
+{% if user.is_authenticated %}
+<h1>Welcome {{ user.username }}!</h1>
+<p><a href="{% url 'logout' %}">Logout</a><p>
+<p>List of students</p>
+{% for students in object_list %}
+    <h1> {{ students.first_name }} {{ students.last_name }}</h1>
+    <ul>
+        <li>Cohort: {{ students.cohort }}</li>
+        <li>Favorite Topic: {{ students.favorite_topic }}</li>
+        <li>Favorite Teacher: {{ students.favorite_teacher }}</li>
+        <li>Capstone: {{ students.capstone }}</li>
+    </ul>
+{% endfor %}
+{% else %}
+<h1>Welcome, visitor!</h1>
+<p>You are not logged in. <a href="{% url 'login' %}">Login</a> <a href="{% url 'users:signup' %}">Sign Up</a></p>
+{% endif %}
+<div id='app'>
+    <div v-for='student in students'>
+        <h2>[[ student.first_name]] [[ student.last_name ]]</h2>
+        <ul>
+        <li>Cohort:  [[ student.cohort ]]</li>
+        <li>Favorite Topic: [[ student.favorite_topic ]]</li>
+        <li>Favorite Teacher: [[ student.favorite_teacher]]</li>
+        <li>Capstone: [[ student.capstone ]]</li>
+    </ul>   
+    </div>
+</div>
+<script src="https://unpkg.com/vue"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+    let vm = new Vue({
+        el: '#app',
+        delimiters: ['[[', ']]'],
+        data: {
+            students: []
+        },
+        methods: {
+      list: function () {
+        axios({
+          method: 'get',
+          url: 'api/students/',
+        }).then(response => {console.log(response); this.students = response.data});
+      }
+    },
+    mounted: function () {
+      this.list();
+    }
+  });
+</script>

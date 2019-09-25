@@ -1,0 +1,40 @@
+body {
+    background-color: coral;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.5em;
+}
+
+ul li {
+    list-style: none;
+}
+
+.userInput {
+    text-align: center;
+    padding: 5px;
+    height: 20px;
+    width: 200px;
+    border: 1px solid black;
+    box-shadow: 0 0 20px black;
+}
+
+.inputArea {
+    margin-top: 20px;
+}
+
+.addButton, .deleteButton {
+    padding: 10px;
+    width: 100px;
+    border-radius: 5px;
+    margin-left: 20px;
+    outline: none;
+}
+
+.addButton:hover, .deleteButton:hover {
+    background-color: gray;
+}
+
+.checkbox {
+    height: 5px;
+    width: 5px;
+}

@@ -360,6 +360,97 @@ fetch('https://example.com/new/', {
 })
 ```
 
+### async/await
+
+ECMAScript2017 (ES8) introduced an easier way to work with promises. 
+
+#### Use `fetch` to make an AJAX request
+Recall that `fetch()` is an *asynchronous function* that always returns a `Promise`.
+
+Handle promise the ES6 way:
+```js 
+function getRandomQuote() {
+    // fetch() returns promise
+    fetch('http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1') 
+    // .then() resolves promise with response object and returns another promise
+    .then(res => res.json()) 
+    // console logs response JSON
+    .then(jsonRes => console.log(jsonRes))  
+    // catches any errors
+    .catch(err => console.log(err));
+}
+
+getRandomQuote();
+```
+
+Using async/await:
+
+1. Use the `async` keyword at a function declaration to specify that the function contains some asynchronous operation.
+
+2. Add `await` keyword before any statement that returns a promise. Store the resolved values as variables.
+
+3. Treat other operations as synchronous operations.
+
+```js 
+async function getRandomQuote() { // Step 1
+    const res = await fetch('http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1'); // Step 2
+    const jsonRes = await res.json(); // Step 2
+
+    console.log(jsonRes); // Step 3
+}
+
+getRandomQuote();
+```
+
+### Axios
+
+[Axios](https://github.com/axios/axios) is a JavaScript library which handles AJAX more succinctly. Ultimately it's built upon the Vanilla JavaScript form of AJAX, so it doesn't offer anything you can't otherwise do with Vanilla.
+
+To use, you'll need to either install the library or use a **cdn**.
+
+Using cdn:
+```html
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+```
+
+#### Examples
+```javascript
+axios.get(url)
+.then(function (response) {
+  console.log(response.data)
+})
+```
+
+```javascript
+let config = {
+  headers: {
+    'x-api-key': api_key
+  }
+}
+axios.get(url, config)
+.then(function (response) {
+  console.log(response.data)
+})
+```
+
+```javascript
+let data = {
+  'key': 'value'
+  'data': 'to send'
+}
+let config = {
+  headers: {
+    'header name': 'header value'
+  }
+}
+axios.post(url, data, config)
+.then(function(response) {
+  console.log(response.data)
+})
+```
+
+For more information on Axios and the full list of options, be sure to check out the [official documentation.](https://github.com/axios/axios)
+
 ### Other Ajax Syntax
 
 There is an older syntax for making an Ajax request that does not use `addEventListener`. It's much clunkier to write, but you might see it in the wild, so it's worth being familiar with.

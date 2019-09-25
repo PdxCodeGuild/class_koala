@@ -1,0 +1,58 @@
+body {
+    background-color: coral;
+    height: 100vh;
+}
+
+/* Bootstrap Styling */
+
+.nav-brand,
+.nav-brand:visited {
+    color: purple;
+    font-weight: bold;
+}
+
+/* Normal Styling */
+
+.hero {
+    display: flex;
+    background: linear-gradient(to right, rgba(255, 255, 240, 1), rgba(255, 255, 255, .3), rgba(255, 255, 240, 1)), url('https://cdn.pixabay.com/photo/2015/12/08/00/26/coffee-shop-1081713_1280.jpg');
+    background-size: cover;
+    /* height: 100vh; */
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5em;;
+    
+}
+
+#user-input {
+    margin: auto;
+}
+
+#input-box {
+    text-align: center;
+}
+
+#submit {
+    margin-top: 5px;
+    padding: 5px;
+    width: 100px;
+    border-radius: 20px;
+    outline: none;
+}
+
+#results {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card {
+    
+    margin: 10px auto;
+    border: 1px solid yellow;
+}
+
+ul, li {
+    list-style: none;
+}

@@ -2,6 +2,14 @@
 
 
 
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'short/style.css' %}">
+
+
+
+
+
 <h1>{{ 'URL Converter'}}</h1>
 
 
@@ -14,6 +22,17 @@
 
 
 <div class= new_link>
-    Your new Link:<br> <textarea id="new_url" readonly>         </textarea>
-    <p>{{new_code}}</p>
+    Your new Link:<br> <textarea id="new_url" readonly>
+        {% if messages %}
+            {% for message in messages %}
+            
+            {{ message }}
+                
+            
+            {% endfor %}
+        {% endif %}
+    </textarea>
+    
 </div>
+
+

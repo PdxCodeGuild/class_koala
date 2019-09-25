@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>quoteZilla</title>
+		<!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+		<!-- Material Design Icons -->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	</head>
+
+	<body>
+
+		<div id="app">
+
+			<header>
+				<nav>
+					<div class="nav-wrapper green lighten-1">
+						<a href="#" class="brand-logo center">quoteZilla</a>
+					</div>
+				</nav>
+			</header>
+
+			<div class="container">
+				<div>
+					<div style="margin-top: 20px">
+						<input type="text" placeholder="Search" v-model="searchValue">
+					</div>
+					<div class="input-field">
+						<select v-model="typeValue">
+							<option value="" disabled selected>Select Filter:</option>
+							<option value="keyword">Keyword</option>
+							<option value="author">Author</option>
+							<option value="tag">Tag</option>
+						</select>
+					</div>
+					<div style="margin: 25px 0 20px" class="right-align">
+						<button class="btn waves-effect waves-light green lighten-1" type="submit" name="action" @click="getQuotes">Quote Me<i class="material-icons right">chat_bubble_outline</i></button>
+					</div>
+				</div>
+				<div v-for="(quote, index) in quoteResults" class="section">
+					<p>{{ quote.body }}</p>
+					<p><em><a :href="quote.url">{{ quote.author }}</a></em></p>
+					<div class="divider"></div>
+				</div>
+				<div style="margin: 25px 0 50px">
+					<ul class="pagination center-align">
+						<prev-button></prev-button>
+						<next-button></next-button>
+				</div>
+			</div>
+
+			<footer>
+			</footer>
+
+		</div>
+
+		<!-- Axios -->
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		<!-- Vue -->
+		<script src="https://unpkg.com/vue"></script>
+		<!-- Personal JavaScript -->
+		<script src="script.js"></script>
+		<!-- Compiled and minified JavaScript -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+	</body>
+	
+</html>
