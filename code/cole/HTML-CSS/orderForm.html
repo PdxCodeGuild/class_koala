@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h2>Burrito Time</h2>
+    <form class="burrito" action="index.html" method="post">
+      <fieldset>
+        <legend>Build Your Burrito</legend>
+        <p>Tortilla:</p>
+        <input type="radio" name="whiteF">White Flour
+        <input type="radio" name="wheat">Wheat Flour
+        <input type="radio" name="spinach">Spinach
+        <input type="radio" name="corn">Corn<br/>
+        <p>Rice:</p>
+        <input type="radio" name="whiteR">White Rice
+        <input type="radio" name="brownR">Brown Rice<br/>
+        <p>Beans:</p>
+        <input type="radio" name="blackB">Black Beans
+        <input type="radio" name="pinto">Pinto Beans<br/>
+        <p>Protein:</p>
+        <input type="radio" name="carnitas">Carnitas
+        <input type="radio" name="chicken">Chicken
+        <input type="radio" name="sofritas">Sofritas
+        <input type="radio" name="none">None
+        <p>Additional Ingredients:</p>
+        <input type="checkbox" name="cheese">Cheese<br/>
+        <input type="checkbox" name="sourCream">Sour Cream<br/>
+      </fieldset>
+      <button type="button" name="button">Save</button>
+    </form>
+    <form class="info" action="index.html" method="post">
+      <fieldset>
+        <legend>Personal Info</legend>
+        Username: <input placeholder="more than 6 characters" type="text" name="user" pattern = "{6,200}" title="username must be more than 6 characters"><br/>
+        Password: <input placeholder = "more than 6 characters"type="text" name="pass" pattern = "{6,200}" title="password must be more than 6 characters"><br/>
+        Name: <input type="text" name="name" placeholder="First/Last" pattern="">
+        Email:
+        Phone Number:
+        Date of Birth:
+        SSN:
+        Street:
+        City, State, Zip:
+      </fieldset>
+    </form>
+  </body>
+</html>

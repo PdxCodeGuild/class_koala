@@ -1,1 +1,57 @@
 /*companyHome.css*/
+.header {
+  background-image: url(https://www.redestateservices.com/wp-content/uploads/2017/04/office-1600x300.jpg);
+  background-size: 1600px 300px;
+  background-repeat:no-repeat;
+}
+
+.name {
+  font-family: Arial;
+  padding-top: 15px;
+}
+
+.slogan {
+  font-family: Arial;
+  font-style: italic;
+  padding-bottom: 80px;
+}
+
+.tabs {
+  font-family: Arial;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 5px;
+  grid-auto-rows: minmax(50px, auto);
+  background-color: rgb(116, 180, 232);
+}
+
+.home {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.business {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.account {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.careers {
+  grid-column: 4;
+  grid-row: 1;
+}
+
+.about {
+  grid-column: 5;
+  grid-row: 1;
+}
+
+body {
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+}

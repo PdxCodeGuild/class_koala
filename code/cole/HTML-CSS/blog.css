@@ -1,12 +1,15 @@
 /*blog.css*/
 body{
-  text-align: center
+  text-align: center;
+  background-color: rgb(116, 180, 232);
 }
 
 body h {
   font-size: 40px;
 }
 body p {
-  padding-left: 400px;
-  padding-right: 400px;
+  padding-left: 300px;
+  padding-right: 300px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
