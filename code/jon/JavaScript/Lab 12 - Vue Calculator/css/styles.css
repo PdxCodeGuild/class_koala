@@ -13,8 +13,9 @@ body{
 .display {
     grid-column: 1 / 5;
     background-color: gray;
-    color: black;
+    color: coral;
     text-align: right;
+    font-size: 2em;
 }
 
 .zeroButton {
