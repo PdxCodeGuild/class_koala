@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Vue Calculator Lab</title>
+</head>
+<body>
+    <div id="vue">
+        <div class="calculator">
+            <div class='display'>{{ current || '0' }}</div>
+            <div @click='clear' class='button'>AC</div>
+            <div @click='sign' class='button'>+/-</div>
+            <div @click.once='percent' class='button'>%</div>
+            <div @click='divide' class='button operators'>/</div>
+            <div @click='append("7")' class='button'>7</div>
+            <div @click='append("8")' class='button'>8</div>
+            <div @click='append("9")' class='button'>9</div>
+            <div @click='multiply' class='button operators'>x</div>
+            <div @click='append("4")' class='button'>4</div>
+            <div @click='append("5")' class='button'>5</div>
+            <div @click='append("6")' class='button'>6</div>
+            <div @click='subtract' class='button operators'>-</div>
+            <div @click='append("1")' class='button'>1</div>
+            <div @click='append("2")' class='button'>2</div>
+            <div @click='append("3")' class='button'>3</div>
+            <div @click='add' class='button operators'>+</div>
+            <div @click='append("0")' class='zeroButton button'>0</div>
+            <div @click='dot' class='button'>.</div>
+            <div @click='equals' class='button operators'>=</div>
+        </div>
+    </div>
+     <!-- Include Vue from a CDN of your choice, I chose unpkg -->
+     <script src="https://unpkg.com/vue"></script>
+     <!-- Include your code here... -->
+     <script src="js/main.js"></script>
+</body>
+</html>
