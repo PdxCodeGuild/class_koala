@@ -1,6 +1,6 @@
 {% if user.is_authenticated %}
 <h1>Welcome {{ user.username }}!</h1>
-<p><a href="{% url 'logout' %}">Logout</a><p>
+<p><a href="{% url 'logout' %}">Logout</a><h2>
 <p>List of students</p>
 {% for students in object_list %}
     <h1> {{ students.first_name }} {{ students.last_name }}</h1>
@@ -25,6 +25,19 @@
         <li>Capstone: [[ student.capstone ]]</li>
     </ul>   
     </div>
+    <div>
+      <h2>Add a New Student:</h2>
+      <form @submit.prevent='addStudent'>
+        {% csrf_token %}
+        <p><input type='text' placeholder='First Name' v-model='newStudent.first_name'></p>
+        <p><input type='text' placeholder='Last Name' v-model='newStudent.last_name'></p>
+        <p><input type='text' placeholder='cohort' v-model='newStudent.cohort'></p>
+        <p><input type='text' placeholder='Favorite Topic' v-model='newStudent.favorite_topic'></p>
+        <p><input type='text' placeholder='Favorite Teacher' v-model='newStudent.favorite_teacher'></p>
+        <p><input type='text' placeholder='Capstone URL (http://www.google.com)' v-model='newStudent.capstone'></p>
+        <button type='submit'>Submit New Student</button>
+      </form>
+    </div>
 </div>
 <script src="https://unpkg.com/vue"></script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
@@ -33,7 +46,15 @@
         el: '#app',
         delimiters: ['[[', ']]'],
         data: {
-            students: []
+          students: [],
+          newStudent: {
+            first_name: '',
+            last_name:'',
+            cohort: '',
+            favorite_topic: '',
+            favorite_teacher: '',
+            capstone: '',
+          }
         },
         methods: {
       list: function () {
@@ -41,7 +62,28 @@
           method: 'get',
           url: 'api/students/',
         }).then(response => {console.log(response); this.students = response.data});
-      }
+      },
+      addStudent() {
+          axios.post('api/students/', {
+            first_name: this.newStudent.first_name,
+            last_name: this.newStudent.last_name,
+            cohort: this.newStudent.cohort,
+            favorite_topic: this.newStudent.favorite_topic,
+            favorite_teacher: this.newStudent.favorite_teacher,
+            capstone: this.newStudent.capstone,
+          })
+          .then(response => {
+                const data = response.data;
+                console.log(`Data: ${data}`);
+                this.students.push(data);
+                this.newStudent.first_name = '';
+                this.newStudent.last_name = '';
+                this.newStudent.cohort = '';
+                this.newStudent.favorite_topic = '';
+                this.newStudent.favorite_teacher = '';
+                this.newStudent.capstone = '';
+          });
+      },
     },
     mounted: function () {
       this.list();
