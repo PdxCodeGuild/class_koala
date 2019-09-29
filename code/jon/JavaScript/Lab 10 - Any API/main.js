@@ -26,15 +26,15 @@ function getResults() {
         for (let i = 0; i < query.length; i++) {
            
             let result = `
-                    <div class='card'>
-                        <li>${query[i].restaurant.thumb}</li>
-                        <li>Establishment: <a href='`${query[i].url}`}'${query[i].restaurant.name}</li>
+                    <div class="card">
+                        <li>Establishment: <a href='${query[i].url}'>${query[i].restaurant.name}</a></li>
                         <li>Address: ${query[i].restaurant.location.address}</li>
                         <li>Phone: ${query[i].restaurant.phone_numbers}</li>
                    </div>
             `
             results.innerHTML += result;
         }
+        user_input = ' ';
        
     
     })
