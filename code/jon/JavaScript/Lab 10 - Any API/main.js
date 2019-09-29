@@ -17,7 +17,7 @@ function getResults() {
             // establishment_type: 286, //coffee shop
         },
         headers: {
-            "user-key": "577576e3fbba11ceadaeed9bc5d1f8b2",
+            "user-key": "",
         },
     })
     .then (function(response) {
