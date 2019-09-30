@@ -10,13 +10,11 @@ let ball = {
     vy: (2*Math.random()-1)*10
 };
 
-console.log(ball.vx);
-console.log(ball.vy);
+
 
 let ctx = canvas.getContext("2d");
 
 function main_loop() {
-  ball.vy += .01;
   ball.px += ball.vx;
   ball.py += ball.vy;
   if (ball.px > width || ball.px < 0) {
@@ -27,6 +25,9 @@ function main_loop() {
     ball.vy = -ball.vy;
     ball.vy = ball.vy*.9;
   }
+  ball.vy += 0.1;
+  console.log(ball.vx);
+  console.log(ball.vy);
   ctx.clearRect(0,0,width,height);
   ctx.beginPath();
   ctx.arc(ball.px, ball.py, ball.radius, 0, 2 * Math.PI, false);
