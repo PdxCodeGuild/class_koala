@@ -1,0 +1,39 @@
+{% if user.is_authenticated %}
+<h1>Welcome {{ user.username }}!</h1>
+<p><a href="{% url 'logout' %}">Logout</a><p>
+{% else %}
+<h1>Welcome, visitor!</h1>
+<p>You are not logged in. <a href="{% url 'login' %}">Login</a> <a href="{% url 'users:signup' %}">Sign Up</a></p>
+{% endif %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div id = "app">
+      {% if user.is_authenticated %}
+      <h1>Welcome {{ user.username }}!</h1>
+      <p><a href="{% url 'logout' %}">Logout</a><p>
+      {% else %}
+      <h1>Welcome, visitor!</h1>
+      <p>You are not logged in. <a href="{% url 'login' %}">Login</a> <a href="{% url 'users:signup' %}">Sign Up</a></p>
+      {% endif %}
+    </div>
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+      let app = new Vuew({
+        el: '#app',
+        delimiters: ['[[', ']]'],
+        data: {
+
+        },
+        methods: {
+
+        },
+      })
+    </script>
+  </body>
+</html>
