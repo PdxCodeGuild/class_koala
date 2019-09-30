@@ -109,6 +109,13 @@ In all three presentations, you should first explain the development process and
 - what is the future of the project? what features (if any) will you work on next?
 
 ## Odds and Ends
+
+DRF Tutorial Beginners Guide  
+https://wsvincent.com/official-django-rest-framework-tutorial-beginners-guide/
+
+DRF Quickstart  
+https://www.django-rest-framework.org/tutorial/quickstart/
+
 An Illustrated (and Musical) Guide to Map, Reduce, and Filter Array Methods  
 https://css-tricks.com/an-illustrated-and-musical-guide-to-map-reduce-and-filter-array-methods/
 
