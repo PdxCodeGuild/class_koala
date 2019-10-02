@@ -1,0 +1,31 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>{% block title %}Chirp{% endblock %}</title>
+    <meta name="author" content="Cole Nation" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+
+  <body>
+		<div class="container">
+			<header>
+				<div id="top-bar">
+					<h1><a href="{% url 'chirps:home' %}">CHIRP</a></h1>
+				</div>
+			</header>
+
+			<main>
+				{% block content %}
+				{% endblock %}
+			</main>
+
+			<footer>
+			</footer>
+		</div>
+
+	</body>
+
+</html>

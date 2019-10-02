@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}{{ object.username }}{% endblock %}
+
+{% block content %}
+<div id="nav-bar">
+  {% if user.is_authenticated %}
+  <p><a href="{% url 'users:profile' user.username %}"><i class="far fa-user-circle"></i></a></p>
+  <p class="username"><a href="{% url 'users:profile' user.username %}">{{ user.username }}</a></p>
+  <p class="logout"><a href="{% url 'logout' %}">LOGOUT</a>
+  <p><a href="{% url 'chirps:new' %}" class="chirp-new"><i class="fas fa-feather-alt"></i></a></p>
+  {% else %}
+  <p><i class="far fa-user-circle"></i></p>
+  <p class="login"><a href="{% url 'login' %}">LOGIN</a>
+  {% endif %}
+</div>
+{% for chirp in object.chirp_set.all %}
+<div class="chirp-entry">
+  <h5 class="chirp-displayname">{{ chirp.username.profile.displayname }}</h5>
+  <h5 class="chirp-username"><em>@{{ chirp.username }}</em></h5>
+  <h5 class="chirp-created">{{ chirp.postDate }}</h5>
+  <p class="chirp-body">{{ chirp.chirpText }}</p>
+  {% if user.is_authenticated %}
+  <p class="delete"><a href="{% url 'chirps:delete' chirp.pk %}"><i class="far fa-trash-alt"></i></a></p>
+  {% endif %}
+</div>
+<hr />
+{% endfor %}
+{% endblock %}

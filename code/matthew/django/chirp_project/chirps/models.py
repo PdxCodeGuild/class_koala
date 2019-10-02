@@ -8,6 +8,6 @@ class Chirp(models.Model):
 
     def __str__(self):
         return self.body
-    
+
     def get_absolute_url(self):
         return reverse('chirps:detail', args=(self.id,))

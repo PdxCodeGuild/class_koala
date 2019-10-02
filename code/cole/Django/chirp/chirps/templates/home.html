@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div id="nav-bar">
+  {% if user.is_authenticated %}
+  <p class="username"><a href="{% url 'users:profile' user.username %}">{{ user.username }}</a></p>
+  <p class="logout"><a href="{% url 'logout' %}">LOGOUT</a>
+  <p><a href="{% url 'chirps:new' %}" class="chirp-new">NEW CHIRP</i></a></p>
+  {% else %}
+  <p class="login"><a href="{% url 'login' %}">LOGIN</a>
+  {% endif %}
+</div>
+{% for chirp in chirp_list %}
+<div class="chirp-entry">
+	<h5 class="chirp-displayname">{{ chirp.username.profile.displayname }}</h5>
+  <h5 class="chirp-username"><em>@{{ chirp.username }}</em></h5>
+  <h5 class="chirp-created">{{ chirp.postDate }}</h5>
+  <p class="chirp-body">{{ chirp.chirpText }}</p>
+</div>
+<hr />
+{% endfor %}
+{% endblock %}
