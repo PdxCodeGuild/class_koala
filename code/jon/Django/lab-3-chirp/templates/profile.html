@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+<h1>{{ user.username }}</h1>
+
+{% block contents %}
+    {% for post in object.post_set.all %}
+            <div class="chirp-entry">
+                <h5 class="chirp-displayname">{{ post.username.profile.userName }}</h5>
+                <h5 class="chirp-username"><em>@{{ post.user }}</em></h5>
+                <h5 class="chirp-created">{{ post.post_date }}</h5>
+                <p class="chirp-body">{{ post.post_text }}</p>
+        {% if user.is_authenticated %}
+            <p class="delete"><a href="{% url 'chirps:delete' chirp.pk %}"><i class="far fa-trash-alt"></i></a></p>
+        {% endif %}
+            </div>
+    <hr>
+    {% endfor %}
+{% endblock contents %} 
