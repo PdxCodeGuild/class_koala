@@ -116,6 +116,12 @@ https://wsvincent.com/official-django-rest-framework-tutorial-beginners-guide/
 DRF Quickstart  
 https://www.django-rest-framework.org/tutorial/quickstart/
 
+Tips for Using Django's ManyToMany Field  
+https://www.revsys.com/tidbits/tips-using-djangos-manytomanyfield/
+
+Models and Relationships  
+https://docs.djangoproject.com/en/2.1/topics/db/models/
+
 An Illustrated (and Musical) Guide to Map, Reduce, and Filter Array Methods  
 https://css-tricks.com/an-illustrated-and-musical-guide-to-map-reduce-and-filter-array-methods/
 
