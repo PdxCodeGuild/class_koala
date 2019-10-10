@@ -1,17 +1,17 @@
-
-let hackerText = document.getElementById("text");
-let i = 0;
-
-
-
-document.body.addEventListener("keydown", function() {
-   var result           = '';
-   var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-   var charactersLength = characters.length;
-   for ( var i = 0; i < length; i++ ) {
-      result += characters.charAt(Math.floor(Math.random() * charactersLength));
-   }
-   return result;
-});
-
-
+var x = 0;
+	var hacktyper = document.getElementById("hacktyper");
+	var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	var charLength = chars.length;
+	window.onload = function() {
+		the_i = setInterval(function(){
+			var el = document.createElement('span');
+			var rand = Math.floor(Math.random() * charLength);
+			//var charText = document.createTextNode(chars[x++]);
+			var charText = document.createTextNode(chars[rand]);
+			if(x >= charLength) {
+				x = 0;
+			}else {
+				hacktyper.appendChild(el).appendChild(charText);
+			}
+		},10);
+	}

@@ -6,7 +6,7 @@ let app = new Vue({
 
     el: '#app',
     data: {
-    
+
         search_input:null,
         type_input:null,
         quote_results:[],

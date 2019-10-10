@@ -15,9 +15,11 @@
         <div id="app">
             <div class= "input_choice">
                 <select v-model="type_input"> 
-                <option value="author">author</option>
-                <option value="tag">tag</option>
-                <option value="keyword">keyword</option>
+                    <option disabled value="null">Please select one</option>
+                    <option value="author">Author</option>
+                    <option value="tag">Tag</option>
+                    <option value="keyword">Keyword</option>
+                </select>
             </div>
 
             <div class= user_pick_author>
