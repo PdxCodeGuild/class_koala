@@ -1,0 +1,30 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lab 3 - Chirp Lab</title>
+    <script src="https://kit.fontawesome.com/46755477df.js" crossorigin="anonymous"></script>
+    <link href='{% static 'css/base.css'%}'
+</head>
+<body>
+    <header>
+        <h1><a href="{% url 'home' %}">Chirp Chirp</a></h1>
+    </header>
+    {% if user.is_authenticated %}
+        <h2>Welcome back, {{ user.username }}</h2>
+        <p><a href="{% url 'logout' %}">Log Out</a></p>
+    {% else %}
+        <p>You are not logged in</p>
+            <a href="{% url 'login' %}">Log In</a>
+    {% endif %}
+    <p><a href={% url 'post_new' %}>+ Add New Chirp</a></p>
+    <div>
+        {% block content %}
+        {% endblock content %}
+    </div>
+</body>
+</html>
