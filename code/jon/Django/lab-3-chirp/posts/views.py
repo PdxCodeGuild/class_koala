@@ -16,7 +16,7 @@ class ChirpDetailView(DetailView):
     model = Post
     template_name = 'post_detail.html'
 
-class ChirpCreateView(CreateView):
+class ChirpCreateView(LoginRequiredMixin, CreateView):
     model = Post
     template_name = 'post_new.html'
     fields = ['post_text', 'author']
@@ -26,8 +26,12 @@ class ChirpCreateView(CreateView):
         form.instance.username = self.request.user
         return super().form_valid(form)
 
-class ChirpDeleteView(DeleteView):
+class ChirpDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = Post
     template_name = 'post_delete.html'
+    success_url = reverse_lazy('home')
 
+    def test_func(self):
+        obj = self.getobject()
+        return self.request.user == obj.username
 
