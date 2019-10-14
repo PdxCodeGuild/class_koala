@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+	<body>
+		<div id="app" class="container">
+
+		  <nav>
+				<div class="nav-wrapper">
+					<div class="input-field">
+						<input type="search" id="search" class="flow-text" placeholder="Add Item" v-model="newTodo.task" />
+						<button v-on:click="addItem" class="button">add</button>
+					</div>
+				</div>
+			</nav>
+
+			<ul v-if="todos" class="collection">
+				<li v-for="todo, i in todos" class="collection-item valign-wrapper row">
+					<p v-on:click="removeItem(i)">{{ todo.task }}</p>
+				</li>
+			</ul>
+
+		</div>
+		<script src="https://unpkg.com/vue"></script>
+		<script src="VueToDo.js"></script>
+
+	</body>
+</html>

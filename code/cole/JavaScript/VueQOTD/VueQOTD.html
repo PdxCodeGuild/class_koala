@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+
+	</head>
+
+	<body>
+
+		<div id="app">
+
+			<header>
+        <h1>VueQOTD</h1>
+			</header>
+
+			<div class="container">
+				<div>
+					<div style="margin-top: 20px">
+						<input type="text" placeholder="Search" v-model="searchValue">
+					</div>
+					<div class="input-field">
+						<select v-model="typeValue">
+							<option value="" disabled selected>Select Filter:</option>
+							<option value="keyword">Keyword</option>
+							<option value="author">Author</option>
+							<option value="tag">Tag</option>
+						</select>
+					</div>
+					<div style="margin: 25px 0 20px" class="right-align">
+						<button class="btn waves-effect waves-light green lighten-1" type="submit" name="action" @click="getQuotes">Get Quotes</button>
+					</div>
+				</div>
+				<div v-for="(quote, index) in quoteResults" class="section">
+					<p>{{ quote.body }}</p>
+					<p><em><a :href="quote.url">{{ quote.author }}</a></em></p>
+					<div class="divider"></div>
+				</div>
+				</div>
+			</div>
+
+
+
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		<script src="https://unpkg.com/vue"></script>
+		<script src="VueQOTD.js"></script>
+
+
+	</body>
+
+</html>
