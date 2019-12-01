@@ -29,7 +29,7 @@ html {
 
 .nav-color{
     
-    margin-bottom: 190px;
+    margin-bottom: 170px;
     grid-area: header;
     background-color: black;
     grid-area: span;
@@ -152,5 +152,7 @@ body {
 }
 
 
-
-@media screen 
+a:link {
+    text-decoration: none;
+    color: white;
+}
