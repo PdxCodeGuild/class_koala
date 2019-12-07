@@ -1,27 +1,87 @@
-let target = document.getElementById("target");
-let quoteButton = document.getElementById("quote-button");
 
-quoteButton.addEventListener("click", function(e) {
-    let req = new XMLHttpRequest();
-    req.addEventListener("progress", function(e) {
-        console.log(e.loaded);
-        target.innerText = "Loading...";
-    });
-    req.addEventListener("error", function(e) {
-        console.log(e.status);
-        target.innerText = "Cannot load quote. Try again later!";
-    });
-    req.addEventListener("load", function(e) {
-        console.log(req.responseText);
-        let response = JSON.parse(req.responseText);
-        console.log(response);
-        let resultHTML = `
-            <p>${response.quote.body}</p>
-            <p><i><a href="${response.quote.url}">${response.quote.author}</a></i></p>
-            `
-        textTarget.innerHTML = resultHTML;
-    });
-    req.open("GET", "https://favqs.com/api/qotd");
-    req.setRequestHeader("Authorization", 'Token token="62ed060e527356492260d09e11562aa2"');
-    req.send()
+let page = 1;
+
+let quoteButton = document.getElementById("quote-button");
+let target = document.getElementById("target");
+let prevButton = document.getElementById("prevButton");
+let nextButton = document.getElementById("nextButton");
+let userInput = document.getElementById("user-input");
+
+
+function getQuotes() {
+	let userFilter = document.getElementById("user-input").value;
+	axios({
+		method: "get",
+		baseURL: "https://favqs.com/api/quotes/",
+		params: {
+			page: page,
+			filter: userFilter,
+		},
+		headers: {
+			Authorization: 'Token token="62ed060e527356492260d09e11562aa2"'
+		}
+	})
+	.then(function(response) {
+		console.log(response);
+		let quotes = response.data.quotes;
+		target.innerHTML = "";
+		for(let quote of quotes) {
+			let currentQuotes = `
+			<div class="mt-4">
+				<p>${quote.body}</p>
+				<p><a href=${quote.url}>${quote.author}</a></p>
+			</div>
+			`;
+			target.innerHTML += currentQuotes;
+		}
+	})
+	.catch(function(error) {
+		console.log(error);
+	})
+}
+
+function next() {
+	page += 1;
+	if (page > 1) {
+		prevButton.classList.remove("d-none");
+	}
+}
+
+function previous() {
+	if (page > 1) {
+		page -= 1;
+	}
+	if (page === 1) {
+		prevButton.classList.add("d-none");
+	}
+}
+
+function keyPress(e) {
+	if (e.which === 13) {
+	  getQuotes();
+	  nextButton.classList.remove("d-none");
+	  e.preventDefault();
+	}
+  }
+
+
+quoteButton.addEventListener("click", function() {
+	getQuotes();
+	nextButton.classList.remove("d-none");
+})
+
+userInput.addEventListener("keydown", keyPress, function(e) {
+	console.log(e);
 });
+
+nextButton.addEventListener("click", function(e) {
+	console.log(e);
+	next();
+	getQuotes();
+})
+
+prevButton.addEventListener("click", function(e) {
+	console.log(e);
+	previous();
+	getQuotes();
+})

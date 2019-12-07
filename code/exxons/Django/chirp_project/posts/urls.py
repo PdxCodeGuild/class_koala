@@ -1,7 +1,11 @@
 from django.urls import path
-from . import views
 
-app_name = 'posts' 
+from .views import ChirpListView, ChirpDetailView, ChirpCreateView, ChirpDeleteView
+
 urlpatterns = [
-    path('', views.posts, name='posts')
+    path('', ChirpListView.as_view(), name='home'),
+    path('post/<int:pk>', ChirpDetailView.as_view(), name='post_detail'),
+    path('post/new/', ChirpCreateView.as_view(), name='post_new'),
+    path('post/<int:pk>/delete', ChirpDeleteView.as_view(), name='post_delete'),
+
 ]
