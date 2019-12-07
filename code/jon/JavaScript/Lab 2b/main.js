@@ -21,6 +21,9 @@
 
     let result = cardValues[cardHeld1] + cardValues[cardHeld2] + cardValues[cardHeld3] + cardValues[cardHeld4] + cardValues[cardHeld5] + cardValues[cardHeld6];
 
+    console.log(cardHeld1)
+    console.log(result)
+
     if (result < 17) {
         suggestion.innerText = `Total is ${result}.  You should HIT!`;
     } else if ( result >= 17 && result < 21) {
